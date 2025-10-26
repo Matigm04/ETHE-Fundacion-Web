@@ -1,120 +1,45 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import {
-  Heart,
-  Stethoscope,
-  Brain,
-  Users,
-  FileText,
-  Scale,
-  GraduationCap,
-  Home,
-  Briefcase,
-  Baby,
-  Pill,
-  Activity,
-} from "lucide-react"
+import { Heart, Activity, Brain } from "lucide-react"
 
 export default function SpecialtiesPage() {
   const specialties = [
     {
-      icon: Stethoscope,
-      title: "Medicina General",
+      icon: Activity,
+      title: "Trasplante Hepático",
       description:
-        "Atención médica integral para toda la familia. Consultas, diagnósticos y tratamientos de enfermedades comunes.",
-      services: ["Consultas médicas", "Control de salud", "Diagnóstico y tratamiento", "Recetas médicas"],
-    },
-    {
-      icon: Heart,
-      title: "Cardiología",
-      description:
-        "Especialistas en salud cardiovascular. Prevención, diagnóstico y tratamiento de enfermedades del corazón.",
+        "Haciendo foco en mejorar la calidad de vida de nuestros pacientes, desde Fundación ETHE buscamos generar conciencia en la detección temprana de las afecciones hepáticas para garantizar el éxito del transplante. Con una larga trayectoria en transplates hepáticos pediátricos, ETHE se posiciona como experta en estas intervenciones colaborando a su vez con aquellos pacientes que tengan dificultades económicas.",
       services: [
-        "Electrocardiogramas",
-        "Control de presión arterial",
-        "Prevención cardiovascular",
-        "Seguimiento de pacientes",
+        "Detección temprana de afecciones hepáticas",
+        "Transplantes hepáticos pediátricos", 
+        "Apoyo económico para pacientes",
+        "Seguimiento integral post-transplante"
       ],
     },
     {
       icon: Brain,
-      title: "Psicología Clínica",
+      title: "Trasplante Renal",
       description:
-        "Apoyo emocional y terapia profesional para niños, adolescentes y adultos. Atención individual y familiar.",
-      services: ["Terapia individual", "Terapia familiar", "Orientación psicológica", "Manejo de crisis"],
-    },
-    {
-      icon: Users,
-      title: "Trabajo Social",
-      description:
-        "Programas de asistencia social y desarrollo comunitario. Apoyo integral para familias en situación de vulnerabilidad.",
-      services: ["Evaluación socioeconómica", "Programas de asistencia", "Orientación familiar", "Gestión de recursos"],
-    },
-    {
-      icon: Scale,
-      title: "Asesoría Legal",
-      description:
-        "Orientación jurídica en derecho civil, familiar y laboral. Asistencia en trámites administrativos y legales.",
-      services: ["Consultas jurídicas", "Derecho familiar", "Derecho laboral", "Trámites administrativos"],
-    },
-    {
-      icon: FileText,
-      title: "Gestión Documental",
-      description: "Ayuda en la obtención y gestión de documentos oficiales. Asesoramiento en trámites burocráticos.",
-      services: ["Tramitación de DNI", "Certificados oficiales", "Documentación legal", "Asesoramiento en trámites"],
-    },
-    {
-      icon: GraduationCap,
-      title: "Apoyo Educativo",
-      description:
-        "Programas de refuerzo escolar y orientación educativa. Becas y apoyo para estudiantes en situación vulnerable.",
-      services: ["Refuerzo escolar", "Orientación vocacional", "Gestión de becas", "Apoyo a estudiantes"],
-    },
-    {
-      icon: Home,
-      title: "Asistencia Habitacional",
-      description:
-        "Orientación y apoyo en temas de vivienda. Programas de mejoramiento habitacional y acceso a vivienda digna.",
+        "Un trasplante renal realizado a tiempo, evita tener que recurrir a la diálisis del niño. La diálisis es un tratamiento de por vida que afecta no sólo al niño paciente, sino a todo el entorno familiar y a su dinámica de vida. Para realizar estos transplantes, Fundación ETHE trabaja junto a esferas gubernamentales, especialistas, centros médicos y un equipo dedicado a las necesidades especiales de cada paciente. Acompañamos cada caso de transplante renal pediátrico de manera integral durante todo el proceso acompañando al niño para que pueda llevar una vida plena.",
       services: [
-        "Asesoramiento habitacional",
-        "Programas de vivienda",
-        "Mejoramiento del hogar",
-        "Gestión de subsidios",
+        "Transplantes renales pediátricos",
+        "Prevención de diálisis en niños", 
+        "Coordinación con centros médicos especializados",
+        "Acompañamiento integral familiar"
       ],
     },
     {
-      icon: Briefcase,
-      title: "Orientación Laboral",
+      icon: Heart,
+      title: "Cardiopatías Congénitas",
       description:
-        "Apoyo en la búsqueda de empleo y desarrollo profesional. Talleres de capacitación y orientación vocacional.",
-      services: ["Búsqueda de empleo", "Capacitación laboral", "Orientación profesional", "Talleres de habilidades"],
-    },
-    {
-      icon: Baby,
-      title: "Pediatría",
-      description:
-        "Atención médica especializada para niños y adolescentes. Control de crecimiento y desarrollo infantil.",
-      services: ["Control del niño sano", "Vacunación", "Diagnóstico pediátrico", "Orientación a padres"],
-    },
-    {
-      icon: Pill,
-      title: "Farmacia Social",
-      description:
-        "Acceso a medicamentos esenciales a precios accesibles. Orientación sobre uso correcto de medicamentos.",
+        "La mayoría de los defectos cardíacos congénitos se pueden tratar con un diagnóstico temprano. Detectar estas afecciones durante la primer semana de vida, determina que el niño pueda tener una vida normal y sana. Pasada la primer semana, se hace dificultoso realizar la intervención por lo cual es importante detectar anomalías mediante ecografías durante el embarazo y luego del nacimiento del bebé. ETHE reúne a profesionales reconocidos mundialmente por su trabajo en cardiopatías congénitas y cirugías.",
       services: [
-        "Dispensación de medicamentos",
-        "Orientación farmacéutica",
-        "Programas de medicación",
-        "Seguimiento farmacológico",
+        "Diagnóstico temprano de cardiopatías",
+        "Cirugías cardíacas pediátricas", 
+        "Ecografías especializadas",
+        "Profesionales reconocidos mundialmente"
       ],
-    },
-    {
-      icon: Activity,
-      title: "Nutrición",
-      description:
-        "Asesoramiento nutricional personalizado. Programas de alimentación saludable y prevención de enfermedades.",
-      services: ["Consultas nutricionales", "Planes alimentarios", "Educación nutricional", "Seguimiento nutricional"],
     },
   ]
 
@@ -126,7 +51,7 @@ export default function SpecialtiesPage() {
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">Nuestras Especialidades</h1>
             <p className="text-lg md:text-xl text-white/90 leading-relaxed">
-              Ofrecemos una amplia gama de servicios profesionales para atender las necesidades de nuestra comunidad
+              Medicina de alta complejidad especializada en trasplantes y cardiopatías congénitas
             </p>
           </div>
         </div>
@@ -135,32 +60,55 @@ export default function SpecialtiesPage() {
       {/* Specialties Grid */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {specialties.map((specialty, index) => {
               const Icon = specialty.icon
               return (
-                <Card key={index} className="border-[#5dbfb3] hover:shadow-xl transition-shadow">
+                <Card key={index} className="border-[#5dbfb3] hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                   <CardHeader>
-                    <div className="w-14 h-14 bg-[#5dbfb3] rounded-lg flex items-center justify-center mb-4">
-                      <Icon className="text-white" size={28} />
+                    <div className="w-16 h-16 bg-gradient-to-br from-[#5dbfb3] to-[#0a4d5c] rounded-xl flex items-center justify-center mb-4">
+                      <Icon className="text-white" size={32} />
                     </div>
-                    <CardTitle className="text-xl text-[#0a4d5c]">{specialty.title}</CardTitle>
-                    <CardDescription className="text-base">{specialty.description}</CardDescription>
+                    <CardTitle className="text-xl text-[#0a4d5c] mb-3">{specialty.title}</CardTitle>
+                    <CardDescription className="text-base leading-relaxed">{specialty.description}</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <h4 className="font-semibold text-[#0a4d5c] mb-3 text-sm">Servicios incluidos:</h4>
                     <ul className="space-y-2">
                       {specialty.services.map((service, idx) => (
                         <li key={idx} className="flex items-start gap-2 text-sm text-gray-600">
-                          <span className="text-[#5dbfb3] mt-1">•</span>
+                          <span className="text-[#5dbfb3] mt-1 text-lg">•</span>
                           <span>{service}</span>
                         </li>
                       ))}
                     </ul>
+                    <div className="mt-6">
+                      <Button 
+                        asChild 
+                        size="sm" 
+                        className="bg-[#5dbfb3] hover:bg-[#5dbfb3]/90 text-white w-full"
+                      >
+                        <Link href="/contacto">Leer más</Link>
+                      </Button>
+                    </div>
                   </CardContent>
                 </Card>
               )
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Mission Section */}
+      <section className="py-16 md:py-24 bg-gradient-to-br from-[#0a4d5c] to-[#5dbfb3] text-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8">Misión</h2>
+            <p className="text-lg md:text-xl leading-relaxed">
+              Promover el desarrollo de la medicina de alta complejidad en el Caribe y Centro América a través de la 
+              obtención de recursos públicos y privados, los cuales son destinados a la formación y capacitación de 
+              profesionales de todas las especialidades involucradas en este proceso.
+            </p>
           </div>
         </div>
       </section>
@@ -170,15 +118,15 @@ export default function SpecialtiesPage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-[#0a4d5c] mb-6">¿Necesitas Alguno de Estos Servicios?</h2>
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Nuestro equipo de profesionales está listo para atenderte. Contáctanos para más información o para agendar
-            una cita.
+            Nuestro equipo de profesionales especializados en medicina de alta complejidad está listo para atenderte. 
+            Contáctanos para más información sobre nuestros servicios especializados.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-[#0a4d5c] hover:bg-[#0a4d5c]/90">
               <Link href="/contacto">Solicitar Información</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="border-[#0a4d5c] text-[#0a4d5c] bg-transparent">
-              <Link href="/faq">Preguntas Frecuentes</Link>
+              <Link href="/quienes-somos">Conoce Más</Link>
             </Button>
           </div>
         </div>

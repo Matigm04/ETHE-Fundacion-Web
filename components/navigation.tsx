@@ -2,14 +2,23 @@
 
 import Link from "next/link"
 import { useState } from "react"
-import { Menu, X } from "lucide-react"
+import { Menu, X, ChevronDown } from "lucide-react"
+import { usePathname } from "next/navigation"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
+  const [isQuienesSomosOpen, setIsQuienesSomosOpen] = useState(false)
+  const pathname = usePathname()
 
   const navLinks = [
     { href: "/", label: "Inicio" },
-    { href: "/quienes-somos", label: "Quiénes Somos" },
+    { 
+      label: "Quiénes Somos",
+      submenu: [
+        { href: "/quienes-somos", label: "Acerca de ETHE" },
+        { href: "/staff", label: "Nuestro Staff" },
+      ]
+    },
     { href: "/especialidades", label: "Especialidades" },
     { href: "/documentos", label: "Documentos" },
     { href: "/testimonios", label: "Testimonios" },
@@ -31,14 +40,46 @@ export function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-sm font-medium hover:text-[#5dbfb3] transition-colors"
-              >
-                {link.label}
-              </Link>
+            {navLinks.map((link, index) => (
+              <div key={index} className="relative group">
+                {link.submenu ? (
+                  <>
+                    <button
+                      className="flex items-center gap-1 text-sm font-medium hover:text-[#5dbfb3] transition-colors"
+                      onMouseEnter={() => setIsQuienesSomosOpen(true)}
+                      onMouseLeave={() => setIsQuienesSomosOpen(false)}
+                    >
+                      {link.label}
+                      <ChevronDown size={16} className="transition-transform group-hover:rotate-180" />
+                    </button>
+                    {/* Dropdown Menu */}
+                    <div
+                      className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2"
+                      onMouseEnter={() => setIsQuienesSomosOpen(true)}
+                      onMouseLeave={() => setIsQuienesSomosOpen(false)}
+                    >
+                      <div className="py-2">
+                        {link.submenu.map((sublink) => (
+                          <Link
+                            key={sublink.href}
+                            href={sublink.href}
+                            className="block px-4 py-3 text-sm text-[#0a4d5c] hover:bg-[#5dbfb3]/10 hover:text-[#5dbfb3] transition-colors font-medium"
+                          >
+                            {sublink.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  <Link
+                    href={link.href!}
+                    className="text-sm font-medium hover:text-[#5dbfb3] transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                )}
+              </div>
             ))}
           </div>
 
@@ -55,15 +96,48 @@ export function Navigation() {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="lg:hidden pb-6 space-y-4">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setIsOpen(false)}
-                className="block py-2 text-sm font-medium hover:text-[#5dbfb3] transition-colors"
-              >
-                {link.label}
-              </Link>
+            {navLinks.map((link, index) => (
+              <div key={index}>
+                {link.submenu ? (
+                  <>
+                    <button
+                      onClick={() => setIsQuienesSomosOpen(!isQuienesSomosOpen)}
+                      className="flex items-center justify-between w-full py-2 text-sm font-medium hover:text-[#5dbfb3] transition-colors"
+                    >
+                      {link.label}
+                      <ChevronDown 
+                        size={16} 
+                        className={`transition-transform ${isQuienesSomosOpen ? 'rotate-180' : ''}`} 
+                      />
+                    </button>
+                    {isQuienesSomosOpen && (
+                      <div className="pl-4 mt-2 space-y-2">
+                        {link.submenu.map((sublink) => (
+                          <Link
+                            key={sublink.href}
+                            href={sublink.href}
+                            onClick={() => {
+                              setIsOpen(false)
+                              setIsQuienesSomosOpen(false)
+                            }}
+                            className="block py-2 text-sm font-medium text-[#5dbfb3] hover:text-white transition-colors"
+                          >
+                            {sublink.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </>
+                ) : (
+                  <Link
+                    href={link.href!}
+                    onClick={() => setIsOpen(false)}
+                    className="block py-2 text-sm font-medium hover:text-[#5dbfb3] transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                )}
+              </div>
             ))}
           </div>
         )}
