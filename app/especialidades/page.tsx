@@ -82,15 +82,6 @@ export default function SpecialtiesPage() {
                         </li>
                       ))}
                     </ul>
-                    <div className="mt-6">
-                      <Button 
-                        asChild 
-                        size="sm" 
-                        className="bg-[#5dbfb3] hover:bg-[#5dbfb3]/90 text-white w-full"
-                      >
-                        <Link href="/contacto">Leer más</Link>
-                      </Button>
-                    </div>
                   </CardContent>
                 </Card>
               )
