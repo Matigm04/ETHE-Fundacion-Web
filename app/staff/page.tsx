@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Stethoscope, UserCheck, User, Heart } from "lucide-react"
+import { Stethoscope, UserCheck, User, Heart, Activity } from "lucide-react"
 
 export default function StaffPage() {
   return (
@@ -36,7 +36,7 @@ export default function StaffPage() {
                   </div>
                 </div>
                 <CardHeader className="text-center">
-                  <CardTitle className="text-[#0a4d5c] text-lg font-bold">ING. JOSE MARIO FRONTALINI</CardTitle>
+                  <CardTitle className="text-[#0a4d5c] text-lg font-bold">ING. JOSÉ MARIO FRONTALINI</CardTitle>
                   <CardDescription className="text-[#5dbfb3] font-semibold text-base">Presidente</CardDescription>
                 </CardHeader>
               </Card>
@@ -60,7 +60,7 @@ export default function StaffPage() {
                   </div>
                 </div>
                 <CardHeader className="text-center">
-                  <CardTitle className="text-[#0a4d5c] text-lg font-bold">DR. GUSTAVO RAUL BIANCO</CardTitle>
+                  <CardTitle className="text-[#0a4d5c] text-lg font-bold">DR. GUSTAVO RAÚL BIANCO</CardTitle>
                   <CardDescription className="text-[#5dbfb3] font-semibold text-base">Director Ejecutivo</CardDescription>
                 </CardHeader>
               </Card>
@@ -72,8 +72,8 @@ export default function StaffPage() {
                   </div>
                 </div>
                 <CardHeader className="text-center">
-                  <CardTitle className="text-[#0a4d5c] text-lg font-bold">LIC. CAROLINA FERREIRO</CardTitle>
-                  <CardDescription className="text-[#5dbfb3] font-semibold text-base">Secretaria Administrativa</CardDescription>
+                  <CardTitle className="text-[#0a4d5c] text-lg font-bold">LIC. MAYQUEL MENDOZA</CardTitle>
+                  <CardDescription className="text-[#5dbfb3] font-semibold text-base">Estudio Contable</CardDescription>
                 </CardHeader>
               </Card>
 
@@ -84,8 +84,8 @@ export default function StaffPage() {
                   </div>
                 </div>
                 <CardHeader className="text-center">
-                  <CardTitle className="text-[#0a4d5c] text-lg font-bold">LIC. YOSIBELL SANCHEZ ESPINO</CardTitle>
-                  <CardDescription className="text-[#5dbfb3] font-semibold text-base">Secretaria Legal</CardDescription>
+                  <CardTitle className="text-[#0a4d5c] text-lg font-bold">LIC. CHRISTINE VALENZUELA</CardTitle>
+                  <CardDescription className="text-[#5dbfb3] font-semibold text-base">Directora Desarrollo Institucional</CardDescription>
                 </CardHeader>
               </Card>
             </div>
@@ -145,7 +145,7 @@ export default function StaffPage() {
                   </div>
                 </div>
                 <CardHeader className="text-center pb-4">
-                  <CardTitle className="text-[#0a4d5c] text-base font-bold">DR. CRISTIAN KREUTZER</CardTitle>
+                  <CardTitle className="text-[#0a4d5c] text-base font-bold">DR. CRISTIAN KRUETZER</CardTitle>
                   <CardDescription className="text-[#5dbfb3] font-medium">Cirujano Cardiovascular</CardDescription>
                 </CardHeader>
               </Card>
@@ -157,8 +157,8 @@ export default function StaffPage() {
                   </div>
                 </div>
                 <CardHeader className="text-center pb-4">
-                  <CardTitle className="text-[#0a4d5c] text-base font-bold">DR. JUAN IGNACIO DIAZ</CardTitle>
-                  <CardDescription className="text-[#5dbfb3] font-medium">Cuidados Intensivos</CardDescription>
+                  <CardTitle className="text-[#0a4d5c] text-base font-bold">DR. DIEGO ARUFE</CardTitle>
+                  <CardDescription className="text-[#5dbfb3] font-medium">Hepatólogo / Trasplante Hepático</CardDescription>
                 </CardHeader>
               </Card>
 
@@ -181,8 +181,8 @@ export default function StaffPage() {
                   </div>
                 </div>
                 <CardHeader className="text-center pb-4">
-                  <CardTitle className="text-[#0a4d5c] text-base font-bold">DR. JORGE LUIS DE LA FUENTE</CardTitle>
-                  <CardDescription className="text-[#5dbfb3] font-medium">Nefrólogo – TX Renal</CardDescription>
+                  <CardTitle className="text-[#0a4d5c] text-base font-bold">DR. JOSÉ MARÍA MORA GUTIÉRREZ</CardTitle>
+                  <CardDescription className="text-[#5dbfb3] font-medium">Nefrólogo / Tx Renal</CardDescription>
                 </CardHeader>
               </Card>
 
@@ -205,8 +205,8 @@ export default function StaffPage() {
                   </div>
                 </div>
                 <CardHeader className="text-center pb-4">
-                  <CardTitle className="text-[#0a4d5c] text-base font-bold">DRA. MARIA LAURA DARUICH</CardTitle>
-                  <CardDescription className="text-[#5dbfb3] font-medium">Hepatóloga – Trasplante Hepático</CardDescription>
+                  <CardTitle className="text-[#0a4d5c] text-base font-bold">DRA. IVONE MALLA</CardTitle>
+                  <CardDescription className="text-[#5dbfb3] font-medium">Hepatóloga - Trasplante Hepático</CardDescription>
                 </CardHeader>
               </Card>
 
@@ -229,8 +229,8 @@ export default function StaffPage() {
                   </div>
                 </div>
                 <CardHeader className="text-center pb-4">
-                  <CardTitle className="text-[#0a4d5c] text-base font-bold">DRA. BELEN PUSSETTO</CardTitle>
-                  <CardDescription className="text-[#5dbfb3] font-medium">Nefróloga</CardDescription>
+                  <CardTitle className="text-[#0a4d5c] text-base font-bold">MG. MARISA CAMEJO</CardTitle>
+                  <CardDescription className="text-[#5dbfb3] font-medium">Enfermería Cuidados Intensivos</CardDescription>
                 </CardHeader>
               </Card>
             </div>
@@ -238,56 +238,56 @@ export default function StaffPage() {
         </div>
       </section>
 
-      {/* Coordinación de Pacientes */}
-      <section className="py-16 md:py-24 bg-white">
+      {/* Equipo de Investigadores */}
+      <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h3 className="text-2xl md:text-3xl font-bold text-[#5dbfb3] mb-8 text-center">
-              Coordinación de Pacientes
+              Equipo de Investigadores
             </h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 group">
                 <div className="relative h-56 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
                   <div className="w-24 h-24 bg-gradient-to-br from-[#5dbfb3] to-[#0a4d5c] rounded-full flex items-center justify-center">
-                    <UserCheck className="text-white" size={36} />
+                    <Activity className="text-white" size={36} />
                   </div>
                 </div>
                 <CardHeader className="text-center pb-4">
-                  <CardTitle className="text-[#0a4d5c] text-base font-bold">LIC. CAROLINA FERREIRO</CardTitle>
+                  <CardTitle className="text-[#0a4d5c] text-base font-bold">MD PhD JOSEPMARÍA ARGEMI</CardTitle>
                 </CardHeader>
               </Card>
 
               <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 group">
                 <div className="relative h-56 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
                   <div className="w-24 h-24 bg-gradient-to-br from-[#5dbfb3] to-[#0a4d5c] rounded-full flex items-center justify-center">
-                    <UserCheck className="text-white" size={36} />
+                    <Activity className="text-white" size={36} />
                   </div>
                 </div>
                 <CardHeader className="text-center pb-4">
-                  <CardTitle className="text-[#0a4d5c] text-base font-bold">LIC. VALERIA A. BINAGHI</CardTitle>
+                  <CardTitle className="text-[#0a4d5c] text-base font-bold">MD PhD GUILLERMO D. MAZZOLINI</CardTitle>
                 </CardHeader>
               </Card>
 
               <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 group">
                 <div className="relative h-56 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
                   <div className="w-24 h-24 bg-gradient-to-br from-[#5dbfb3] to-[#0a4d5c] rounded-full flex items-center justify-center">
-                    <UserCheck className="text-white" size={36} />
+                    <Activity className="text-white" size={36} />
                   </div>
                 </div>
                 <CardHeader className="text-center pb-4">
-                  <CardTitle className="text-[#0a4d5c] text-base font-bold">LIC. VALERIA B. FERREIRO</CardTitle>
+                  <CardTitle className="text-[#0a4d5c] text-base font-bold">MD EDILMAR ALVARADO TAPIAS</CardTitle>
                 </CardHeader>
               </Card>
 
               <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 group">
                 <div className="relative h-56 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
                   <div className="w-24 h-24 bg-gradient-to-br from-[#5dbfb3] to-[#0a4d5c] rounded-full flex items-center justify-center">
-                    <UserCheck className="text-white" size={36} />
+                    <Activity className="text-white" size={36} />
                   </div>
                 </div>
                 <CardHeader className="text-center pb-4">
-                  <CardTitle className="text-[#0a4d5c] text-base font-bold">LIC. PILAR HEREDIA</CardTitle>
+                  <CardTitle className="text-[#0a4d5c] text-base font-bold">DR. JUAN MIGUEL BAYO</CardTitle>
                 </CardHeader>
               </Card>
             </div>
