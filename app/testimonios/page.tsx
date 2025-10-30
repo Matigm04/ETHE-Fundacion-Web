@@ -134,7 +134,7 @@ export default function TestimonialsPage() {
       {/* Call to Action */}
       <section className="py-16 md:py-24 bg-gradient-to-r from-[#0a4d5c] to-[#0a4d5c]/90 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">¿Necesitas Ayuda con un Trasplante?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">¿Necesitas ayuda con un trasplante?</h2>
           <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
             Si tú o un familiar necesitan un trasplante o tratamiento de alta complejidad, contáctanos. 
             Nuestro equipo está listo para ayudarte en cada paso del proceso.

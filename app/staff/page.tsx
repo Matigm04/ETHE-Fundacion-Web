@@ -8,7 +8,7 @@ export default function StaffPage() {
       <section className="bg-gradient-to-br from-[#0a4d5c] to-[#5dbfb3] text-white py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Nuestro Staff</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Nuestro staff</h1>
             <div className="max-w-[80%] mx-auto">
               <p className="text-lg md:text-xl text-white/90 leading-relaxed">
                 Conoce al equipo de profesionales altamente calificados que hacen posible nuestra misión de excelencia 
@@ -25,7 +25,7 @@ export default function StaffPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto mb-16">
             <h3 className="text-2xl md:text-3xl font-bold text-[#5dbfb3] mb-8 text-center">
-              Consejo de Administración
+              Consejo de administración
             </h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -98,7 +98,7 @@ export default function StaffPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto mb-16">
             <h3 className="text-2xl md:text-3xl font-bold text-[#5dbfb3] mb-8 text-center">
-              Profesionales Médicos
+              Profesionales médicos
             </h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -243,7 +243,7 @@ export default function StaffPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h3 className="text-2xl md:text-3xl font-bold text-[#5dbfb3] mb-8 text-center">
-              Equipo de Investigadores
+              Equipo de investigadores
             </h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

@@ -7,7 +7,7 @@ export default function AboutUsPage() {
       <section className="bg-gradient-to-br from-[#0a4d5c] to-[#5dbfb3] text-white py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Quiénes Somos</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Quiénes somos</h1>
             <div className="max-w-[80%] mx-auto">
               <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-6">
                 Somos un equipo de profesionales seleccionados por su reconocida trayectoria en cada una de sus 

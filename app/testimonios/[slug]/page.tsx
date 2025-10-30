@@ -124,7 +124,7 @@ export default function TestimonialPage({ params }: TestimonialPageProps) {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-2xl md:text-3xl font-bold text-[#0a4d5c] mb-4">
-              ¿Necesitas Ayuda?
+              ¿Necesitas ayuda?
             </h2>
             <p className="text-gray-700 mb-8 leading-relaxed">
               Si tú o un familiar necesitan un trasplante o tratamiento de alta complejidad, 
@@ -141,7 +141,7 @@ export default function TestimonialPage({ params }: TestimonialPageProps) {
                 href="/testimonios"
                 className="inline-flex items-center justify-center px-8 py-4 border-2 border-[#0a4d5c] text-[#0a4d5c] font-semibold rounded-lg hover:bg-[#0a4d5c] hover:text-white transition-all duration-300"
               >
-                Ver Más Testimonios
+                Ver más testimonios
               </Link>
             </div>
           </div>

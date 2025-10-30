@@ -22,11 +22,11 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-[#5dbfb3]">Enlaces Rápidos</h3>
+            <h3 className="text-lg font-semibold mb-4 text-[#5dbfb3]">Enlaces rápidos</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="/quienes-somos" className="text-sm text-white/80 hover:text-[#5dbfb3] transition-colors">
-                  Quiénes Somos
+                  Quiénes somos
                 </Link>
               </li>
               <li>

@@ -5,43 +5,43 @@ import { FileText, Download, FileCheck, Info } from "lucide-react"
 export default function DocumentsPage() {
   const documentCategories = [
     {
-      title: "Documentos Institucionales",
+      title: "Documentos institucionales",
       description: "Información oficial sobre la fundación",
       documents: [
-        { name: "Estatuto de la Fundación", size: "2.5 MB", type: "PDF" },
-        { name: "Memoria Anual 2024", size: "5.8 MB", type: "PDF" },
-        { name: "Informe de Transparencia", size: "1.2 MB", type: "PDF" },
-        { name: "Código de Ética", size: "850 KB", type: "PDF" },
+        { name: "Estatuto de la fundación", size: "2.5 MB", type: "PDF" },
+        { name: "Memoria anual 2024", size: "5.8 MB", type: "PDF" },
+        { name: "Informe de transparencia", size: "1.2 MB", type: "PDF" },
+        { name: "Código de ética", size: "850 KB", type: "PDF" },
       ],
     },
     {
-      title: "Formularios de Solicitud",
+      title: "Formularios de solicitud",
       description: "Formularios para solicitar nuestros servicios",
       documents: [
-        { name: "Solicitud de Atención Médica", size: "450 KB", type: "PDF" },
-        { name: "Solicitud de Apoyo Social", size: "520 KB", type: "PDF" },
-        { name: "Solicitud de Asesoría Legal", size: "380 KB", type: "PDF" },
-        { name: "Solicitud de Apoyo Psicológico", size: "420 KB", type: "PDF" },
+        { name: "Solicitud de atención médica", size: "450 KB", type: "PDF" },
+        { name: "Solicitud de apoyo social", size: "520 KB", type: "PDF" },
+        { name: "Solicitud de asesoría legal", size: "380 KB", type: "PDF" },
+        { name: "Solicitud de apoyo psicológico", size: "420 KB", type: "PDF" },
       ],
     },
     {
-      title: "Guías y Manuales",
+      title: "Guías y manuales",
       description: "Recursos informativos para la comunidad",
       documents: [
-        { name: "Guía de Servicios Disponibles", size: "3.2 MB", type: "PDF" },
-        { name: "Manual de Derechos del Usuario", size: "1.8 MB", type: "PDF" },
-        { name: "Guía de Trámites Administrativos", size: "2.1 MB", type: "PDF" },
-        { name: "Manual de Prevención en Salud", size: "4.5 MB", type: "PDF" },
+        { name: "Guía de servicios disponibles", size: "3.2 MB", type: "PDF" },
+        { name: "Manual de derechos del usuario", size: "1.8 MB", type: "PDF" },
+        { name: "Guía de trámites administrativos", size: "2.1 MB", type: "PDF" },
+        { name: "Manual de prevención en salud", size: "4.5 MB", type: "PDF" },
       ],
     },
     {
-      title: "Informes y Publicaciones",
+      title: "Informes y publicaciones",
       description: "Estudios e informes de nuestro trabajo",
       documents: [
-        { name: "Informe de Impacto Social 2024", size: "6.2 MB", type: "PDF" },
-        { name: "Estudio de Necesidades Comunitarias", size: "3.8 MB", type: "PDF" },
-        { name: "Boletín Informativo - Edición 12", size: "2.4 MB", type: "PDF" },
-        { name: "Casos de Éxito y Testimonios", size: "5.1 MB", type: "PDF" },
+        { name: "Informe de impacto social 2024", size: "6.2 MB", type: "PDF" },
+        { name: "Estudio de necesidades comunitarias", size: "3.8 MB", type: "PDF" },
+        { name: "Boletín informativo - Edición 12", size: "2.4 MB", type: "PDF" },
+        { name: "Casos de éxito y testimonios", size: "5.1 MB", type: "PDF" },
       ],
     },
   ]
@@ -52,7 +52,7 @@ export default function DocumentsPage() {
       <section className="bg-gradient-to-br from-[#0a4d5c] to-[#5dbfb3] text-white py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">Documentos y Recursos</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">Documentos y recursos</h1>
             <p className="text-lg md:text-xl text-white/90 leading-relaxed">
               Accede a toda la información y formularios necesarios para conocer y utilizar nuestros servicios
             </p>
@@ -67,7 +67,7 @@ export default function DocumentsPage() {
             <div className="flex items-start gap-4">
               <Info className="text-[#5dbfb3] flex-shrink-0 mt-1" size={24} />
               <div>
-                <h3 className="font-semibold text-[#0a4d5c] mb-2">Información Importante</h3>
+                <h3 className="font-semibold text-[#0a4d5c] mb-2">Información importante</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
                   Todos los documentos están disponibles en formato PDF. Si necesitas ayuda para completar algún
                   formulario o tienes dudas sobre los documentos, no dudes en contactarnos. Estamos aquí para ayudarte.
@@ -124,13 +124,13 @@ export default function DocumentsPage() {
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
             <FileCheck className="w-16 h-16 text-[#5dbfb3] mx-auto mb-6" />
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0a4d5c] mb-6">¿Necesitas Ayuda con los Documentos?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0a4d5c] mb-6">¿Necesitas ayuda con los documentos?</h2>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
               Si tienes dificultades para descargar o completar algún documento, nuestro equipo está disponible para
               asistirte. También ofrecemos ayuda presencial en nuestras oficinas.
             </p>
             <Button asChild size="lg" className="bg-[#0a4d5c] hover:bg-[#0a4d5c]/90">
-              <a href="/contacto">Solicitar Asistencia</a>
+              <a href="/contacto">Solicitar asistencia</a>
             </Button>
           </div>
         </div>

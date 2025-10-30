@@ -13,10 +13,10 @@ export function Navigation() {
   const navLinks = [
     { href: "/", label: "Inicio" },
     { 
-      label: "Quiénes Somos",
+      label: "Quiénes somos",
       submenu: [
         { href: "/quienes-somos", label: "Acerca de ETHE" },
-        { href: "/staff", label: "Nuestro Staff" },
+        { href: "/staff", label: "Nuestro staff" },
       ]
     },
     { href: "/especialidades", label: "Especialidades" },

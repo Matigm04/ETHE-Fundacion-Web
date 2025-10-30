@@ -55,7 +55,7 @@ export default function ContactPage() {
             {/* Contact Information */}
             <div className="lg:col-span-1 space-y-6">
               <div>
-                <h2 className="text-2xl md:text-3xl font-bold text-[#0a4d5c] mb-6">Información de Contacto</h2>
+                <h2 className="text-2xl md:text-3xl font-bold text-[#0a4d5c] mb-6">Información de contacto</h2>
                 <p className="text-gray-600 leading-relaxed mb-8">
                   Puedes comunicarte con nosotros a través de cualquiera de estos medios. Estamos disponibles para
                   atenderte.
@@ -232,7 +232,7 @@ export default function ContactPage() {
       <section className="py-16 md:py-24 bg-[#f5f5f5]">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0a4d5c] mb-6 text-center">Nuestra Ubicación</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0a4d5c] mb-6 text-center">Nuestra ubicación</h2>
             <p className="text-lg text-gray-600 text-center mb-8 leading-relaxed">
               Visítanos en nuestras oficinas. Estamos ubicados en el centro de Buenos Aires
             </p>
