@@ -6,190 +6,365 @@ import { Heart, Activity, Brain, ArrowRight, CheckCircle } from "lucide-react"
 export default function HomePage() {
   return (
     <div className="flex flex-col">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-[#0a4d5c] to-[#5dbfb3] text-white py-20 md:py-32">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-balance">
-              Medicina de alta complejidad en el Caribe y Centro América
-            </h1>
-            <p className="text-lg md:text-xl mb-8 text-white/90 leading-relaxed">
-              Fundación ETHE se especializa en trasplantes hepáticos, renales y cardiopatías congénitas, 
-              promoviendo el desarrollo de la medicina de alta complejidad a través de la formación profesional.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-white text-[#0a4d5c] hover:bg-white/90">
-                <Link href="/contacto">
-                  Contáctanos
-                  <ArrowRight className="ml-2" size={20} />
-                </Link>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white/10 bg-transparent"
-              >
-                <Link href="/quienes-somos">Conoce más</Link>
-              </Button>
+      {/* Hero Section - Diseño de círculos superpuestos y bloques intercalados */}
+      <section className="relative bg-gradient-to-br from-[#00334e] via-[#00334e] to-[#003a52] text-white py-20 md:py-32 overflow-hidden">
+        {/* Large circular overlays */}
+        <div className="absolute inset-0">
+          {/* Teal circle - top right */}
+          <div 
+            className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-[#5bbaa5]"
+            style={{ opacity: 0.15 }}
+          />
+          {/* Yellow circle - bottom left */}
+          <div 
+            className="absolute -bottom-32 -left-32 w-[500px] h-[500px] rounded-full bg-[#ffcb05]"
+            style={{ opacity: 0.12 }}
+          />
+          {/* Red circle - center right */}
+          <div 
+            className="absolute top-1/3 right-0 w-[400px] h-[400px] rounded-full bg-[#c74a3a]"
+            style={{ opacity: 0.08 }}
+          />
+          {/* Beige circle - top left */}
+          <div 
+            className="absolute top-0 left-1/4 w-[350px] h-[350px] rounded-full bg-[#cfa46c]"
+            style={{ opacity: 0.1 }}
+          />
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+              {/* Content - offset layout */}
+              <div className="lg:col-span-7 lg:col-start-1">
+                <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#c74a3a] to-[#c74a3a]/80 rounded-full mb-6 shadow-lg">
+                  <div className="w-2.5 h-2.5 bg-white rounded-full animate-pulse" />
+                  <span className="text-sm font-bold uppercase tracking-wider">Medicina de Alta Complejidad</span>
+                </div>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-[1.1]">
+                  Transformando
+                  <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#ffcb05] via-[#ffcb05] to-[#cfa46c] mt-2">
+                    vidas a través
+                  </span>
+                  <span className="block mt-2">de la medicina</span>
+                </h1>
+                <p className="text-xl md:text-2xl mb-10 text-white/90 leading-relaxed max-w-2xl">
+                  Expertos en trasplantes hepáticos, renales y cardiopatías congénitas en el Caribe y Centro América.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 mb-12">
+                  <Button asChild size="lg" className="bg-[#c74a3a] text-white hover:bg-[#b43a2a] shadow-2xl text-base px-8 py-6 h-auto">
+                    <Link href="/contacto">
+                      Solicitar consulta
+                      <ArrowRight className="ml-2" size={22} />
+                    </Link>
+                  </Button>
+                  <Button
+                    asChild
+                    size="lg"
+                    className="bg-transparent text-white hover:bg-white/10 border-2 border-white/50 text-base px-8 py-6 h-auto"
+                  >
+                    <Link href="/especialidades">Ver especialidades</Link>
+                  </Button>
+                </div>
+
+                {/* Horizontal stats bar */}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-5 border-l-4 border-[#ffcb05] hover:bg-white/10 transition-all">
+                    <div className="text-4xl font-bold text-[#ffcb05] mb-1">15+</div>
+                    <p className="text-white/70 text-sm font-medium">Años de experiencia</p>
+                  </div>
+                  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-5 border-l-4 border-[#5bbaa5] hover:bg-white/10 transition-all">
+                    <div className="text-4xl font-bold text-[#5bbaa5] mb-1">3</div>
+                    <p className="text-white/70 text-sm font-medium">Especialidades</p>
+                  </div>
+                  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-5 border-l-4 border-[#c74a3a] hover:bg-white/10 transition-all">
+                    <div className="text-4xl font-bold text-[#c74a3a] mb-1">1000+</div>
+                    <p className="text-white/70 text-sm font-medium">Pacientes tratados</p>
+                  </div>
+                  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-5 border-l-4 border-[#cfa46c] hover:bg-white/10 transition-all">
+                    <div className="text-4xl font-bold text-[#cfa46c] mb-1">100%</div>
+                    <p className="text-white/70 text-sm font-medium">Dedicación</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Specialties Overview */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0a4d5c] mb-4">Nuestras especialidades</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              Medicina de alta complejidad especializada en trasplantes y cardiopatías congénitas
+      {/* Specialties Overview - Diseño de tarjetas escalonadas horizontalmente */}
+      <section className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+        {/* Decorative shapes - waves instead of circles */}
+        <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-r from-[#5bbaa5]/10 via-transparent to-[#ffcb05]/10" 
+          style={{ clipPath: 'polygon(0 0, 100% 0, 100% 50%, 0 100%)' }} />
+        <div className="absolute bottom-0 right-0 w-full h-32 bg-gradient-to-l from-[#c74a3a]/10 via-transparent to-[#cfa46c]/10"
+          style={{ clipPath: 'polygon(0 50%, 100% 100%, 100% 100%, 0 100%)' }} />
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto mb-16 text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#5bbaa5]/10 rounded-full mb-4">
+              <span className="text-[#5bbaa5] font-bold uppercase tracking-wider text-sm">Nuestras Áreas</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#00334e] mb-4">
+              Especialidades médicas
+            </h2>
+            <p className="text-xl text-[#333333]/80 leading-relaxed">
+              Tres pilares de excelencia en medicina de alta complejidad
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="border-[#5dbfb3] hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-              <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-[#5dbfb3] to-[#0a4d5c] rounded-xl flex items-center justify-center mb-4 mx-auto">
-                  <Activity className="text-white" size={32} />
-                </div>
-                <CardTitle className="text-[#0a4d5c] text-xl">Trasplante hepático</CardTitle>
-                <CardDescription className="leading-relaxed">
-                  Expertos en transplantes hepáticos pediátricos con enfoque en la detección temprana 
-                  de afecciones hepáticas para garantizar el éxito del tratamiento.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card className="border-[#5dbfb3] hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-              <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-[#5dbfb3] to-[#0a4d5c] rounded-xl flex items-center justify-center mb-4 mx-auto">
-                  <Brain className="text-white" size={32} />
-                </div>
-                <CardTitle className="text-[#0a4d5c] text-xl">Trasplante renal</CardTitle>
-                <CardDescription className="leading-relaxed">
-                  Transplantes renales pediátricos realizados a tiempo para evitar la diálisis, 
-                  con acompañamiento integral durante todo el proceso.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card className="border-[#5dbfb3] hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-              <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-[#5dbfb3] to-[#0a4d5c] rounded-xl flex items-center justify-center mb-4 mx-auto">
-                  <Heart className="text-white" size={32} />
-                </div>
-                <CardTitle className="text-[#0a4d5c] text-xl">Cardiopatías congénitas</CardTitle>
-                <CardDescription className="leading-relaxed">
-                  Diagnóstico temprano y tratamiento de defectos cardíacos congénitos con 
-                  profesionales reconocidos mundialmente.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-          </div>
-
-          <div className="text-center mt-12">
-            <Button asChild size="lg" className="bg-[#0a4d5c] hover:bg-[#0a4d5c]/90">
-              <Link href="/especialidades">
-                Ver todas las especialidades
-                <ArrowRight className="ml-2" size={20} />
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Mission Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-[#0a4d5c] to-[#5dbfb3] text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">Misión</h2>
-            <p className="text-lg md:text-xl leading-relaxed">
-              Promover el desarrollo de la medicina de alta complejidad en el Caribe y Centro América a través de la 
-              obtención de recursos públicos y privados, los cuales son destinados a la formación y capacitación de 
-              profesionales de todas las especialidades involucradas en este proceso.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us */}
-      <section className="py-16 md:py-24 bg-[#f5f5f5]">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0a4d5c] mb-6">¿Por qué elegirnos?</h2>
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                En Fundación ETHE, nos especializamos en medicina de alta complejidad con un enfoque 
-                integral en el desarrollo profesional y la atención de calidad.
-              </p>
-
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="text-[#5dbfb3] flex-shrink-0 mt-1" size={24} />
-                  <div>
-                    <h3 className="font-semibold text-[#0a4d5c] mb-1">Profesionales especializados</h3>
-                    <p className="text-gray-600">Equipo multidisciplinario reconocido mundialmente en medicina de alta complejidad</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="text-[#5dbfb3] flex-shrink-0 mt-1" size={24} />
-                  <div>
-                    <h3 className="font-semibold text-[#0a4d5c] mb-1">Atención integral</h3>
-                    <p className="text-gray-600">Acompañamiento completo durante todo el proceso de tratamiento</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="text-[#5dbfb3] flex-shrink-0 mt-1" size={24} />
-                  <div>
-                    <h3 className="font-semibold text-[#0a4d5c] mb-1">Formación profesional</h3>
-                    <p className="text-gray-600">Capacitación de profesionales en todas las especialidades involucradas</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="text-[#5dbfb3] flex-shrink-0 mt-1" size={24} />
-                  <div>
-                    <h3 className="font-semibold text-[#0a4d5c] mb-1">Apoyo económico</h3>
-                    <p className="text-gray-600">Asistencia a pacientes con dificultades económicas</p>
+          {/* Staggered horizontal cards */}
+          <div className="space-y-8">
+            {/* Trasplante Hepático - Left aligned */}
+            <div className="flex justify-start">
+              <div className="w-full lg:w-2/3 group">
+                <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border-l-8 border-[#c74a3a]">
+                  <div className="flex flex-col md:flex-row gap-6 items-start md:items-center">
+                    <div className="w-20 h-20 bg-gradient-to-br from-[#c74a3a] to-[#c74a3a]/70 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                      <Activity className="text-white" size={36} />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-3xl font-bold text-[#00334e] mb-3">Trasplante hepático</h3>
+                      <p className="text-[#333333] leading-relaxed mb-4">
+                        Expertos en transplantes hepáticos pediátricos con detección temprana 
+                        y seguimiento integral post-quirúrgico.
+                      </p>
+                      <Link href="/especialidades" className="inline-flex items-center text-[#c74a3a] font-bold hover:gap-3 transition-all">
+                        Conocer más <ArrowRight className="ml-2" size={20} />
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="relative">
-              <img
-                src="/diverse-community-people-helping-each-other.jpg"
-                alt="Profesionales médicos trabajando juntos"
-                className="rounded-lg shadow-xl w-full"
-              />
+            {/* Trasplante Renal - Right aligned */}
+            <div className="flex justify-end">
+              <div className="w-full lg:w-2/3 group">
+                <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border-r-8 border-[#cfa46c]">
+                  <div className="flex flex-col md:flex-row-reverse gap-6 items-start md:items-center">
+                    <div className="w-20 h-20 bg-gradient-to-br from-[#cfa46c] to-[#cfa46c]/70 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                      <Brain className="text-white" size={36} />
+                    </div>
+                    <div className="flex-1 md:text-right">
+                      <h3 className="text-3xl font-bold text-[#00334e] mb-3">Trasplante renal</h3>
+                      <p className="text-[#333333] leading-relaxed mb-4">
+                        Transplantes renales pediátricos realizados a tiempo para evitar diálisis 
+                        con acompañamiento completo.
+                      </p>
+                      <Link href="/especialidades" className="inline-flex items-center text-[#cfa46c] font-bold hover:gap-3 transition-all md:flex-row-reverse">
+                        <ArrowRight className="ml-2 md:mr-2 md:ml-0" size={20} /> Conocer más
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Cardiopatías - Center/Left aligned */}
+            <div className="flex justify-center lg:justify-start">
+              <div className="w-full lg:w-2/3 group">
+                <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border-l-8 border-[#ffcb05]">
+                  <div className="flex flex-col md:flex-row gap-6 items-start md:items-center">
+                    <div className="w-20 h-20 bg-gradient-to-br from-[#ffcb05] to-[#cfa46c] rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                      <Heart className="text-[#00334e]" size={36} />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-3xl font-bold text-[#00334e] mb-3">Cardiopatías congénitas</h3>
+                      <p className="text-[#333333] leading-relaxed mb-4">
+                        Diagnóstico temprano y tratamiento de defectos cardíacos con 
+                        profesionales de renombre mundial.
+                      </p>
+                      <Link href="/especialidades" className="inline-flex items-center text-[#ffcb05] font-bold hover:gap-3 transition-all">
+                        Conocer más <ArrowRight className="ml-2" size={20} />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="py-16 md:py-24 bg-[#0a4d5c] text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">¿Necesitas ayuda especializada?</h2>
-          <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Nuestros especialistas en medicina de alta complejidad están aquí para ayudarte. 
-            Contáctanos para obtener información sobre nuestros servicios especializados.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-[#5dbfb3] text-white hover:bg-[#5dbfb3]/90">
-              <Link href="/contacto">Solicitar información</Link>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white/10 bg-transparent"
-            >
-              <Link href="/especialidades">Ver especialidades</Link>
-            </Button>
+      {/* Mission Section - Bloques coloridos intercalados */}
+      <section className="relative py-16 md:py-24 bg-white overflow-hidden">
+        <div className="container mx-auto px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+              {/* Left side - Content with yellow background */}
+              <div className="bg-[#ffcb05] p-12 md:p-16 flex items-center">
+                <div>
+                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#00334e] text-white rounded-full mb-6">
+                    <span className="text-sm font-bold uppercase tracking-wider">Nuestra Misión</span>
+                  </div>
+                  <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#00334e] leading-tight">
+                    Compromiso con la excelencia médica
+                  </h2>
+                  <p className="text-lg leading-relaxed text-[#00334e]/90 mb-6">
+                    Promover el desarrollo de la medicina de alta complejidad en el Caribe y Centro América 
+                    a través de recursos públicos y privados destinados a la formación y capacitación 
+                    de profesionales especializados.
+                  </p>
+                  <Button asChild size="lg" className="bg-[#00334e] text-white hover:bg-[#00334e]/90">
+                    <Link href="/quienes-somos">
+                      Conocer más sobre nosotros
+                      <ArrowRight className="ml-2" size={20} />
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+
+              {/* Right side - Feature blocks with teal background */}
+              <div className="bg-[#5bbaa5] p-12 md:p-16 flex items-center">
+                <div className="space-y-6 w-full">
+                  <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all hover:translate-x-2">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 bg-[#c74a3a] rounded-xl flex items-center justify-center flex-shrink-0">
+                        <CheckCircle className="text-white" size={24} />
+                      </div>
+                      <div>
+                        <h3 className="font-bold text-[#00334e] text-lg mb-2">Profesionales especializados</h3>
+                        <p className="text-[#333333] text-sm">Equipo multidisciplinario reconocido internacionalmente</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all hover:translate-x-2">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 bg-[#cfa46c] rounded-xl flex items-center justify-center flex-shrink-0">
+                        <CheckCircle className="text-white" size={24} />
+                      </div>
+                      <div>
+                        <h3 className="font-bold text-[#00334e] text-lg mb-2">Atención integral</h3>
+                        <p className="text-[#333333] text-sm">Acompañamiento completo durante el tratamiento</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all hover:translate-x-2">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 bg-[#00334e] rounded-xl flex items-center justify-center flex-shrink-0">
+                        <CheckCircle className="text-white" size={24} />
+                      </div>
+                      <div>
+                        <h3 className="font-bold text-[#00334e] text-lg mb-2">Formación continua</h3>
+                        <p className="text-[#333333] text-sm">Capacitación profesional de excelencia</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us - Grid con colores de fondo alternados */}
+      <section className="py-16 md:py-24 bg-gradient-to-b from-white to-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#c74a3a]/10 rounded-full mb-4">
+              <span className="text-[#c74a3a] font-bold uppercase tracking-wider text-sm">Nuestro Valor</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#00334e] mb-4">¿Por qué elegir ETHE?</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            <div className="bg-[#c74a3a] text-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all hover:scale-105">
+              <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-6">
+                <CheckCircle className="text-white" size={32} />
+              </div>
+              <h3 className="font-bold text-white mb-3 text-2xl">Equipo especializado</h3>
+              <p className="text-white/90 leading-relaxed">
+                Profesionales reconocidos internacionalmente en medicina de alta complejidad
+              </p>
+            </div>
+
+            <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all hover:scale-105 border-4 border-[#5bbaa5]">
+              <div className="w-16 h-16 bg-gradient-to-br from-[#5bbaa5] to-[#00334e] rounded-2xl flex items-center justify-center mb-6">
+                <CheckCircle className="text-white" size={32} />
+              </div>
+              <h3 className="font-bold text-[#00334e] mb-3 text-2xl">Atención 360°</h3>
+              <p className="text-[#333333] leading-relaxed">
+                Acompañamiento integral en cada etapa del tratamiento y recuperación
+              </p>
+            </div>
+
+            <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all hover:scale-105 border-4 border-[#cfa46c]">
+              <div className="w-16 h-16 bg-gradient-to-br from-[#cfa46c] to-[#00334e] rounded-2xl flex items-center justify-center mb-6">
+                <CheckCircle className="text-white" size={32} />
+              </div>
+              <h3 className="font-bold text-[#00334e] mb-3 text-2xl">Formación continua</h3>
+              <p className="text-[#333333] leading-relaxed">
+                Capacitación constante de profesionales en las últimas técnicas médicas
+              </p>
+            </div>
+
+            <div className="bg-[#ffcb05] text-[#00334e] rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all hover:scale-105">
+              <div className="w-16 h-16 bg-[#00334e]/20 rounded-2xl flex items-center justify-center mb-6">
+                <CheckCircle className="text-[#00334e]" size={32} />
+              </div>
+              <h3 className="font-bold text-[#00334e] mb-3 text-2xl">Resultados probados</h3>
+              <p className="text-[#00334e]/90 leading-relaxed">
+                Más de 15 años transformando vidas en el Caribe y Centro América
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action - Bloques de color con contraste fuerte */}
+      <section className="relative overflow-hidden">
+        <div className="grid grid-cols-1 lg:grid-cols-2">
+          {/* Left side - Dark blue with content */}
+          <div className="bg-[#00334e] text-white p-12 md:p-16 lg:p-20 flex items-center">
+            <div className="max-w-xl">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#ffcb05] text-[#00334e] rounded-full mb-6">
+                <div className="w-2 h-2 bg-[#00334e] rounded-full animate-pulse" />
+                <span className="text-sm font-bold uppercase tracking-wider">Empieza ahora</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                ¿Necesitas atención médica especializada?
+              </h2>
+              <p className="text-xl text-white/90 mb-8 leading-relaxed">
+                Nuestro equipo está listo para acompañarte en cada paso del tratamiento
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button asChild size="lg" className="bg-[#c74a3a] text-white hover:bg-[#b43a2a] text-base px-8 py-6 h-auto">
+                  <Link href="/contacto">
+                    Solicitar información
+                    <ArrowRight className="ml-2" size={20} />
+                  </Link>
+                </Button>
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-transparent text-white hover:bg-white/10 border-2 border-white text-base px-8 py-6 h-auto"
+                >
+                  <Link href="/especialidades">Ver especialidades</Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+
+          {/* Right side - Red gradient */}
+          <div className="relative bg-gradient-to-br from-[#c74a3a] via-[#c74a3a] to-[#00334e] p-12 md:p-16 lg:p-20 flex items-center justify-center min-h-[500px]">
+            {/* Decorative shapes */}
+            <div className="absolute top-10 right-10 w-32 h-32 bg-[#ffcb05]/30 rounded-full blur-2xl" />
+            <div className="absolute bottom-10 left-10 w-40 h-40 bg-[#5bbaa5]/20 rounded-full blur-3xl" />
+            
+            <div className="relative z-10 text-center text-white">
+              <div className="mb-8">
+                <div className="text-6xl md:text-7xl font-bold mb-2">15+</div>
+                <p className="text-xl">Años de experiencia</p>
+              </div>
+              <div className="h-px w-32 mx-auto bg-white/30 my-8" />
+              <div>
+                <div className="text-6xl md:text-7xl font-bold mb-2">1000+</div>
+                <p className="text-xl">Vidas transformadas</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
