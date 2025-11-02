@@ -27,12 +27,12 @@ export function Navigation() {
   ]
 
   return (
-    <nav className="bg-[#0a4d5c] text-white sticky top-0 z-50 shadow-lg">
+    <nav className="bg-[#00334e] text-white sticky top-0 z-50 shadow-lg">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-[#5dbfb3] rounded-lg flex items-center justify-center font-bold text-2xl text-[#0a4d5c]">
+            <div className="w-12 h-12 bg-[#5bbaa5] rounded-lg flex items-center justify-center font-bold text-2xl text-[#00334e]">
               FE
             </div>
             <span className="text-xl font-bold hidden sm:block">Fundación ETHE</span>
@@ -45,7 +45,7 @@ export function Navigation() {
                 {link.submenu ? (
                   <>
                     <button
-                      className="flex items-center gap-1 text-sm font-medium hover:text-[#5dbfb3] transition-colors"
+                      className="flex items-center gap-1 text-sm font-medium hover:text-[#5bbaa5] transition-colors"
                       onMouseEnter={() => setIsQuienesSomosOpen(true)}
                       onMouseLeave={() => setIsQuienesSomosOpen(false)}
                     >
@@ -63,7 +63,7 @@ export function Navigation() {
                           <Link
                             key={sublink.href}
                             href={sublink.href}
-                            className="block px-4 py-3 text-sm text-[#0a4d5c] hover:bg-[#5dbfb3]/10 hover:text-[#5dbfb3] transition-colors font-medium"
+                            className="block px-4 py-3 text-sm text-[#00334e] hover:bg-[#5bbaa5]/10 hover:text-[#5bbaa5] transition-colors font-medium"
                           >
                             {sublink.label}
                           </Link>
@@ -74,7 +74,7 @@ export function Navigation() {
                 ) : (
                   <Link
                     href={link.href!}
-                    className="text-sm font-medium hover:text-[#5dbfb3] transition-colors"
+                    className="text-sm font-medium hover:text-[#5bbaa5] transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -86,7 +86,7 @@ export function Navigation() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 hover:bg-[#0a4d5c]/80 rounded-lg transition-colors"
+            className="lg:hidden p-2 hover:bg-[#00334e]/80 rounded-lg transition-colors"
             aria-label="Toggle menu"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -102,7 +102,7 @@ export function Navigation() {
                   <>
                     <button
                       onClick={() => setIsQuienesSomosOpen(!isQuienesSomosOpen)}
-                      className="flex items-center justify-between w-full py-2 text-sm font-medium hover:text-[#5dbfb3] transition-colors"
+                      className="flex items-center justify-between w-full py-2 text-sm font-medium hover:text-[#5bbaa5] transition-colors"
                     >
                       {link.label}
                       <ChevronDown 
@@ -120,7 +120,7 @@ export function Navigation() {
                               setIsOpen(false)
                               setIsQuienesSomosOpen(false)
                             }}
-                            className="block py-2 text-sm font-medium text-[#5dbfb3] hover:text-white transition-colors"
+                            className="block py-2 text-sm font-medium text-[#5bbaa5] hover:text-white transition-colors"
                           >
                             {sublink.label}
                           </Link>
@@ -132,7 +132,7 @@ export function Navigation() {
                   <Link
                     href={link.href!}
                     onClick={() => setIsOpen(false)}
-                    className="block py-2 text-sm font-medium hover:text-[#5dbfb3] transition-colors"
+                    className="block py-2 text-sm font-medium hover:text-[#5bbaa5] transition-colors"
                   >
                     {link.label}
                   </Link>

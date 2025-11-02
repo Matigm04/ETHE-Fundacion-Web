@@ -10,7 +10,7 @@ export default function FAQPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[#0a4d5c] to-[#5dbfb3] text-white py-16 md:py-24">
+      <section className="bg-gradient-to-br from-[#00334e] to-[#5bbaa5] text-white py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <HelpCircle className="w-16 h-16 mx-auto mb-6" />
@@ -27,10 +27,10 @@ export default function FAQPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <p className="text-sm text-[#5dbfb3] font-semibold mb-2 uppercase tracking-wide">
+              <p className="text-sm text-[#5bbaa5] font-semibold mb-2 uppercase tracking-wide">
                 Información gentileza de INCUCAI
               </p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0a4d5c] mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#00334e] mb-4">
                 Preguntas Generales
               </h2>
             </div>
@@ -40,14 +40,14 @@ export default function FAQPage() {
                 <AccordionItem 
                   key={index} 
                   value={`general-${index}`}
-                  className="border-2 border-[#5dbfb3]/30 rounded-lg px-6 data-[state=open]:border-[#0a4d5c] transition-colors"
+                  className="border-2 border-[#5bbaa5]/30 rounded-lg px-6 data-[state=open]:border-[#5bbaa5] transition-colors"
                 >
                   <AccordionTrigger className="text-left hover:no-underline py-6">
-                    <span className="font-semibold text-[#0a4d5c] text-lg pr-4">
+                    <span className="font-semibold text-[#00334e] text-lg pr-4">
                       {faq.question}
                     </span>
                   </AccordionTrigger>
-                  <AccordionContent className="text-gray-700 leading-relaxed pb-6 text-base">
+                  <AccordionContent className="text-[#333333] leading-relaxed pb-6 text-base">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
@@ -58,14 +58,14 @@ export default function FAQPage() {
       </section>
 
       {/* Mitos y Realidades */}
-      <section className="py-16 md:py-24 bg-[#f5f5f5]">
+      <section className="py-16 md:py-24 bg-[#f5f7fa]">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0a4d5c] mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#00334e] mb-4">
                 Mitos y Realidades sobre la Donación de Órganos
               </h2>
-              <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
+              <p className="text-lg text-[#333333] leading-relaxed max-w-3xl mx-auto">
                 Las principales causas de miedos e inseguridades a la hora de considerar la posibilidad de donar los órganos, 
                 son generalmente la resultante de la falta de educación e información acerca de esta temática que nos involucra a todos.
               </p>
@@ -73,17 +73,17 @@ export default function FAQPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {myths.map((item, index) => (
-                <Card key={index} className="border-2 border-[#5dbfb3]/30 hover:border-[#0a4d5c] transition-all duration-300 hover:shadow-lg">
+                <Card key={index} className="border-2 border-[#cfa46c]/40 hover:border-[#cfa46c] transition-all duration-300 hover:shadow-lg bg-white">
                   <CardContent className="p-6">
                     <div className="mb-4">
-                      <h3 className="font-bold text-[#5dbfb3] text-lg mb-2 flex items-start gap-2">
+                      <h3 className="font-bold text-[#cfa46c] text-lg mb-2 flex items-start gap-2">
                         <span className="text-2xl">❓</span>
                         <span>{item.myth}</span>
                       </h3>
                     </div>
                     <div className="pl-8">
-                      <p className="text-gray-700 leading-relaxed">
-                        <span className="font-semibold text-[#0a4d5c]">
+                      <p className="text-[#333333] leading-relaxed">
+                        <span className="font-semibold text-[#00334e]">
                           {item.reality.split('.')[0]}.
                         </span>
                         {item.reality.substring(item.reality.indexOf('.') + 1)}
@@ -102,35 +102,35 @@ export default function FAQPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0a4d5c] mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#00334e] mb-4">
                 Preguntas por Especialidad
               </h2>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-lg text-[#333333] leading-relaxed">
                 Consulta preguntas específicas sobre cada tipo de tratamiento
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {specialtyFAQs.map((specialty, index) => (
-                <Card key={index} className="border-2 border-[#5dbfb3]/30 hover:border-[#0a4d5c] transition-all duration-300 hover:shadow-xl overflow-hidden group">
+                <Card key={index} className="border-2 border-[#5bbaa5]/30 hover:border-[#5bbaa5] transition-all duration-300 hover:shadow-xl overflow-hidden group bg-white">
                   <div className={`h-3 bg-gradient-to-r ${specialty.color}`} />
                   <CardContent className="p-8 text-center">
                     <div className="mb-6">
-                      <div className="w-24 h-24 mx-auto bg-gradient-to-br from-[#5dbfb3]/20 to-[#0a4d5c]/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                        {specialty.icon === "liver" && <Activity className="w-12 h-12 text-[#0a4d5c]" />}
-                        {specialty.icon === "kidney" && <Activity className="w-12 h-12 text-[#0a4d5c]" />}
-                        {specialty.icon === "heart" && <Heart className="w-12 h-12 text-[#0a4d5c]" />}
+                      <div className="w-24 h-24 mx-auto bg-gradient-to-br from-[#5bbaa5]/20 to-[#00334e]/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        {specialty.icon === "liver" && <Activity className="w-12 h-12 text-[#00334e]" />}
+                        {specialty.icon === "kidney" && <Activity className="w-12 h-12 text-[#00334e]" />}
+                        {specialty.icon === "heart" && <Heart className="w-12 h-12 text-[#00334e]" />}
                       </div>
                     </div>
-                    <h3 className="text-xl font-bold text-[#0a4d5c] mb-3">
+                    <h3 className="text-xl font-bold text-[#00334e] mb-3">
                       {specialty.specialty}
                     </h3>
-                    <p className="text-gray-600 mb-6 text-sm">
+                    <p className="text-[#333333] mb-6 text-sm">
                       {specialty.description}
                     </p>
                     <Link
                       href={`/faq/${specialty.slug}`}
-                      className="inline-flex items-center justify-center px-6 py-3 bg-[#d9534f] hover:bg-[#c9443f] text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg w-full"
+                      className="inline-flex items-center justify-center px-6 py-3 bg-[#c74a3a] hover:bg-[#b43a2a] text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg w-full"
                     >
                       LEER +
                     </Link>
@@ -143,7 +143,7 @@ export default function FAQPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-r from-[#0a4d5c] to-[#0a4d5c]/90 text-white">
+      <section className="py-16 md:py-24 bg-[#c74a3a] text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">¿No encontraste tu respuesta?</h2>
           <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
@@ -152,13 +152,13 @@ export default function FAQPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contacto"
-              className="inline-flex items-center justify-center px-8 py-4 bg-[#d9534f] hover:bg-[#c9443f] text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-xl"
+              className="inline-flex items-center justify-center px-8 py-4 bg-white text-[#c74a3a] hover:bg-gray-100 font-semibold rounded-lg transition-all duration-300 hover:shadow-xl"
             >
               Contactar a ETHE
             </Link>
             <Link
               href="/documentos"
-              className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-[#0a4d5c] transition-all duration-300"
+              className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-[#c74a3a] transition-all duration-300"
             >
               Ver Documentos
             </Link>

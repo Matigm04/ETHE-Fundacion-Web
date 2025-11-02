@@ -4,7 +4,25 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: oklch(1 0 0);
+  /* Fundación ETHE - Paleta Corporativa */
+  /* Colores Primarios */
+  --brand-blue-dark: #00334e;      /* Pantone 546 M - Títulos, Marco */
+  --brand-red-cta: #c74a3a;        /* Pantone DS 88-2 U - Botones CTA */
+  --brand-beige: #cfa46c;          /* Pantone DS 30-4 U - Renal */
+  --brand-teal: #5bbaa5;           /* Pantone DS 263-5 C - Acentos positivos */
+  --brand-yellow: #ffcb05;         /* Pantone DS 5-1 U - Cardiopatías */
+  
+  /* Colores Secundarios */
+  --brand-gray-dark: #919195;      /* Pantone Cool Gray 9 M - Soporte */
+  --brand-gray-light: #cacad4;     /* Pantone Cool Gray 4 M - Soporte */
+  --brand-gray-web: #f5f7fa;       /* Gris Web - Fondo base anti-blanco */
+  
+  /* Colores de texto */
+  --text-primary: #333333;         /* Texto cuerpo principal */
+  --text-on-dark: #ffffff;         /* Texto sobre fondos oscuros */
+  
+  /* Variables shadcn/ui adaptadas */
+  --background: oklch(0.98 0.002 240);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
@@ -159,14 +177,36 @@
 
 body {
   font-family: var(--font-sans);
-  background: rgb(var(--color-background));
-  color: rgb(var(--color-foreground));
+  background-color: var(--brand-gray-web);
+  color: var(--text-primary);
+  line-height: 1.6;
 }
 
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
+
+/* Utilidades de color corporativo */
+.bg-brand-blue-dark { background-color: var(--brand-blue-dark); }
+.bg-brand-red-cta { background-color: var(--brand-red-cta); }
+.bg-brand-beige { background-color: var(--brand-beige); }
+.bg-brand-teal { background-color: var(--brand-teal); }
+.bg-brand-yellow { background-color: var(--brand-yellow); }
+.bg-brand-gray-web { background-color: var(--brand-gray-web); }
+.bg-brand-gray-light { background-color: var(--brand-gray-light); }
+
+.text-brand-blue-dark { color: var(--brand-blue-dark); }
+.text-brand-red-cta { color: var(--brand-red-cta); }
+.text-brand-beige { color: var(--brand-beige); }
+.text-brand-teal { color: var(--brand-teal); }
+.text-brand-yellow { color: var(--brand-yellow); }
+
+.border-brand-blue-dark { border-color: var(--brand-blue-dark); }
+.border-brand-red-cta { border-color: var(--brand-red-cta); }
+.border-brand-beige { border-color: var(--brand-beige); }
+.border-brand-teal { border-color: var(--brand-teal); }
+.border-brand-yellow { border-color: var(--brand-yellow); }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {

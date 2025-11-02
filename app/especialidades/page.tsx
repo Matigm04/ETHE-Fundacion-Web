@@ -16,6 +16,10 @@ export default function SpecialtiesPage() {
         "Apoyo económico para pacientes",
         "Seguimiento integral post-transplante"
       ],
+      color: "#c74a3a",
+      bgColor: "bg-[#c74a3a]",
+      borderColor: "border-[#c74a3a]",
+      bulletColor: "text-[#c74a3a]"
     },
     {
       icon: Brain,
@@ -28,6 +32,10 @@ export default function SpecialtiesPage() {
         "Coordinación con centros médicos especializados",
         "Acompañamiento integral familiar"
       ],
+      color: "#cfa46c",
+      bgColor: "bg-[#cfa46c]",
+      borderColor: "border-[#cfa46c]",
+      bulletColor: "text-[#cfa46c]"
     },
     {
       icon: Heart,
@@ -40,13 +48,17 @@ export default function SpecialtiesPage() {
         "Ecografías especializadas",
         "Profesionales reconocidos mundialmente"
       ],
+      color: "#ffcb05",
+      bgColor: "bg-[#ffcb05]",
+      borderColor: "border-[#ffcb05]",
+      bulletColor: "text-[#ffcb05]"
     },
   ]
 
   return (
     <div className="flex flex-col">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[#0a4d5c] to-[#5dbfb3] text-white py-16 md:py-24">
+      {/* Hero Section - Azul Oscuro corporativo */}
+      <section className="bg-gradient-to-br from-[#00334e] to-[#5bbaa5] text-white py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">Nuestras especialidades</h1>
@@ -57,27 +69,27 @@ export default function SpecialtiesPage() {
         </div>
       </section>
 
-      {/* Specialties Grid */}
+      {/* Specialties Grid - Fondo blanco con tarjetas por color */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {specialties.map((specialty, index) => {
               const Icon = specialty.icon
               return (
-                <Card key={index} className="border-[#5dbfb3] hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <Card key={index} className={`border-2 ${specialty.borderColor} hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white`}>
                   <CardHeader>
-                    <div className="w-16 h-16 bg-gradient-to-br from-[#5dbfb3] to-[#0a4d5c] rounded-xl flex items-center justify-center mb-4">
-                      <Icon className="text-white" size={32} />
+                    <div className={`w-16 h-16 ${specialty.bgColor} rounded-xl flex items-center justify-center mb-4 shadow-lg`}>
+                      <Icon className={specialty.color === "#ffcb05" ? "text-[#00334e]" : "text-white"} size={32} />
                     </div>
-                    <CardTitle className="text-xl text-[#0a4d5c] mb-3">{specialty.title}</CardTitle>
-                    <CardDescription className="text-base leading-relaxed">{specialty.description}</CardDescription>
+                    <CardTitle className="text-xl text-[#00334e] mb-3">{specialty.title}</CardTitle>
+                    <CardDescription className="text-base leading-relaxed text-[#333333]">{specialty.description}</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <h4 className="font-semibold text-[#0a4d5c] mb-3 text-sm">Servicios incluidos:</h4>
+                    <h4 className="font-semibold text-[#00334e] mb-3 text-sm">Servicios incluidos:</h4>
                     <ul className="space-y-2">
                       {specialty.services.map((service, idx) => (
-                        <li key={idx} className="flex items-start gap-2 text-sm text-gray-600">
-                          <span className="text-[#5dbfb3] mt-1 text-lg">•</span>
+                        <li key={idx} className="flex items-start gap-2 text-sm text-[#333333]">
+                          <span className={`${specialty.bulletColor} mt-1 text-lg`}>•</span>
                           <span>{service}</span>
                         </li>
                       ))}
@@ -90,12 +102,12 @@ export default function SpecialtiesPage() {
         </div>
       </section>
 
-      {/* Mission Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-[#0a4d5c] to-[#5dbfb3] text-white">
+      {/* Mission Section - Fondo beige suave */}
+      <section className="py-16 md:py-24" style={{ backgroundColor: 'rgba(207, 164, 108, 0.08)' }}>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">Misión</h2>
-            <p className="text-lg md:text-xl leading-relaxed">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-[#00334e]">Misión</h2>
+            <p className="text-lg md:text-xl leading-relaxed text-[#333333]">
               Promover el desarrollo de la medicina de alta complejidad en el Caribe y Centro América a través de la 
               obtención de recursos públicos y privados, los cuales son destinados a la formación y capacitación de 
               profesionales de todas las especialidades involucradas en este proceso.
@@ -104,19 +116,19 @@ export default function SpecialtiesPage() {
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="py-16 md:py-24 bg-[#f5f5f5]">
+      {/* Call to Action - Fondo gris web */}
+      <section className="py-16 md:py-24 bg-[#f5f7fa]">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#0a4d5c] mb-6">¿Necesitas alguno de estos servicios?</h2>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#00334e] mb-6">¿Necesitas alguno de estos servicios?</h2>
+          <p className="text-lg text-[#333333] mb-8 max-w-2xl mx-auto leading-relaxed">
             Nuestro equipo de profesionales especializados en medicina de alta complejidad está listo para atenderte. 
             Contáctanos para más información sobre nuestros servicios especializados.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-[#0a4d5c] hover:bg-[#0a4d5c]/90">
+            <Button asChild size="lg" className="bg-[#c74a3a] hover:bg-[#b43a2a] shadow-lg">
               <Link href="/contacto">Solicitar información</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-[#0a4d5c] text-[#0a4d5c] bg-transparent">
+            <Button asChild size="lg" variant="outline" className="border-2 border-[#00334e] text-[#00334e] hover:bg-[#00334e] hover:text-white">
               <Link href="/quienes-somos">Conoce más</Link>
             </Button>
           </div>

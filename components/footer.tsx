@@ -3,13 +3,13 @@ import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "luc
 
 export function Footer() {
   return (
-    <footer className="bg-[#0a4d5c] text-white mt-20">
+    <footer className="bg-[#00334e] text-white mt-20">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* About */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-[#5dbfb3] rounded-lg flex items-center justify-center font-bold text-lg text-[#0a4d5c]">
+              <div className="w-10 h-10 bg-[#5bbaa5] rounded-lg flex items-center justify-center font-bold text-lg text-[#00334e]">
                 FE
               </div>
               <span className="text-lg font-bold">Fundación ETHE</span>
@@ -22,25 +22,25 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-[#5dbfb3]">Enlaces rápidos</h3>
+            <h3 className="text-lg font-semibold mb-4 text-[#5bbaa5]">Enlaces rápidos</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/quienes-somos" className="text-sm text-white/80 hover:text-[#5dbfb3] transition-colors">
+                <Link href="/quienes-somos" className="text-sm text-white/80 hover:text-[#5bbaa5] transition-colors">
                   Quiénes somos
                 </Link>
               </li>
               <li>
-                <Link href="/especialidades" className="text-sm text-white/80 hover:text-[#5dbfb3] transition-colors">
+                <Link href="/especialidades" className="text-sm text-white/80 hover:text-[#5bbaa5] transition-colors">
                   Especialidades
                 </Link>
               </li>
               <li>
-                <Link href="/documentos" className="text-sm text-white/80 hover:text-[#5dbfb3] transition-colors">
+                <Link href="/documentos" className="text-sm text-white/80 hover:text-[#5bbaa5] transition-colors">
                   Documentos
                 </Link>
               </li>
               <li>
-                <Link href="/testimonios" className="text-sm text-white/80 hover:text-[#5dbfb3] transition-colors">
+                <Link href="/testimonios" className="text-sm text-white/80 hover:text-[#5bbaa5] transition-colors">
                   Testimonios
                 </Link>
               </li>
@@ -49,7 +49,7 @@ export function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-[#5dbfb3]">Contacto</h3>
+            <h3 className="text-lg font-semibold mb-4 text-[#5bbaa5]">Contacto</h3>
             <ul className="space-y-3">
               <li className="flex items-start gap-2 text-sm text-white/80">
                 <Phone size={16} className="mt-1 flex-shrink-0" />
@@ -68,32 +68,32 @@ export function Footer() {
 
           {/* Social Media */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-[#5dbfb3]">Síguenos</h3>
+            <h3 className="text-lg font-semibold mb-4 text-[#5bbaa5]">Síguenos</h3>
             <div className="flex gap-4">
               <a
                 href="#"
-                className="w-10 h-10 bg-white/10 hover:bg-[#5dbfb3] rounded-lg flex items-center justify-center transition-colors"
+                className="w-10 h-10 bg-white/10 hover:bg-[#5bbaa5] rounded-lg flex items-center justify-center transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook size={20} />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 bg-white/10 hover:bg-[#5dbfb3] rounded-lg flex items-center justify-center transition-colors"
+                className="w-10 h-10 bg-white/10 hover:bg-[#5bbaa5] rounded-lg flex items-center justify-center transition-colors"
                 aria-label="Twitter"
               >
                 <Twitter size={20} />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 bg-white/10 hover:bg-[#5dbfb3] rounded-lg flex items-center justify-center transition-colors"
+                className="w-10 h-10 bg-white/10 hover:bg-[#5bbaa5] rounded-lg flex items-center justify-center transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram size={20} />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 bg-white/10 hover:bg-[#5dbfb3] rounded-lg flex items-center justify-center transition-colors"
+                className="w-10 h-10 bg-white/10 hover:bg-[#5bbaa5] rounded-lg flex items-center justify-center transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={20} />
