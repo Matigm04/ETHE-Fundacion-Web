@@ -191,52 +191,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* Call to Action - Split con imagen */}
-      <section className="relative overflow-hidden">
-        <div className="grid grid-cols-1 lg:grid-cols-2">
-          {/* Imagen lado */}
-          <div className="relative h-96 lg:h-auto">
-            <img
-              src="/diverse-community-people-helping-each-other.jpg"
-              alt="Equipo ETHE"
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#00334e]/80 to-transparent" />
-          </div>
-
-          {/* CTA lado - Rojo vibrante */}
-          <div className="bg-[#c74a3a] text-white py-16 px-8 lg:px-16 flex items-center">
-            <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full mb-4">
-                <div className="w-2 h-2 bg-[#ffcb05] rounded-full animate-pulse" />
-                <span className="text-sm font-semibold">Estamos aquí para ayudarte</span>
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">¿Necesitas atención médica especializada?</h2>
-              <p className="text-lg text-white/95 mb-8 leading-relaxed max-w-xl">
-                Contáctanos hoy y descubre cómo nuestros especialistas pueden ayudarte. 
-                Brindamos atención personalizada y acompañamiento en cada paso del proceso.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild size="lg" className="bg-white text-[#c74a3a] hover:bg-gray-100 shadow-xl">
-                  <Link href="/contacto">
-                    Solicitar consulta
-                    <ArrowRight className="ml-2" size={20} />
-                  </Link>
-                </Button>
-                <Button
-                  asChild
-                  size="lg"
-                  variant="outline"
-                  className="border-2 border-white text-white hover:bg-white/10 bg-transparent"
-                >
-                  <Link href="/especialidades">Ver especialidades</Link>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }
