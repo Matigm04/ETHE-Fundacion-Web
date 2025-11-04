@@ -37,10 +37,6 @@ export default function HomePage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
               {/* Content - offset layout */}
               <div className="lg:col-span-7 lg:col-start-1">
-                <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#c74a3a] to-[#c74a3a]/80 rounded-full mb-6 shadow-lg">
-                  <div className="w-2.5 h-2.5 bg-white rounded-full animate-pulse" />
-                  <span className="text-sm font-bold uppercase tracking-wider">Medicina de Alta Complejidad</span>
-                </div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-[1.1]">
                   Transformando
                   <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#ffcb05] via-[#ffcb05] to-[#cfa46c] mt-2">
@@ -51,7 +47,7 @@ export default function HomePage() {
                 <p className="text-xl md:text-2xl mb-10 text-white/90 leading-relaxed max-w-2xl">
                   Expertos en trasplantes hepáticos, renales y cardiopatías congénitas en el Caribe y Centro América.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 mb-12">
+                <div className="flex flex-col sm:flex-row gap-4">
                   <Button asChild size="lg" className="bg-[#c74a3a] text-white hover:bg-[#b43a2a] shadow-2xl text-base px-8 py-6 h-auto">
                     <Link href="/contacto">
                       Solicitar consulta
@@ -65,26 +61,6 @@ export default function HomePage() {
                   >
                     <Link href="/especialidades">Ver especialidades</Link>
                   </Button>
-                </div>
-
-                {/* Horizontal stats bar */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-5 border-l-4 border-[#ffcb05] hover:bg-white/10 transition-all">
-                    <div className="text-4xl font-bold text-[#ffcb05] mb-1">15+</div>
-                    <p className="text-white/70 text-sm font-medium">Años de experiencia</p>
-                  </div>
-                  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-5 border-l-4 border-[#5bbaa5] hover:bg-white/10 transition-all">
-                    <div className="text-4xl font-bold text-[#5bbaa5] mb-1">3</div>
-                    <p className="text-white/70 text-sm font-medium">Especialidades</p>
-                  </div>
-                  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-5 border-l-4 border-[#c74a3a] hover:bg-white/10 transition-all">
-                    <div className="text-4xl font-bold text-[#c74a3a] mb-1">1000+</div>
-                    <p className="text-white/70 text-sm font-medium">Pacientes tratados</p>
-                  </div>
-                  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-5 border-l-4 border-[#cfa46c] hover:bg-white/10 transition-all">
-                    <div className="text-4xl font-bold text-[#cfa46c] mb-1">100%</div>
-                    <p className="text-white/70 text-sm font-medium">Dedicación</p>
-                  </div>
                 </div>
               </div>
             </div>
@@ -309,61 +285,6 @@ export default function HomePage() {
               <p className="text-[#00334e]/90 leading-relaxed">
                 Más de 15 años transformando vidas en el Caribe y Centro América
               </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Call to Action - Bloques de color con contraste fuerte */}
-      <section className="relative overflow-hidden">
-        <div className="grid grid-cols-1 lg:grid-cols-2">
-          {/* Left side - Dark blue with content */}
-          <div className="bg-[#00334e] text-white p-12 md:p-16 lg:p-20 flex items-center">
-            <div className="max-w-xl">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#ffcb05] text-[#00334e] rounded-full mb-6">
-                <div className="w-2 h-2 bg-[#00334e] rounded-full animate-pulse" />
-                <span className="text-sm font-bold uppercase tracking-wider">Empieza ahora</span>
-              </div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                ¿Necesitas atención médica especializada?
-              </h2>
-              <p className="text-xl text-white/90 mb-8 leading-relaxed">
-                Nuestro equipo está listo para acompañarte en cada paso del tratamiento
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild size="lg" className="bg-[#c74a3a] text-white hover:bg-[#b43a2a] text-base px-8 py-6 h-auto">
-                  <Link href="/contacto">
-                    Solicitar información
-                    <ArrowRight className="ml-2" size={20} />
-                  </Link>
-                </Button>
-                <Button
-                  asChild
-                  size="lg"
-                  className="bg-transparent text-white hover:bg-white/10 border-2 border-white text-base px-8 py-6 h-auto"
-                >
-                  <Link href="/especialidades">Ver especialidades</Link>
-                </Button>
-              </div>
-            </div>
-          </div>
-
-          {/* Right side - Red gradient */}
-          <div className="relative bg-gradient-to-br from-[#c74a3a] via-[#c74a3a] to-[#00334e] p-12 md:p-16 lg:p-20 flex items-center justify-center min-h-[500px]">
-            {/* Decorative shapes */}
-            <div className="absolute top-10 right-10 w-32 h-32 bg-[#ffcb05]/30 rounded-full blur-2xl" />
-            <div className="absolute bottom-10 left-10 w-40 h-40 bg-[#5bbaa5]/20 rounded-full blur-3xl" />
-            
-            <div className="relative z-10 text-center text-white">
-              <div className="mb-8">
-                <div className="text-6xl md:text-7xl font-bold mb-2">15+</div>
-                <p className="text-xl">Años de experiencia</p>
-              </div>
-              <div className="h-px w-32 mx-auto bg-white/30 my-8" />
-              <div>
-                <div className="text-6xl md:text-7xl font-bold mb-2">1000+</div>
-                <p className="text-xl">Vidas transformadas</p>
-              </div>
             </div>
           </div>
         </div>
