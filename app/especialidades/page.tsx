@@ -9,11 +9,11 @@ export default function SpecialtiesPage() {
       icon: Activity,
       title: "Trasplante hepático",
       description:
-        "Haciendo foco en mejorar la calidad de vida de nuestros pacientes, desde Fundación ETHE buscamos generar conciencia en la detección temprana de las afecciones hepáticas para garantizar el éxito del transplante. Con una larga trayectoria en transplates hepáticos pediátricos, ETHE se posiciona como experta en estas intervenciones colaborando a su vez con aquellos pacientes que tengan dificultades económicas.",
+        "El trasplante hepático es un tratamiento médico indicado cuando otras alternativas para recuperar la salud del paciente se han agotado. Consiste en el reemplazo de un hígado enfermo, sin posibilidad de recuperación, por otro sano proveniente de un donante cadavérico o de un donante vivo relacionado. El procedimiento puede durar hasta 12 horas y está indicado principalmente en casos de insuficiencia hepática aguda o crónica, cirrosis hepática, tumores hepáticos y defectos genéticos del metabolismo. Fundación ETHE cuenta con una larga trayectoria en transplantes hepáticos pediátricos, posicionándose como experta en estas intervenciones y colaborando con aquellos pacientes que tengan dificultades económicas.",
       services: [
-        "Detección temprana de afecciones hepáticas",
-        "Transplantes hepáticos pediátricos", 
-        "Apoyo económico para pacientes",
+        "Evaluación pre-trasplante y lista de espera",
+        "Trasplante de donante cadavérico o donante vivo",
+        "Cirugía de trasplante hepático completo o reducido",
         "Seguimiento integral post-transplante"
       ],
     },
@@ -21,23 +21,23 @@ export default function SpecialtiesPage() {
       icon: Brain,
       title: "Trasplante renal",
       description:
-        "Un trasplante renal realizado a tiempo, evita tener que recurrir a la diálisis del niño. La diálisis es un tratamiento de por vida que afecta no sólo al niño paciente, sino a todo el entorno familiar y a su dinámica de vida. Para realizar estos transplantes, Fundación ETHE trabaja junto a esferas gubernamentales, especialistas, centros médicos y un equipo dedicado a las necesidades especiales de cada paciente. Acompañamos cada caso de transplante renal pediátrico de manera integral durante todo el proceso acompañando al niño para que pueda llevar una vida plena.",
+        "El trasplante renal es el procedimiento mediante el cual a una persona con insuficiencia renal crónica se le implanta un riñón sano de otra persona. Un trasplante renal realizado a tiempo evita tener que recurrir a la diálisis, un tratamiento de por vida que afecta al paciente y a todo su entorno familiar. El riñón donado puede provenir de un donante cadavérico o de un donante vivo relacionado (padres, hijos, hermanos). El riñón trasplantado se coloca en la región anterior del abdomen y puede comenzar a funcionar inmediatamente o demorar algunos días. Fundación ETHE trabaja junto a esferas gubernamentales, especialistas y centros médicos con un equipo dedicado a las necesidades especiales de cada paciente, acompañando cada caso de manera integral durante todo el proceso para que el niño pueda llevar una vida plena.",
       services: [
-        "Transplantes renales pediátricos",
-        "Prevención de diálisis en niños", 
-        "Coordinación con centros médicos especializados",
-        "Acompañamiento integral familiar"
+        "Evaluación pre-trasplante y estudios de compatibilidad",
+        "Trasplante de donante cadavérico o donante vivo relacionado",
+        "Cirugía de implantación renal",
+        "Seguimiento post-trasplante y manejo de inmunosupresores"
       ],
     },
     {
       icon: Heart,
       title: "Cardiopatías congénitas",
       description:
-        "La mayoría de los defectos cardíacos congénitos se pueden tratar con un diagnóstico temprano. Detectar estas afecciones durante la primer semana de vida, determina que el niño pueda tener una vida normal y sana. Pasada la primer semana, se hace dificultoso realizar la intervención por lo cual es importante detectar anomalías mediante ecografías durante el embarazo y luego del nacimiento del bebé. ETHE reúne a profesionales reconocidos mundialmente por su trabajo en cardiopatías congénitas y cirugías.",
+        "Las cardiopatías congénitas son defectos cardíacos presentes desde el nacimiento que en su mayoría requieren intervención quirúrgica para su curación. La detección temprana durante la primera semana de vida es fundamental, ya que determina que el niño pueda tener una vida normal y sana. Pasada la primera semana, la intervención se hace más dificultosa, por lo cual es crucial detectar anomalías mediante ecografías durante el embarazo y tras el nacimiento del bebé. La prevención cardiovascular debe iniciarse precozmente en la infancia, tanto en niños con patologías específicas de alto riesgo como en aquellos expuestos a factores preexistentes. Fundación ETHE reúne a profesionales reconocidos mundialmente por su trabajo en cardiopatías congénitas y cirugías, junto a Centros Médicos altamente calificados y un equipo de asistencia personalizada que otorga asistencia médica de calidad, contención emocional a pacientes y familiares, facilitando el acceso al tratamiento.",
       services: [
-        "Diagnóstico temprano de cardiopatías",
-        "Cirugías cardíacas pediátricas", 
-        "Ecografías especializadas",
+        "Diagnóstico temprano mediante ecografías especializadas",
+        "Cirugías cardíacas pediátricas de alta complejidad",
+        "Prevención cardiovascular en la infancia",
         "Profesionales reconocidos mundialmente"
       ],
     },

@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Target, Users, Heart, Globe, GraduationCap, Microscope, HeartHandshake, Eye, Award, Plane, HandHeart, Building2 } from "lucide-react"
+import { Target, Users, Heart, Globe, GraduationCap, Microscope, HeartHandshake, HandHeart } from "lucide-react"
 
 export default function AboutUsPage() {
   return (
@@ -27,40 +27,22 @@ export default function AboutUsPage() {
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-[#0a4d5c] mb-12 text-center">Acerca de ETHE</h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Misión */}
-              <Card className="border-2 border-[#5dbfb3] hover:shadow-xl transition-all duration-300">
-                <CardHeader>
-                  <div className="w-16 h-16 bg-gradient-to-br from-[#5dbfb3] to-[#0a4d5c] rounded-xl flex items-center justify-center mb-4 mx-auto">
-                    <Target className="text-white" size={32} />
-                  </div>
-                  <CardTitle className="text-2xl text-[#0a4d5c] text-center">Misión</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 leading-relaxed text-center">
-                    Promover el desarrollo de la medicina de alta complejidad en el Caribe y Centro América a través de la 
-                    obtención de recursos públicos y privados, los cuales son destinados a la formación y capacitación de 
-                    profesionales de todas las especialidades involucradas en este proceso.
-                  </p>
-                </CardContent>
-              </Card>
-
-              {/* Visión */}
-              <Card className="border-2 border-[#5dbfb3] hover:shadow-xl transition-all duration-300">
-                <CardHeader>
-                  <div className="w-16 h-16 bg-gradient-to-br from-[#5dbfb3] to-[#0a4d5c] rounded-xl flex items-center justify-center mb-4 mx-auto">
-                    <Eye className="text-white" size={32} />
-                  </div>
-                  <CardTitle className="text-2xl text-[#0a4d5c] text-center">Visión</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 leading-relaxed text-center">
-                    Ser la fundación líder que garantiza el acceso a tratamientos de alta complejidad y la formación médica 
-                    de excelencia en la región, creando un futuro más saludable para todos.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
+            {/* Misión */}
+            <Card className="border-2 border-[#5dbfb3] hover:shadow-xl transition-all duration-300">
+              <CardHeader>
+                <div className="w-16 h-16 bg-gradient-to-br from-[#5dbfb3] to-[#0a4d5c] rounded-xl flex items-center justify-center mb-4 mx-auto">
+                  <Target className="text-white" size={32} />
+                </div>
+                <CardTitle className="text-2xl text-[#0a4d5c] text-center">Misión</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600 leading-relaxed text-center">
+                  Promover el desarrollo de la medicina de alta complejidad en el Caribe y Centro América a través de la 
+                  obtención de recursos públicos y privados, los cuales son destinados a la formación y capacitación de 
+                  profesionales de todas las especialidades involucradas en este proceso.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -86,8 +68,7 @@ export default function AboutUsPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-600 text-sm leading-relaxed">
-                    Componer una red de médicos especialistas y voluntarios asociados a la detección temprana de pacientes 
-                    que necesiten acceder rápidamente a cirugías o tratamientos médicos de alta complejidad.
+                    Componer una red de médicos especialistas y voluntarios asociados a la detección temprana de pacientes que necesiten acceder rápidamente a cirugías o tratamientos médicos de alta complejidad por médicos expertos en cada especialidad y de esta manera cumplir con dos metas, mejorar la calidad de vida del paciente y la formación de los médicos participantes a través de los ateneos correspondientes.
                   </p>
                 </CardContent>
               </Card>
@@ -101,8 +82,7 @@ export default function AboutUsPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-600 text-sm leading-relaxed">
-                    Articular con otras Instituciones para brindar diversos beneficios al paciente promoviendo el 
-                    intercambio, colaboración y alianzas con entidades públicas y privadas.
+                    Articular con otras Instituciones para brindar diversos beneficios al paciente promoviendo a su vez el intercambio, colaboración y alianzas con entidades, organismos públicos y privados, que posean los mismos principios éticos.
                   </p>
                 </CardContent>
               </Card>
@@ -130,8 +110,7 @@ export default function AboutUsPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-600 text-sm leading-relaxed">
-                    Fomentar e incentivar la investigación médica innovadora y la excelencia en la educación en el 
-                    ejercicio de la medicina.
+                    Fomentar e incentivar la investigación médica innovadora y la excelencia en la educación en el ejercicio de la medicina.
                   </p>
                 </CardContent>
               </Card>
@@ -145,8 +124,21 @@ export default function AboutUsPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-600 text-sm leading-relaxed">
-                    Contribuir al desarrollo de cursos por expertos para la formación de profesionales en medicina de 
-                    alta complejidad y programas de trasplantes.
+                    Contribuir al desarrollo y dictados de cursos por expertos, para la formación de profesionales en el área de la salud, programas de trasplantes, medicina de alta complejidad, entre otros, los cuales podrán realizarse en su país de origen o en el exterior.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 border-[#5dbfb3]/30 bg-white hover:shadow-2xl hover:border-[#0a4d5c] transition-all duration-300 hover:-translate-y-1">
+                <CardHeader>
+                  <div className="w-14 h-14 bg-gradient-to-br from-[#5dbfb3] to-[#0a4d5c] rounded-lg flex items-center justify-center mb-4">
+                    <HandHeart className="text-white" size={28} />
+                  </div>
+                  <CardTitle className="text-[#0a4d5c] text-lg">Donación de Órganos</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    Promover la Donación de Órganos poniendo especial atención a la educación, divulgación y concientización de la población general.
                   </p>
                 </CardContent>
               </Card>
@@ -160,8 +152,7 @@ export default function AboutUsPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-600 text-sm leading-relaxed">
-                    Coordinar asistencia médica, estudios, medicamentos y hospedaje, brindando contención emocional a 
-                    pacientes y familiares durante trasplantes.
+                    Coordinar y facilitar la asistencia médica, estudios de laboratorio de análisis clínicos, obtención de medicamentos, estudios complementarios, cobertura de viáticos y/u hospedaje a cada paciente, colaborando a su vez en la contención emocional a pacientes y familiares que aguarden o se recuperen de un trasplante de órganos.
                   </p>
                 </CardContent>
               </Card>
@@ -175,72 +166,51 @@ export default function AboutUsPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-[#0a4d5c] mb-6 text-center">Elegir ETHE</h2>
-            <p className="text-xl text-[#5dbfb3] mb-12 text-center font-semibold">
+            <p className="text-xl text-[#5dbfb3] mb-8 text-center font-semibold">
               Las razones por las cuales confiar en la Fundación
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              
-              <Card className="border-2 border-[#5dbfb3]/30 hover:shadow-2xl hover:border-[#0a4d5c] transition-all duration-300 hover:-translate-y-1">
-                <CardHeader className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-[#5dbfb3] to-[#0a4d5c] rounded-xl flex items-center justify-center mb-4 mx-auto">
-                    <Award className="text-white" size={32} />
-                  </div>
-                  <CardTitle className="text-[#0a4d5c] text-lg">Experiencia Médica de Renombre</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 text-sm leading-relaxed text-center">
-                    Nuestro equipo está formado por expertos médicos de renombre en trasplantes hepáticos, renales y 
-                    cardiopatías congénitas pediátricas.
-                  </p>
-                </CardContent>
-              </Card>
+            <div className="mb-12 space-y-6 text-gray-600 leading-relaxed">
+              <p>
+                Desde Fundación ETHE, nos proponemos mejorar la calidad de vida de nuestros pacientes a través de cirugías de alta complejidad médica, siendo nuestra especialidad los trasplantes hepáticos, renales y las cardiopatías congénitas pediátricas.
+              </p>
+              <p>
+                EL equipo de ETHE está formado por expertos médicos de renombre y un equipo de asistencia personalizada a los pacientes que ofrecen el mejor servicio, desde asistir a los pacientes con los planes de viaje hasta asegurares una experiencia placentera durante su estadía en Argentina. Con el foco en la inclusión social, buscamos facilitar a personas de cualquier parte del mundo la posibilidad de realizar el trasplante que necesitan, colaborando con aquellos que presenten dificultades económicas y buscando alternativas de financiación.
+              </p>
+              <p>
+                Además, en los casos que se requiera, gestionamos la asistencia médica, estudios de laboratorio, estudios de análisis clínicos, obtención de medicamentos, estudios médicos complementarios, cobertura de viáticos y/u hospedaje para pacientes del país y del extranjero. Sabemos lo dificultoso que es ese momento y los acompañamos con una asistencia integral.
+              </p>
+              <p>
+                Fundación ETHE trabaja junto a esferas gubernamentales (embajadas, ministerios de salud, etcétera), profesionales de la salud, centros médicos de alta calidad y un equipo dedicado a las necesidades especiales del paciente y sus familiares al llegar a Argentina. Es importante resaltar la excelente relación de confianza que se desarrolló a lo largo de los años entre las Instituciones Médicas, nuestro Equipo Profesional y los Ministerios Públicos de los distintos países. ETHE es una Fundación que busca promover el desarrollo de la medicina de alta complejidad a través de la educación y capacitación de los profesionales en todas las especialidades involucradas en el proceso.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-              <Card className="border-2 border-[#5dbfb3]/30 hover:shadow-2xl hover:border-[#0a4d5c] transition-all duration-300 hover:-translate-y-1">
-                <CardHeader className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-[#5dbfb3] to-[#0a4d5c] rounded-xl flex items-center justify-center mb-4 mx-auto">
-                    <Plane className="text-white" size={32} />
-                  </div>
-                  <CardTitle className="text-[#0a4d5c] text-lg">Asistencia Personalizada 360°</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 text-sm leading-relaxed text-center">
-                    Ofrecemos un servicio único de asistencia personalizada, desde asistir con los planes de viaje hasta 
-                    asegurar una experiencia placentera durante su estadía en Argentina.
-                  </p>
-                </CardContent>
-              </Card>
+      {/* Video Section */}
+      <section className="py-16 md:py-24 bg-[#f5f5f5]">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0a4d5c] mb-4">
+                Conoce más sobre nuestro trabajo
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                Descubre cómo Fundación ETHE transforma vidas a través de la medicina de alta complejidad
+              </p>
+            </div>
 
-              <Card className="border-2 border-[#5dbfb3]/30 hover:shadow-2xl hover:border-[#0a4d5c] transition-all duration-300 hover:-translate-y-1">
-                <CardHeader className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-[#5dbfb3] to-[#0a4d5c] rounded-xl flex items-center justify-center mb-4 mx-auto">
-                    <HandHeart className="text-white" size={32} />
-                  </div>
-                  <CardTitle className="text-[#0a4d5c] text-lg">Foco en Inclusión Social</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 text-sm leading-relaxed text-center">
-                    Buscamos facilitar el acceso a trasplantes a personas de cualquier parte del mundo, colaborando con 
-                    aquellos que presenten dificultades económicas.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-2 border-[#5dbfb3]/30 hover:shadow-2xl hover:border-[#0a4d5c] transition-all duration-300 hover:-translate-y-1">
-                <CardHeader className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-[#5dbfb3] to-[#0a4d5c] rounded-xl flex items-center justify-center mb-4 mx-auto">
-                    <Building2 className="text-white" size={32} />
-                  </div>
-                  <CardTitle className="text-[#0a4d5c] text-lg">Confianza Institucional</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 text-sm leading-relaxed text-center">
-                    Trabajamos junto a esferas gubernamentales, profesionales de la salud y centros médicos, construyendo 
-                    una sólida red de confianza internacional.
-                  </p>
-                </CardContent>
-              </Card>
-
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-[#5dbfb3]/20 bg-gray-100">
+              <div className="relative pb-[56.25%]"> {/* 16:9 Aspect Ratio */}
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full"
+                  src="https://www.youtube.com/embed/uc7F2Zp7S-A?start=47"
+                  title="Fundación ETHE - Trasplante Hepático, Renal, Cardiopatías, Medicina Fetal"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
+              </div>
             </div>
           </div>
         </div>
