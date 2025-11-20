@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { useState } from "react"
 import { Menu, X, ChevronDown } from "lucide-react"
 import { usePathname } from "next/navigation"
@@ -27,15 +28,21 @@ export function Navigation() {
   ]
 
   return (
-    <nav className="bg-[#0a4d5c] text-white sticky top-0 z-50 shadow-lg">
+    <nav className="bg-[#f9f4ec] text-[#0a4d5c] sticky top-0 z-50 shadow-md">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-[#5dbfb3] rounded-lg flex items-center justify-center font-bold text-2xl text-[#0a4d5c]">
-              FE
+          <Link href="/" className="flex items-center">
+            <div className="relative h-16 w-auto">
+              <Image
+                src="/Fundacion_ETHE_Logo_sinFondo.png"
+                alt="Fundación ETHE"
+                width={200}
+                height={64}
+                className="object-contain h-full w-auto"
+                priority
+              />
             </div>
-            <span className="text-xl font-bold hidden sm:block">Fundación ETHE</span>
           </Link>
 
           {/* Desktop Navigation */}

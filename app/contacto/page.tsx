@@ -37,9 +37,16 @@ export default function ContactPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[#0a4d5c] to-[#5dbfb3] text-white py-16 md:py-24">
-        <div className="container mx-auto px-4">
+      <section className="bg-[#5bbaa5] text-white py-16 md:py-24 relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-10 right-20 w-32 h-32 bg-[#ffcb05] opacity-15 rounded-full" />
+        <div className="absolute bottom-10 left-10 w-24 h-24 bg-white opacity-10 rounded-full" />
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full mb-6">
+              <span className="text-sm font-semibold uppercase tracking-wider">Comunícate</span>
+            </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">Contáctanos</h1>
             <p className="text-lg md:text-xl text-white/90 leading-relaxed">
               Estamos aquí para ayudarte. Comunícate con nosotros y te responderemos a la brevedad
@@ -49,27 +56,28 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Info and Form */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24 bg-[#f5f7fa]">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Contact Information */}
             <div className="lg:col-span-1 space-y-6">
               <div>
-                <h2 className="text-2xl md:text-3xl font-bold text-[#0a4d5c] mb-6">Información de contacto</h2>
+                <p className="text-[#5bbaa5] font-semibold mb-2 uppercase tracking-wider text-sm">Llámanos o Escríbenos</p>
+                <h2 className="text-2xl md:text-3xl font-bold text-[#00334e] mb-6">Información de contacto</h2>
                 <p className="text-gray-600 leading-relaxed mb-8">
                   Puedes comunicarte con nosotros a través de cualquiera de estos medios. Estamos disponibles para
                   atenderte.
                 </p>
               </div>
 
-              <Card className="border-[#5dbfb3]">
+              <Card className="border-[#5bbaa5]/30 bg-white">
                 <CardHeader>
                   <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 bg-[#5dbfb3] rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 bg-[#5bbaa5] rounded-lg flex items-center justify-center flex-shrink-0">
                       <Phone className="text-white" size={20} />
                     </div>
                     <div>
-                      <CardTitle className="text-lg text-[#0a4d5c] mb-1">Teléfono</CardTitle>
+                      <CardTitle className="text-lg text-[#00334e] mb-1">Teléfono</CardTitle>
                       <CardDescription>+54 11 1234-5678</CardDescription>
                       <CardDescription>+54 11 8765-4321</CardDescription>
                     </div>
@@ -77,14 +85,14 @@ export default function ContactPage() {
                 </CardHeader>
               </Card>
 
-              <Card className="border-[#5dbfb3]">
+              <Card className="border-[#5bbaa5]/30 bg-white">
                 <CardHeader>
                   <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 bg-[#5dbfb3] rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 bg-[#5bbaa5] rounded-lg flex items-center justify-center flex-shrink-0">
                       <Mail className="text-white" size={20} />
                     </div>
                     <div>
-                      <CardTitle className="text-lg text-[#0a4d5c] mb-1">Email</CardTitle>
+                      <CardTitle className="text-lg text-[#00334e] mb-1">Email</CardTitle>
                       <CardDescription>info@fundacionethe.org</CardDescription>
                       <CardDescription>contacto@fundacionethe.org</CardDescription>
                     </div>
@@ -92,14 +100,14 @@ export default function ContactPage() {
                 </CardHeader>
               </Card>
 
-              <Card className="border-[#5dbfb3]">
+              <Card className="border-[#5bbaa5]/30 bg-white">
                 <CardHeader>
                   <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 bg-[#5dbfb3] rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 bg-[#5bbaa5] rounded-lg flex items-center justify-center flex-shrink-0">
                       <MapPin className="text-white" size={20} />
                     </div>
                     <div>
-                      <CardTitle className="text-lg text-[#0a4d5c] mb-1">Dirección</CardTitle>
+                      <CardTitle className="text-lg text-[#00334e] mb-1">Dirección</CardTitle>
                       <CardDescription>Av. Corrientes 1234</CardDescription>
                       <CardDescription>Buenos Aires, Argentina</CardDescription>
                       <CardDescription>C1043AAZ</CardDescription>
@@ -108,14 +116,14 @@ export default function ContactPage() {
                 </CardHeader>
               </Card>
 
-              <Card className="border-[#5dbfb3]">
+              <Card className="border-[#5bbaa5]/30 bg-white">
                 <CardHeader>
                   <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 bg-[#5dbfb3] rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 bg-[#5bbaa5] rounded-lg flex items-center justify-center flex-shrink-0">
                       <Clock className="text-white" size={20} />
                     </div>
                     <div>
-                      <CardTitle className="text-lg text-[#0a4d5c] mb-1">Horario</CardTitle>
+                      <CardTitle className="text-lg text-[#00334e] mb-1">Horario</CardTitle>
                       <CardDescription>Lunes a Viernes</CardDescription>
                       <CardDescription>8:00 - 18:00 hs</CardDescription>
                     </div>
@@ -126,9 +134,9 @@ export default function ContactPage() {
 
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <Card className="border-[#5dbfb3]">
+              <Card className="border-[#5bbaa5]/30 bg-white">
                 <CardHeader>
-                  <CardTitle className="text-2xl text-[#0a4d5c]">Envíanos un Mensaje</CardTitle>
+                  <CardTitle className="text-2xl text-[#00334e]">Envíanos un Mensaje</CardTitle>
                   <CardDescription>
                     Completa el formulario y nos pondremos en contacto contigo lo antes posible
                   </CardDescription>
@@ -137,7 +145,7 @@ export default function ContactPage() {
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <Label htmlFor="name" className="text-[#0a4d5c]">
+                        <Label htmlFor="name" className="text-[#00334e]">
                           Nombre Completo *
                         </Label>
                         <Input
@@ -152,7 +160,7 @@ export default function ContactPage() {
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="email" className="text-[#0a4d5c]">
+                        <Label htmlFor="email" className="text-[#00334e]">
                           Email *
                         </Label>
                         <Input
@@ -163,14 +171,14 @@ export default function ContactPage() {
                           onChange={handleChange}
                           required
                           placeholder="tu@email.com"
-                          className="border-[#5dbfb3] focus:ring-[#5dbfb3]"
+                          className="border-[#5bbaa5]/30 focus:ring-[#5bbaa5]"
                         />
                       </div>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <Label htmlFor="phone" className="text-[#0a4d5c]">
+                        <Label htmlFor="phone" className="text-[#00334e]">
                           Teléfono
                         </Label>
                         <Input
@@ -180,12 +188,12 @@ export default function ContactPage() {
                           value={formData.phone}
                           onChange={handleChange}
                           placeholder="+54 11 1234-5678"
-                          className="border-[#5dbfb3] focus:ring-[#5dbfb3]"
+                          className="border-[#5bbaa5]/30 focus:ring-[#5bbaa5]"
                         />
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="subject" className="text-[#0a4d5c]">
+                        <Label htmlFor="subject" className="text-[#00334e]">
                           Asunto *
                         </Label>
                         <Input
@@ -195,13 +203,13 @@ export default function ContactPage() {
                           onChange={handleChange}
                           required
                           placeholder="Motivo de tu consulta"
-                          className="border-[#5dbfb3] focus:ring-[#5dbfb3]"
+                          className="border-[#5bbaa5]/30 focus:ring-[#5bbaa5]"
                         />
                       </div>
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="message" className="text-[#0a4d5c]">
+                      <Label htmlFor="message" className="text-[#00334e]">
                         Mensaje *
                       </Label>
                       <Textarea
@@ -212,11 +220,11 @@ export default function ContactPage() {
                         required
                         placeholder="Cuéntanos cómo podemos ayudarte..."
                         rows={6}
-                        className="border-[#5dbfb3] focus:ring-[#5dbfb3] resize-none"
+                        className="border-[#5bbaa5]/30 focus:ring-[#5bbaa5] resize-none"
                       />
                     </div>
 
-                    <Button type="submit" size="lg" className="w-full bg-[#0a4d5c] hover:bg-[#0a4d5c]/90">
+                    <Button type="submit" size="lg" className="w-full bg-[#c74a3a] hover:bg-[#b73d2d]">
                       Enviar Mensaje
                       <Send className="ml-2" size={20} />
                     </Button>
@@ -229,17 +237,18 @@ export default function ContactPage() {
       </section>
 
       {/* Map Section */}
-      <section className="py-16 md:py-24 bg-[#f5f5f5]">
+      <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0a4d5c] mb-6 text-center">Nuestra ubicación</h2>
+            <p className="text-[#5bbaa5] font-semibold mb-2 uppercase tracking-wider text-sm text-center">Visítanos</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#00334e] mb-6 text-center">Nuestra ubicación</h2>
             <p className="text-lg text-gray-600 text-center mb-8 leading-relaxed">
               Visítanos en nuestras oficinas. Estamos ubicados en el centro de Buenos Aires
             </p>
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-[#5dbfb3]">
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden border-2 border-[#5bbaa5]/30">
               <div className="aspect-video bg-gray-200 flex items-center justify-center">
                 <div className="text-center p-8">
-                  <MapPin className="w-16 h-16 text-[#5dbfb3] mx-auto mb-4" />
+                  <MapPin className="w-16 h-16 text-[#5bbaa5] mx-auto mb-4" />
                   <p className="text-gray-600 font-semibold">Av. Corrientes 1234, Buenos Aires</p>
                   <p className="text-sm text-gray-500 mt-2">Mapa interactivo disponible próximamente</p>
                 </div>

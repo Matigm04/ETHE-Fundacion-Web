@@ -5,9 +5,16 @@ export default function StaffPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[#0a4d5c] to-[#5dbfb3] text-white py-16 md:py-24">
-        <div className="container mx-auto px-4">
+      <section className="bg-[#5bbaa5] text-white py-16 md:py-24 relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-10 right-20 w-32 h-32 bg-[#ffcb05] opacity-15 rounded-full" />
+        <div className="absolute bottom-10 left-10 w-24 h-24 bg-white opacity-10 rounded-full" />
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full mb-6">
+              <span className="text-sm font-semibold uppercase tracking-wider">Nuestros Profesionales</span>
+            </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Nuestro staff</h1>
             <div className="max-w-[80%] mx-auto">
               <p className="text-lg md:text-xl text-white/90 leading-relaxed">
@@ -21,10 +28,11 @@ export default function StaffPage() {
       </section>
 
       {/* Consejo de Administración */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24 bg-[#f5f7fa]">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto mb-16">
-            <h3 className="text-2xl md:text-3xl font-bold text-[#5dbfb3] mb-8 text-center">
+            <p className="text-[#5bbaa5] font-semibold mb-2 uppercase tracking-wider text-sm text-center">Liderazgo</p>
+            <h3 className="text-2xl md:text-3xl font-bold text-[#00334e] mb-8 text-center">
               Consejo de administración
             </h3>
             
@@ -94,10 +102,11 @@ export default function StaffPage() {
       </section>
 
       {/* Profesionales Médicos */}
-      <section className="py-16 md:py-24 bg-[#f5f5f5]">
+      <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto mb-16">
-            <h3 className="text-2xl md:text-3xl font-bold text-[#5dbfb3] mb-8 text-center">
+          <div className="max-w-6xl mx-auto">
+            <p className="text-[#5bbaa5] font-semibold mb-2 uppercase tracking-wider text-sm text-center">Especialistas</p>
+            <h3 className="text-2xl md:text-3xl font-bold text-[#00334e] mb-8 text-center">
               Profesionales médicos
             </h3>
             
@@ -239,10 +248,13 @@ export default function StaffPage() {
       </section>
 
       {/* Equipo de Investigadores */}
-      <section className="py-16 md:py-24 bg-gray-50">
+      <section className="py-16 md:py-24 bg-[#00334e]">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h3 className="text-2xl md:text-3xl font-bold text-[#5dbfb3] mb-8 text-center">
+            <div className="inline-block px-4 py-2 bg-white/10 rounded-full mb-6 mx-auto block w-fit">
+              <span className="text-sm font-semibold uppercase tracking-wider text-white">Investigación</span>
+            </div>
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-8 text-center">
               Equipo de investigadores
             </h3>
             

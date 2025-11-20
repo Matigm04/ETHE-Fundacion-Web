@@ -29,9 +29,16 @@ export default function TestimonialsPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[#0a4d5c] to-[#5dbfb3] text-white py-16 md:py-24">
-        <div className="container mx-auto px-4">
+      <section className="bg-[#5bbaa5] text-white py-16 md:py-24 relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-10 right-20 w-32 h-32 bg-[#ffcb05] opacity-15 rounded-full" />
+        <div className="absolute bottom-10 left-10 w-24 h-24 bg-white opacity-10 rounded-full" />
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full mb-6">
+              <span className="text-sm font-semibold uppercase tracking-wider">Historias Reales</span>
+            </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">Testimonios</h1>
             <p className="text-lg md:text-xl text-white/90 leading-relaxed">
               Historias reales de pacientes que recuperaron su salud gracias a nuestros programas de trasplantes y medicina de alta complejidad
@@ -41,10 +48,11 @@ export default function TestimonialsPage() {
       </section>
 
       {/* Filter by Specialty */}
-      <section className="py-8 bg-white border-b">
+      <section className="py-8 bg-[#f5f7fa] border-b">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl font-bold text-[#0a4d5c] mb-6 text-center">Especialidades</h2>
+            <p className="text-[#5bbaa5] font-semibold mb-2 uppercase tracking-wider text-sm text-center">Filtra por</p>
+            <h2 className="text-2xl font-bold text-[#00334e] mb-6 text-center">Especialidades</h2>
             <div className="flex flex-wrap justify-center gap-4">
               {specialties.map((specialty, index) => (
                 <button
@@ -52,8 +60,8 @@ export default function TestimonialsPage() {
                   onClick={() => setSelectedSpecialty(specialty.slug)}
                   className={`px-6 py-3 border-2 font-medium rounded-lg transition-all duration-300 ${
                     selectedSpecialty === specialty.slug
-                      ? "bg-[#0a4d5c] text-white border-[#0a4d5c]"
-                      : "border-[#0a4d5c] text-[#0a4d5c] hover:bg-[#0a4d5c] hover:text-white"
+                      ? "bg-[#00334e] text-white border-[#00334e]"
+                      : "border-[#00334e] text-[#00334e] hover:bg-[#00334e] hover:text-white"
                   }`}
                 >
                   {specialty.name}
@@ -65,7 +73,7 @@ export default function TestimonialsPage() {
       </section>
 
       {/* Testimonials Grid */}
-      <section className="py-16 md:py-24 bg-[#f5f5f5]">
+      <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
             {filteredTestimonials.length > 0 ? (
@@ -132,8 +140,11 @@ export default function TestimonialsPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 md:py-24 bg-gradient-to-r from-[#0a4d5c] to-[#0a4d5c]/90 text-white">
+      <section className="py-16 md:py-24 bg-[#00334e] text-white">
         <div className="container mx-auto px-4 text-center">
+          <div className="inline-block px-4 py-2 bg-white/10 rounded-full mb-6">
+            <span className="text-sm font-semibold uppercase tracking-wider">¿Necesitas Asistencia?</span>
+          </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-6">¿Necesitas ayuda con un trasplante?</h2>
           <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
             Si tú o un familiar necesitan un trasplante o tratamiento de alta complejidad, contáctanos. 
@@ -142,7 +153,7 @@ export default function TestimonialsPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contacto"
-              className="inline-flex items-center justify-center px-8 py-4 bg-[#d9534f] hover:bg-[#c9443f] text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-xl"
+              className="inline-flex items-center justify-center px-8 py-4 bg-[#c74a3a] hover:bg-[#b73d2d] text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-xl"
             >
               Solicitar Asistencia
             </a>

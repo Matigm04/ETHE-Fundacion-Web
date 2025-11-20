@@ -46,7 +46,7 @@ export default function HomePage() {
       </section>
 
       {/* Specialties Overview - Tarjetas con colores sólidos */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24 bg-[#f5f7fa]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <p className="text-[#5bbaa5] font-semibold mb-2 uppercase tracking-wider text-sm">Nuestras Áreas</p>
@@ -125,7 +125,7 @@ export default function HomePage() {
       </section>
 
       {/* Why Choose Us - Tarjetas numeradas con bordes de color */}
-      <section className="py-16 md:py-24 bg-[#f5f7fa]">
+      <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <p className="text-[#5bbaa5] font-semibold mb-2 uppercase tracking-wider text-sm">Nuestro Valor</p>
@@ -162,7 +162,7 @@ export default function HomePage() {
       </section>
 
       {/* Values Grid - 4 columnas con gradientes */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24 bg-[#cfa46c]/10">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
             <div className="bg-gradient-to-br from-[#c74a3a] to-[#00334e] rounded-2xl p-8 text-white">

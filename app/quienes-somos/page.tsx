@@ -4,9 +4,16 @@ import { Target, Users, Heart, Globe, GraduationCap, Microscope, HeartHandshake,
 export default function AboutUsPage() {
   return (
     <div className="flex flex-col">
-      <section className="bg-gradient-to-br from-[#0a4d5c] to-[#5dbfb3] text-white py-16 md:py-24">
-        <div className="container mx-auto px-4">
+      <section className="bg-[#5bbaa5] text-white py-16 md:py-24 relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-10 right-20 w-32 h-32 bg-[#ffcb05] opacity-15 rounded-full" />
+        <div className="absolute bottom-10 left-10 w-24 h-24 bg-white opacity-10 rounded-full" />
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full mb-6">
+              <span className="text-sm font-semibold uppercase tracking-wider">Nuestra Historia</span>
+            </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Quiénes somos</h1>
             <div className="max-w-[80%] mx-auto">
               <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-6">
@@ -22,10 +29,11 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24 bg-[#f5f7fa]">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0a4d5c] mb-12 text-center">Acerca de ETHE</h2>
+            <p className="text-[#5bbaa5] font-semibold mb-2 uppercase tracking-wider text-sm text-center">Nuestra Fundación</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#00334e] mb-12 text-center">Acerca de ETHE</h2>
             
             {/* Misión */}
             <Card className="border-2 border-[#5dbfb3] hover:shadow-xl transition-all duration-300">
@@ -47,111 +55,114 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-[#f5f5f5]">
+      <section className="py-16 md:py-24 bg-[#00334e]">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h3 className="text-2xl md:text-3xl font-bold text-[#0a4d5c] mb-6 text-center">
+            <div className="inline-block px-4 py-2 bg-white/10 rounded-full mb-6 mx-auto block w-fit">
+              <span className="text-sm font-semibold uppercase tracking-wider text-white">Nuestros Objetivos</span>
+            </div>
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 text-center">
               Objetivos de la Fundación
             </h3>
-            <p className="text-gray-600 text-center mb-12 text-lg max-w-3xl mx-auto">
+            <p className="text-white/90 text-center mb-12 text-lg max-w-3xl mx-auto">
               Para dar cumplimiento a su Misión, la Fundación desarrolla y promueve los siguientes objetivos:
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               
-              <Card className="border-2 border-[#5dbfb3]/30 bg-white hover:shadow-2xl hover:border-[#0a4d5c] transition-all duration-300 hover:-translate-y-1">
+              <Card className="border-2 border-white/20 bg-white/10 backdrop-blur-sm hover:bg-white/20 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
                 <CardHeader>
-                  <div className="w-14 h-14 bg-gradient-to-br from-[#5dbfb3] to-[#0a4d5c] rounded-lg flex items-center justify-center mb-4">
+                  <div className="w-14 h-14 bg-[#5bbaa5] rounded-lg flex items-center justify-center mb-4">
                     <Users className="text-white" size={28} />
                   </div>
-                  <CardTitle className="text-[#0a4d5c] text-lg">Red de Especialistas</CardTitle>
+                  <CardTitle className="text-white text-lg">Red de Especialistas</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600 text-sm leading-relaxed">
+                  <p className="text-white/90 text-sm leading-relaxed">
                     Componer una red de médicos especialistas y voluntarios asociados a la detección temprana de pacientes que necesiten acceder rápidamente a cirugías o tratamientos médicos de alta complejidad por médicos expertos en cada especialidad y de esta manera cumplir con dos metas, mejorar la calidad de vida del paciente y la formación de los médicos participantes a través de los ateneos correspondientes.
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="border-2 border-[#5dbfb3]/30 bg-white hover:shadow-2xl hover:border-[#0a4d5c] transition-all duration-300 hover:-translate-y-1">
+              <Card className="border-2 border-white/20 bg-white/10 backdrop-blur-sm hover:bg-white/20 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
                 <CardHeader>
-                  <div className="w-14 h-14 bg-gradient-to-br from-[#5dbfb3] to-[#0a4d5c] rounded-lg flex items-center justify-center mb-4">
+                  <div className="w-14 h-14 bg-[#5bbaa5] rounded-lg flex items-center justify-center mb-4">
                     <HeartHandshake className="text-white" size={28} />
                   </div>
-                  <CardTitle className="text-[#0a4d5c] text-lg">Colaboración Institucional</CardTitle>
+                  <CardTitle className="text-white text-lg">Colaboración Institucional</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600 text-sm leading-relaxed">
+                  <p className="text-white/90 text-sm leading-relaxed">
                     Articular con otras Instituciones para brindar diversos beneficios al paciente promoviendo a su vez el intercambio, colaboración y alianzas con entidades, organismos públicos y privados, que posean los mismos principios éticos.
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="border-2 border-[#5dbfb3]/30 bg-white hover:shadow-2xl hover:border-[#0a4d5c] transition-all duration-300 hover:-translate-y-1">
+              <Card className="border-2 border-white/20 bg-white/10 backdrop-blur-sm hover:bg-white/20 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
                 <CardHeader>
-                  <div className="w-14 h-14 bg-gradient-to-br from-[#5dbfb3] to-[#0a4d5c] rounded-lg flex items-center justify-center mb-4">
+                  <div className="w-14 h-14 bg-[#5bbaa5] rounded-lg flex items-center justify-center mb-4">
                     <Globe className="text-white" size={28} />
                   </div>
-                  <CardTitle className="text-[#0a4d5c] text-lg">Difusión Global</CardTitle>
+                  <CardTitle className="text-white text-lg">Difusión Global</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600 text-sm leading-relaxed">
+                  <p className="text-white/90 text-sm leading-relaxed">
                     Promover y difundir los avances multidisciplinarios de la alta complejidad médica en todo el mundo.
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="border-2 border-[#5dbfb3]/30 bg-white hover:shadow-2xl hover:border-[#0a4d5c] transition-all duration-300 hover:-translate-y-1">
+              <Card className="border-2 border-white/20 bg-white/10 backdrop-blur-sm hover:bg-white/20 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
                 <CardHeader>
-                  <div className="w-14 h-14 bg-gradient-to-br from-[#5dbfb3] to-[#0a4d5c] rounded-lg flex items-center justify-center mb-4">
+                  <div className="w-14 h-14 bg-[#5bbaa5] rounded-lg flex items-center justify-center mb-4">
                     <Microscope className="text-white" size={28} />
                   </div>
-                  <CardTitle className="text-[#0a4d5c] text-lg">Investigación e Innovación</CardTitle>
+                  <CardTitle className="text-white text-lg">Investigación e Innovación</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600 text-sm leading-relaxed">
+                  <p className="text-white/90 text-sm leading-relaxed">
                     Fomentar e incentivar la investigación médica innovadora y la excelencia en la educación en el ejercicio de la medicina.
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="border-2 border-[#5dbfb3]/30 bg-white hover:shadow-2xl hover:border-[#0a4d5c] transition-all duration-300 hover:-translate-y-1">
+              <Card className="border-2 border-white/20 bg-white/10 backdrop-blur-sm hover:bg-white/20 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
                 <CardHeader>
-                  <div className="w-14 h-14 bg-gradient-to-br from-[#5dbfb3] to-[#0a4d5c] rounded-lg flex items-center justify-center mb-4">
+                  <div className="w-14 h-14 bg-[#5bbaa5] rounded-lg flex items-center justify-center mb-4">
                     <GraduationCap className="text-white" size={28} />
                   </div>
-                  <CardTitle className="text-[#0a4d5c] text-lg">Formación Profesional</CardTitle>
+                  <CardTitle className="text-white text-lg">Formación Profesional</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600 text-sm leading-relaxed">
+                  <p className="text-white/90 text-sm leading-relaxed">
                     Contribuir al desarrollo y dictados de cursos por expertos, para la formación de profesionales en el área de la salud, programas de trasplantes, medicina de alta complejidad, entre otros, los cuales podrán realizarse en su país de origen o en el exterior.
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="border-2 border-[#5dbfb3]/30 bg-white hover:shadow-2xl hover:border-[#0a4d5c] transition-all duration-300 hover:-translate-y-1">
+              <Card className="border-2 border-white/20 bg-white/10 backdrop-blur-sm hover:bg-white/20 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
                 <CardHeader>
-                  <div className="w-14 h-14 bg-gradient-to-br from-[#5dbfb3] to-[#0a4d5c] rounded-lg flex items-center justify-center mb-4">
+                  <div className="w-14 h-14 bg-[#5bbaa5] rounded-lg flex items-center justify-center mb-4">
                     <HandHeart className="text-white" size={28} />
                   </div>
-                  <CardTitle className="text-[#0a4d5c] text-lg">Donación de Órganos</CardTitle>
+                  <CardTitle className="text-white text-lg">Donación de Órganos</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600 text-sm leading-relaxed">
+                  <p className="text-white/90 text-sm leading-relaxed">
                     Promover la Donación de Órganos poniendo especial atención a la educación, divulgación y concientización de la población general.
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="border-2 border-[#5dbfb3]/30 bg-white hover:shadow-2xl hover:border-[#0a4d5c] transition-all duration-300 hover:-translate-y-1">
+              <Card className="border-2 border-white/20 bg-white/10 backdrop-blur-sm hover:bg-white/20 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
                 <CardHeader>
-                  <div className="w-14 h-14 bg-gradient-to-br from-[#5dbfb3] to-[#0a4d5c] rounded-lg flex items-center justify-center mb-4">
+                  <div className="w-14 h-14 bg-[#5bbaa5] rounded-lg flex items-center justify-center mb-4">
                     <Heart className="text-white" size={28} />
                   </div>
-                  <CardTitle className="text-[#0a4d5c] text-lg">Asistencia Integral</CardTitle>
+                  <CardTitle className="text-white text-lg">Asistencia Integral</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600 text-sm leading-relaxed">
+                  <p className="text-white/90 text-sm leading-relaxed">
                     Coordinar y facilitar la asistencia médica, estudios de laboratorio de análisis clínicos, obtención de medicamentos, estudios complementarios, cobertura de viáticos y/u hospedaje a cada paciente, colaborando a su vez en la contención emocional a pacientes y familiares que aguarden o se recuperen de un trasplante de órganos.
                   </p>
                 </CardContent>
@@ -162,10 +173,11 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24 bg-[#cfa46c]/10">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0a4d5c] mb-6 text-center">Elegir ETHE</h2>
+            <p className="text-[#5bbaa5] font-semibold mb-2 uppercase tracking-wider text-sm text-center">Confía en Nosotros</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#00334e] mb-6 text-center">Elegir ETHE</h2>
             <p className="text-xl text-[#5dbfb3] mb-8 text-center font-semibold">
               Las razones por las cuales confiar en la Fundación
             </p>
@@ -189,11 +201,12 @@ export default function AboutUsPage() {
       </section>
 
       {/* Video Section */}
-      <section className="py-16 md:py-24 bg-[#f5f5f5]">
+      <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0a4d5c] mb-4">
+              <p className="text-[#5bbaa5] font-semibold mb-2 uppercase tracking-wider text-sm">Nuestro Trabajo</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#00334e] mb-4">
                 Conoce más sobre nuestro trabajo
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
