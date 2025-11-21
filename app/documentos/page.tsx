@@ -1,47 +1,39 @@
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { FileText, Download, FileCheck, Info } from "lucide-react"
+import { FileText, Download, FileCheck, Info, Activity, Heart } from "lucide-react"
 
 export default function DocumentsPage() {
   const documentCategories = [
     {
-      title: "Documentos institucionales",
-      description: "Información oficial sobre la fundación",
+      title: "Trasplante Hepático",
+      description: "Información sobre el hígado, indicaciones y procedimientos quirúrgicos",
+      icon: "liver",
+      color: "from-[#5bbaa5] to-[#00334e]",
       documents: [
-        { name: "Estatuto de la fundación", size: "2.5 MB", type: "PDF" },
-        { name: "Memoria anual 2024", size: "5.8 MB", type: "PDF" },
-        { name: "Informe de transparencia", size: "1.2 MB", type: "PDF" },
-        { name: "Código de ética", size: "850 KB", type: "PDF" },
+        { name: "Sobre el hígado y su funcionamiento", type: "PDF" },
+        { name: "Indicaciones y evaluación para trasplante", type: "PDF" },
+        { name: "El trasplante: sobre el procedimiento quirúrgico", type: "PDF" },
       ],
     },
     {
-      title: "Formularios de solicitud",
-      description: "Formularios para solicitar nuestros servicios",
+      title: "Trasplante Renal",
+      description: "Información sobre el proceso quirúrgico, donantes y opciones de tratamiento",
+      icon: "kidney",
+      color: "from-[#5bbaa5] to-[#00334e]",
       documents: [
-        { name: "Solicitud de atención médica", size: "450 KB", type: "PDF" },
-        { name: "Solicitud de apoyo social", size: "520 KB", type: "PDF" },
-        { name: "Solicitud de asesoría legal", size: "380 KB", type: "PDF" },
-        { name: "Solicitud de apoyo psicológico", size: "420 KB", type: "PDF" },
+        { name: "Sobre el proceso quirúrgico", type: "PDF" },
+        { name: "Donantes renales", type: "PDF" },
+        { name: "Opciones de tratamiento", type: "PDF" },
       ],
     },
     {
-      title: "Guías y manuales",
-      description: "Recursos informativos para la comunidad",
+      title: "Cardiopatías Congénitas",
+      description: "Información sobre cardiopatías congénitas y enfermedades cardiovasculares infantiles",
+      icon: "heart",
+      color: "from-[#5bbaa5] to-[#00334e]",
       documents: [
-        { name: "Guía de servicios disponibles", size: "3.2 MB", type: "PDF" },
-        { name: "Manual de derechos del usuario", size: "1.8 MB", type: "PDF" },
-        { name: "Guía de trámites administrativos", size: "2.1 MB", type: "PDF" },
-        { name: "Manual de prevención en salud", size: "4.5 MB", type: "PDF" },
-      ],
-    },
-    {
-      title: "Informes y publicaciones",
-      description: "Estudios e informes de nuestro trabajo",
-      documents: [
-        { name: "Informe de impacto social 2024", size: "6.2 MB", type: "PDF" },
-        { name: "Estudio de necesidades comunitarias", size: "3.8 MB", type: "PDF" },
-        { name: "Boletín informativo - Edición 12", size: "2.4 MB", type: "PDF" },
-        { name: "Casos de éxito y testimonios", size: "5.1 MB", type: "PDF" },
+        { name: "¿Qué son las cardiopatías congénitas?", type: "PDF" },
+        { name: "Enfermedades cardiovasculares infantiles", type: "PDF" },
       ],
     },
   ]
@@ -61,7 +53,7 @@ export default function DocumentsPage() {
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">Documentos y recursos</h1>
             <p className="text-lg md:text-xl text-white/90 leading-relaxed">
-              Accede a toda la información y formularios necesarios para conocer y utilizar nuestros servicios
+              El siguiente material fue seleccionado por Fundación ETHE por su contenido de calidad respecto de los tratamientos que la Fundación lleva adelante. Reservado para Uso Profesional, de los Pacientes y Familiares o Interesados en la temática en general. Fundación ETHE consigna en cada material la autoría de los mismos
             </p>
           </div>
         </div>
@@ -88,36 +80,45 @@ export default function DocumentsPage() {
       {/* Documents Categories */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
-          <div className="space-y-12">
+          <div className="space-y-16 max-w-6xl mx-auto">
             {documentCategories.map((category, index) => (
-              <div key={index} className="max-w-5xl mx-auto">
-                <div className="mb-6">
-                  <h2 className="text-2xl md:text-3xl font-bold text-[#00334e] mb-2">{category.title}</h2>
-                  <p className="text-gray-600">{category.description}</p>
+              <div key={index}>
+                {/* Category Header with Icon */}
+                <div className="text-center mb-10">
+                  <div className="w-32 h-32 mx-auto mb-6 bg-[#5bbaa5] rounded-full flex items-center justify-center">
+                    {category.icon === "liver" && <Activity className="text-white" size={56} />}
+                    {category.icon === "kidney" && <Activity className="text-white" size={56} />}
+                    {category.icon === "heart" && <Heart className="text-white" size={56} />}
+                  </div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-[#5bbaa5] mb-3 uppercase tracking-wide">{category.title}</h2>
+                  <p className="text-gray-600 text-lg">{category.description}</p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {/* Documents List */}
+                <div className="space-y-4">
                   {category.documents.map((doc, idx) => (
-                    <Card key={idx} className="border-[#5bbaa5]/30 hover:shadow-lg transition-shadow hover:border-[#5bbaa5]">
-                      <CardHeader>
-                        <div className="flex items-start justify-between gap-4">
-                          <div className="flex items-start gap-3 flex-1">
-                            <div className="w-10 h-10 bg-[#5bbaa5] rounded-lg flex items-center justify-center flex-shrink-0">
-                              <FileText className="text-white" size={20} />
-                            </div>
-                            <div className="flex-1 min-w-0">
-                              <CardTitle className="text-base text-[#00334e] mb-1">{doc.name}</CardTitle>
-                              <CardDescription className="text-sm">
-                                {doc.type} • {doc.size}
-                              </CardDescription>
-                            </div>
+                    <div 
+                      key={idx} 
+                      className="bg-[#5bbaa5] hover:bg-[#4aa594] transition-all duration-300 rounded-lg p-6 shadow-md hover:shadow-xl cursor-pointer group"
+                    >
+                      <div className="flex items-center justify-between gap-4">
+                        <div className="flex items-center gap-4 flex-1">
+                          <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <FileText className="text-white" size={24} />
                           </div>
-                          <Button size="sm" className="bg-[#00334e] hover:bg-[#00334e]/90 flex-shrink-0">
-                            <Download size={16} />
-                          </Button>
+                          <h3 className="text-white font-bold text-lg uppercase tracking-wide group-hover:translate-x-1 transition-transform">
+                            {doc.name}
+                          </h3>
                         </div>
-                      </CardHeader>
-                    </Card>
+                        <Button 
+                          size="sm" 
+                          className="bg-[#00334e] hover:bg-[#00334e]/90 text-white flex-shrink-0 px-6"
+                        >
+                          <Download size={18} className="mr-2" />
+                          Descargar
+                        </Button>
+                      </div>
+                    </div>
                   ))}
                 </div>
               </div>

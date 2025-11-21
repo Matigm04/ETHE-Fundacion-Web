@@ -118,13 +118,13 @@ export default function HomePage() {
             <p className="text-lg leading-relaxed text-white/90">
               Promover el desarrollo de la medicina de alta complejidad en el Caribe y Centro América 
               a través de recursos públicos y privados destinados a la formación y capacitación 
-              de profesionales especializados.
+              de profesionales de todas las especialidades involucradas en este proceso.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us - Tarjetas numeradas con bordes de color */}
+      {/* Why Choose Us - Tarjetas con colores sólidos */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -132,61 +132,30 @@ export default function HomePage() {
             <h2 className="text-3xl md:text-4xl font-bold text-[#00334e] mb-4">¿Por qué elegir ETHE?</h2>
             <p className="text-lg text-[#333333]">Excelencia médica con compromiso social</p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            <div className="bg-white rounded-xl p-6 border-t-4 border-[#c74a3a] hover:shadow-xl transition-shadow">
-              <div className="text-5xl font-bold text-[#c74a3a]/20 mb-4">01</div>
-              <h3 className="font-bold text-[#00334e] mb-2 text-lg">Equipo especializado</h3>
-              <p className="text-[#333333] text-sm">Profesionales reconocidos internacionalmente</p>
-            </div>
-
-            <div className="bg-white rounded-xl p-6 border-t-4 border-[#5bbaa5] hover:shadow-xl transition-shadow">
-              <div className="text-5xl font-bold text-[#5bbaa5]/20 mb-4">02</div>
-              <h3 className="font-bold text-[#00334e] mb-2 text-lg">Atención 360°</h3>
-              <p className="text-[#333333] text-sm">Acompañamiento integral en cada etapa</p>
-            </div>
-
-            <div className="bg-white rounded-xl p-6 border-t-4 border-[#cfa46c] hover:shadow-xl transition-shadow">
-              <div className="text-5xl font-bold text-[#cfa46c]/20 mb-4">03</div>
-              <h3 className="font-bold text-[#00334e] mb-2 text-lg">Formación continua</h3>
-              <p className="text-[#333333] text-sm">Capacitación profesional permanente</p>
-            </div>
-
-            <div className="bg-white rounded-xl p-6 border-t-4 border-[#ffcb05] hover:shadow-xl transition-shadow">
-              <div className="text-5xl font-bold text-[#ffcb05]/20 mb-4">04</div>
-              <h3 className="font-bold text-[#00334e] mb-2 text-lg">Apoyo social</h3>
-              <p className="text-[#333333] text-sm">Asistencia económica disponible</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Values Grid - 4 columnas con gradientes */}
-      <section className="py-16 md:py-24 bg-[#cfa46c]/10">
-        <div className="container mx-auto px-4">
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
             <div className="bg-gradient-to-br from-[#c74a3a] to-[#00334e] rounded-2xl p-8 text-white">
               <CheckCircle size={40} className="mb-4" />
-              <h3 className="font-bold text-xl mb-2">Profesionales</h3>
-              <p className="text-white/90 text-sm">Equipo multidisciplinario reconocido</p>
+              <h3 className="font-bold text-xl mb-2">Equipo especializado</h3>
+              <p className="text-white/90 text-sm">Profesionales reconocidos internacionalmente</p>
             </div>
 
             <div className="bg-gradient-to-br from-[#5bbaa5] to-[#00334e] rounded-2xl p-8 text-white">
               <CheckCircle size={40} className="mb-4" />
               <h3 className="font-bold text-xl mb-2">Atención integral</h3>
-              <p className="text-white/90 text-sm">Acompañamiento completo</p>
+              <p className="text-white/90 text-sm">Acompañamiento integral en cada etapa</p>
             </div>
 
             <div className="bg-gradient-to-br from-[#cfa46c] to-[#00334e] rounded-2xl p-8 text-white">
               <CheckCircle size={40} className="mb-4" />
-              <h3 className="font-bold text-xl mb-2">Formación</h3>
-              <p className="text-white/90 text-sm">Capacitación de excelencia</p>
+              <h3 className="font-bold text-xl mb-2">Formación continua</h3>
+              <p className="text-white/90 text-sm">Capacitación profesional permanente</p>
             </div>
 
             <div className="bg-gradient-to-br from-[#ffcb05] to-[#cfa46c] rounded-2xl p-8 text-[#00334e]">
               <CheckCircle size={40} className="mb-4" />
-              <h3 className="font-bold text-xl mb-2">Apoyo económico</h3>
-              <p className="text-[#00334e]/80 text-sm">Asistencia disponible</p>
+              <h3 className="font-bold text-xl mb-2">Apoyo social</h3>
+              <p className="text-[#00334e]/80 text-sm">Asistencia económica disponible</p>
             </div>
           </div>
         </div>

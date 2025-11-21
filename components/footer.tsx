@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react"
 
 export function Footer() {
@@ -8,11 +9,14 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* About */}
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-[#5dbfb3] rounded-lg flex items-center justify-center font-bold text-lg text-[#0a4d5c]">
-                FE
-              </div>
-              <span className="text-lg font-bold">Fundación ETHE</span>
+            <div className="mb-4">
+              <Image 
+                src="/Fundacion_ETHE_Logo_sinFondo.png" 
+                alt="Fundación ETHE" 
+                width={180} 
+                height={60} 
+                className="object-contain brightness-0 invert"
+              />
             </div>
             <p className="text-sm text-white/80 leading-relaxed">
               Comprometidos con el bienestar y desarrollo de nuestra comunidad a través de servicios profesionales y
@@ -103,7 +107,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-white/10 mt-8 pt-8 text-center text-sm text-white/60">
-          <p>&copy; {new Date().getFullYear()} Fundación ETHE. Todos los derechos reservados.</p>
+          <p>&copy; 2018 / Fundación ETHE / Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>

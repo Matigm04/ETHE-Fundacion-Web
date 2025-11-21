@@ -97,23 +97,6 @@ export default function SpecialtiesPage() {
         </div>
       </section>
 
-      {/* Mission Section */}
-      <section className="py-16 md:py-24 bg-[#00334e] text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block px-4 py-2 bg-white/10 rounded-full mb-6">
-              <span className="text-sm font-semibold uppercase tracking-wider">Nuestra Misión</span>
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">Compromiso con la excelencia médica</h2>
-            <p className="text-lg md:text-xl leading-relaxed">
-              Promover el desarrollo de la medicina de alta complejidad en el Caribe y Centro América a través de la 
-              obtención de recursos públicos y privados, los cuales son destinados a la formación y capacitación de 
-              profesionales de todas las especialidades involucradas en este proceso.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Call to Action */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 text-center">

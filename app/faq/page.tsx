@@ -135,7 +135,7 @@ export default function FAQPage() {
                       {specialty.description}
                     </p>
                     <Link
-                      href={`/faq/${specialty.slug}`}
+                      href="/especialidades"
                       className="inline-flex items-center justify-center px-6 py-3 bg-[#c74a3a] hover:bg-[#b73d2d] text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg w-full"
                     >
                       LEER +
