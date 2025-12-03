@@ -10,7 +10,7 @@ export default function HomePage() {
       <section className="relative bg-[#5bbaa5] text-white py-20 md:py-32 overflow-hidden">
         {/* Decorative yellow overlay */}
         <div className="absolute bottom-0 right-0 w-1/3 h-1/2 bg-[#ffcb05] opacity-20 rounded-tl-[100px]" />
-        <div className="absolute top-10 right-20 w-32 h-32 bg-[#ffcb05] opacity-10 rounded-full" />
+        <div className="absolute top-10 right-4 w-32 h-32 bg-[#ffcb05] opacity-10 rounded-full" />
         <div className="absolute bottom-20 left-10 w-24 h-24 bg-white opacity-5 rounded-full" />
         
         <div className="container mx-auto px-4 relative z-10">

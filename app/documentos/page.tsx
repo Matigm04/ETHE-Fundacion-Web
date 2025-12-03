@@ -43,7 +43,7 @@ export default function DocumentsPage() {
       {/* Hero Section */}
       <section className="bg-[#5bbaa5] text-white py-16 md:py-24 relative overflow-hidden">
         {/* Decorative elements */}
-        <div className="absolute top-10 right-20 w-32 h-32 bg-[#ffcb05] opacity-15 rounded-full" />
+        <div className="absolute top-10 right-4 w-32 h-32 bg-[#ffcb05] opacity-15 rounded-full" />
         <div className="absolute bottom-10 left-10 w-24 h-24 bg-white opacity-10 rounded-full" />
         
         <div className="container mx-auto px-4 relative z-10">
