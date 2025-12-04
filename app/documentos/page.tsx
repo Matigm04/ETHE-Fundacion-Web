@@ -1,6 +1,5 @@
-import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { FileText, Download, FileCheck, Info, Activity, Heart } from "lucide-react"
+import { FileText, FileCheck, Info, Activity, Heart } from "lucide-react"
 
 export default function DocumentsPage() {
   const documentCategories = [
@@ -10,9 +9,21 @@ export default function DocumentsPage() {
       icon: "liver",
       color: "from-[#5bbaa5] to-[#00334e]",
       documents: [
-        { name: "Sobre el hígado y su funcionamiento", type: "PDF" },
-        { name: "Indicaciones y evaluación para trasplante", type: "PDF" },
-        { name: "El trasplante: sobre el procedimiento quirúrgico", type: "PDF" },
+        { 
+          name: "Sobre el hígado y su funcionamiento", 
+          type: "PDF",
+          url: "/documentos_descargas/Transplante_Hepatico/HEPATICO-1-Sobre-el-Higado-y-su-funcionamiento.pdf"
+        },
+        { 
+          name: "Indicaciones y evaluación para trasplante", 
+          type: "PDF",
+          url: "/documentos_descargas/Transplante_Hepatico/HEPATICO-2-Indicaciones-y-evaluación-pre-transplante.pdf"
+        },
+        { 
+          name: "El trasplante: sobre el procedimiento quirúrgico", 
+          type: "PDF",
+          url: "/documentos_descargas/Transplante_Hepatico/HEPATICO-3-El-transplante-Sobre-el-procedimiento-quirúrgico-.pdf"
+        },
       ],
     },
     {
@@ -21,9 +32,21 @@ export default function DocumentsPage() {
       icon: "kidney",
       color: "from-[#5bbaa5] to-[#00334e]",
       documents: [
-        { name: "Sobre el proceso quirúrgico", type: "PDF" },
-        { name: "Donantes renales", type: "PDF" },
-        { name: "Opciones de tratamiento", type: "PDF" },
+        { 
+          name: "Sobre el proceso quirúrgico", 
+          type: "PDF",
+          url: "/documentos_descargas/Transplante_Renal/RENAL-1-Sobre-el-Proceso-Quirúrgico.pdf"
+        },
+        { 
+          name: "Donantes renales", 
+          type: "PDF",
+          url: "/documentos_descargas/Transplante_Renal/RENAL-2-Donantes-Renales.pdf"
+        },
+        { 
+          name: "Opciones de tratamiento", 
+          type: "PDF",
+          url: "/documentos_descargas/Transplante_Renal/RENAL-3-Opciones-de-Tratamiento.pdf"
+        },
       ],
     },
     {
@@ -32,8 +55,16 @@ export default function DocumentsPage() {
       icon: "heart",
       color: "from-[#5bbaa5] to-[#00334e]",
       documents: [
-        { name: "¿Qué son las cardiopatías congénitas?", type: "PDF" },
-        { name: "Enfermedades cardiovasculares infantiles", type: "PDF" },
+        { 
+          name: "¿Qué son las cardiopatías congénitas?", 
+          type: "PDF",
+          url: "/documentos_descargas/Cardiopatias_Congenitas/CARDIOPATIAS2PDF-que-son.pdf"
+        },
+        { 
+          name: "Enfermedades cardiovasculares infantiles", 
+          type: "PDF",
+          url: "/documentos_descargas/Cardiopatias_Congenitas/CARDIPATIAS3PDF-enfermedades-cardiovasculares-infantiles.pdf"
+        },
       ],
     },
   ]
@@ -78,45 +109,47 @@ export default function DocumentsPage() {
       </section>
 
       {/* Documents Categories */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-12 md:py-24 bg-white">
         <div className="container mx-auto px-4">
-          <div className="space-y-16 max-w-6xl mx-auto">
+          <div className="space-y-12 md:space-y-16 max-w-6xl mx-auto">
             {documentCategories.map((category, index) => (
               <div key={index}>
                 {/* Category Header with Icon */}
-                <div className="text-center mb-10">
-                  <div className="w-32 h-32 mx-auto mb-6 bg-[#5bbaa5] rounded-full flex items-center justify-center">
-                    {category.icon === "liver" && <Activity className="text-white" size={56} />}
-                    {category.icon === "kidney" && <Activity className="text-white" size={56} />}
-                    {category.icon === "heart" && <Heart className="text-white" size={56} />}
+                <div className="text-center mb-6 md:mb-10">
+                  <div className="w-20 h-20 md:w-32 md:h-32 mx-auto mb-4 md:mb-6 bg-[#5bbaa5] rounded-full flex items-center justify-center">
+                    {category.icon === "liver" && <Activity className="text-white" size={40} className="md:w-14 md:h-14" />}
+                    {category.icon === "kidney" && <Activity className="text-white" size={40} className="md:w-14 md:h-14" />}
+                    {category.icon === "heart" && <Heart className="text-white" size={40} className="md:w-14 md:h-14" />}
                   </div>
-                  <h2 className="text-3xl md:text-4xl font-bold text-[#5bbaa5] mb-3 uppercase tracking-wide">{category.title}</h2>
-                  <p className="text-gray-600 text-lg">{category.description}</p>
+                  <h2 className="text-2xl md:text-4xl font-bold text-[#5bbaa5] mb-2 md:mb-3 uppercase tracking-wide">{category.title}</h2>
+                  <p className="text-gray-600 text-sm md:text-lg px-4">{category.description}</p>
                 </div>
 
                 {/* Documents List */}
-                <div className="space-y-4">
+                <div className="space-y-3 md:space-y-4">
                   {category.documents.map((doc, idx) => (
                     <div 
                       key={idx} 
-                      className="bg-[#5bbaa5] hover:bg-[#4aa594] transition-all duration-300 rounded-lg p-6 shadow-md hover:shadow-xl cursor-pointer group"
+                      className="bg-[#5bbaa5] hover:bg-[#4aa594] transition-all duration-300 rounded-lg p-4 md:p-6 shadow-md hover:shadow-xl group"
                     >
-                      <div className="flex items-center justify-between gap-4">
-                        <div className="flex items-center gap-4 flex-1">
-                          <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <FileText className="text-white" size={24} />
+                      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 md:gap-4">
+                        <div className="flex items-center gap-3 md:gap-4 flex-1 min-w-0">
+                          <div className="w-10 h-10 md:w-12 md:h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <FileText className="text-white" size={20} />
                           </div>
-                          <h3 className="text-white font-bold text-lg uppercase tracking-wide group-hover:translate-x-1 transition-transform">
+                          <h3 className="text-white font-bold text-sm md:text-lg uppercase tracking-wide group-hover:translate-x-1 transition-transform flex-1 min-w-0">
                             {doc.name}
                           </h3>
                         </div>
-                        <Button 
-                          size="sm" 
-                          className="bg-[#00334e] hover:bg-[#00334e]/90 text-white flex-shrink-0 px-6"
+                        <a
+                          href={doc.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center justify-center gap-2 bg-[#00334e] hover:bg-[#00334e]/90 text-white px-4 md:px-6 py-2 rounded-md text-xs md:text-sm font-medium transition-colors w-full md:w-auto"
                         >
-                          <Download size={18} className="mr-2" />
-                          Descargar
-                        </Button>
+                          <FileText size={16} />
+                          <span>Leer Documento</span>
+                        </a>
                       </div>
                     </div>
                   ))}
@@ -127,25 +160,6 @@ export default function DocumentsPage() {
         </div>
       </section>
 
-      {/* Help Section */}
-      <section className="py-16 md:py-24 bg-[#00334e]">
-        <div className="container mx-auto px-4 text-center">
-          <div className="max-w-3xl mx-auto">
-            <div className="inline-block px-4 py-2 bg-white/10 rounded-full mb-6">
-              <span className="text-sm font-semibold uppercase tracking-wider text-white">Asistencia</span>
-            </div>
-            <FileCheck className="w-16 h-16 text-white mx-auto mb-6" />
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">¿Necesitas ayuda con los documentos?</h2>
-            <p className="text-lg text-white/90 mb-8 leading-relaxed">
-              Si tienes dificultades para descargar o completar algún documento, nuestro equipo está disponible para
-              asistirte. También ofrecemos ayuda presencial en nuestras oficinas.
-            </p>
-            <Button asChild size="lg" className="bg-[#c74a3a] hover:bg-[#b73d2d]">
-              <a href="/contacto">Solicitar asistencia</a>
-            </Button>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }

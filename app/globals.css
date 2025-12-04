@@ -1,8 +1,74 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-/* Importar fuente Cormorant Garamond (similar a ITC Goudy Sans) */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+/* Tipografía Corporativa Fundación ETHE */
+/* TASA Orbiter - Para textos generales */
+@import url('https://fonts.googleapis.com/css2?family=TASA+Orbiter:wght@400..800&display=swap');
+
+/* ITC Goudy Sans Std (1930) - Frederic William Goudy - Fuentes locales */
+@font-face {
+  font-family: 'ITC Goudy Sans';
+  src: url('/fonts/ITC-Goudy/GoudySansStd-Book.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ITC Goudy Sans';
+  src: url('/fonts/ITC-Goudy/GoudySansStd-BookItalic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ITC Goudy Sans';
+  src: url('/fonts/ITC-Goudy/GoudySansStd-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ITC Goudy Sans';
+  src: url('/fonts/ITC-Goudy/GoudySansStd-MediumItalic.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ITC Goudy Sans';
+  src: url('/fonts/ITC-Goudy/GoudySansStd-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ITC Goudy Sans';
+  src: url('/fonts/ITC-Goudy/GoudySansStd-BoldItalic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ITC Goudy Sans';
+  src: url('/fonts/ITC-Goudy/GoudySansStd-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ITC Goudy Sans';
+  src: url('/fonts/ITC-Goudy/GoudySansStd-BlackItalic.otf') format('opentype');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
 
 @custom-variant dark (&:is(.dark *));
 
@@ -32,8 +98,9 @@
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
   
-  /* Variables para la tipografía Goudy */
-  --font-goudy: 'Cormorant Garamond', serif;
+  /* Tipografía Corporativa ETHE */
+  --font-headings: 'ITC Goudy Sans', sans-serif;  /* ITC Goudy Sans Std (1930) para títulos */
+  --font-body: 'TASA Orbiter', sans-serif;  /* TASA Orbiter para textos generales */
   --radius: 0.625rem;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
@@ -81,9 +148,9 @@
 }
 
 @theme inline {
-  /* Tipografía corporativa Goudy */
-  --font-sans: 'Cormorant Garamond', ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  --font-goudy: 'Cormorant Garamond', serif;
+  /* Tipografía Corporativa ETHE */
+  --font-sans: 'TASA Orbiter', ui-sans-serif, system-ui, sans-serif;
+  --font-headings: 'ITC Goudy Sans', sans-serif;
 
   /* Foundation Color Palette */
   --color-petrol: #0a4d5c;
@@ -168,29 +235,91 @@ body {
   font-family: var(--font-sans);
   background: rgb(var(--color-background));
   color: rgb(var(--color-foreground));
-  letter-spacing: 0.01em; /* Goudy tiene espaciado ligeramente abierto */
 }
 
-/* Tipografía Goudy - Estilos según manual corporativo */
+/* Tipografía Corporativa ETHE */
+/* Títulos con ITC Goudy Sans Std (1930) - Frederic William Goudy */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-goudy);
-  font-weight: 700; /* Bold */
+  font-family: var(--font-headings);
+  font-weight: 700;
   letter-spacing: 0.01em;
 }
 
-.text-goudy-book {
-  font-family: var(--font-goudy);
-  font-weight: 400; /* Book */
+/* Textos generales con TASA Orbiter */
+p, span, div, a, li, td, th, label, input, textarea, select, button {
+  font-family: var(--font-body);
+  font-optical-sizing: auto;
 }
 
-.text-goudy-medium {
-  font-family: var(--font-goudy);
-  font-weight: 500; /* Medium */
+/* Clases de utilidad para tipografía */
+.font-headings {
+  font-family: var(--font-headings);
 }
 
-.text-goudy-bold {
-  font-family: var(--font-goudy);
-  font-weight: 700; /* Bold */
+.font-body {
+  font-family: var(--font-body);
+  font-optical-sizing: auto;
+}
+
+/* ITC Goudy Sans Std - Clases de utilidad */
+.goudy-book {
+  font-family: 'ITC Goudy Sans', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.goudy-medium {
+  font-family: 'ITC Goudy Sans', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.goudy-bold {
+  font-family: 'ITC Goudy Sans', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.goudy-black {
+  font-family: 'ITC Goudy Sans', sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* TASA Orbiter - Pesos variables (400-800) */
+.tasa-orbiter-light {
+  font-family: "TASA Orbiter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tasa-orbiter-regular {
+  font-family: "TASA Orbiter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.tasa-orbiter-medium {
+  font-family: "TASA Orbiter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.tasa-orbiter-bold {
+  font-family: "TASA Orbiter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.tasa-orbiter-extrabold {
+  font-family: "TASA Orbiter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
 }
 
 /* Smooth scrolling */

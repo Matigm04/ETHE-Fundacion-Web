@@ -4,23 +4,23 @@ import { Target, Users, Heart, Globe, GraduationCap, Microscope, HeartHandshake,
 export default function AboutUsPage() {
   return (
     <div className="flex flex-col">
-      <section className="bg-[#5bbaa5] text-white py-16 md:py-24 relative overflow-hidden">
+      <section className="bg-[#5bbaa5] text-white py-12 md:py-24 relative overflow-hidden">
         {/* Decorative elements */}
         <div className="absolute top-10 right-4 w-32 h-32 bg-[#ffcb05] opacity-15 rounded-full" />
         <div className="absolute bottom-10 left-10 w-24 h-24 bg-white opacity-10 rounded-full" />
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full mb-6">
-              <span className="text-sm font-semibold uppercase tracking-wider">Nuestra Historia</span>
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 bg-white/20 backdrop-blur-sm rounded-full mb-4 md:mb-6">
+              <span className="text-xs md:text-sm font-semibold uppercase tracking-wider">Nuestra Historia</span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Quiénes somos</h1>
-            <div className="max-w-[80%] mx-auto">
-              <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-6">
+            <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">Quiénes somos</h1>
+            <div className="max-w-[90%] mx-auto">
+              <p className="text-base md:text-xl text-white/90 leading-relaxed mb-4 md:mb-6">
                 Somos un equipo de profesionales seleccionados por su reconocida trayectoria en cada una de sus 
                 especialidades de medicina de alta complejidad.
               </p>
-              <p className="text-base md:text-lg text-white/80 leading-relaxed">
+              <p className="text-sm md:text-lg text-white/80 leading-relaxed">
                 Nos identificamos por nuestros valores éticos y por nuestro alto grado de compromiso para transmitir 
                 y compartir conocimientos, con el objetivo de capacitar en pos de brindar el mejor tratamiento al paciente.
               </p>
@@ -29,11 +29,11 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-[#f5f7fa]">
+      <section className="py-12 md:py-24 bg-[#f5f7fa]">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <p className="text-[#5bbaa5] font-semibold mb-2 uppercase tracking-wider text-sm text-center">Nuestra Fundación</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#00334e] mb-12 text-center">Acerca de ETHE</h2>
+            <p className="text-[#5bbaa5] font-semibold mb-1 md:mb-2 uppercase tracking-wider text-xs md:text-sm text-center">Nuestra Fundación</p>
+            <h2 className="text-2xl md:text-4xl font-bold text-[#00334e] mb-8 md:mb-12 text-center">Acerca de ETHE</h2>
             
             {/* Misión */}
             <Card className="border-2 border-[#5dbfb3] hover:shadow-xl transition-all duration-300">
@@ -55,20 +55,20 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-[#00334e]">
+      <section className="py-12 md:py-24 bg-[#00334e]">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="inline-block px-4 py-2 bg-white/10 rounded-full mb-6 mx-auto block w-fit">
-              <span className="text-sm font-semibold uppercase tracking-wider text-white">Nuestros Objetivos</span>
+            <div className="inline-block px-3 py-1.5 md:px-4 md:py-2 bg-white/10 rounded-full mb-4 md:mb-6 mx-auto block w-fit">
+              <span className="text-xs md:text-sm font-semibold uppercase tracking-wider text-white">Nuestros Objetivos</span>
             </div>
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 text-center">
+            <h3 className="text-xl md:text-3xl font-bold text-white mb-4 md:mb-6 text-center">
               Objetivos de la Fundación
             </h3>
-            <p className="text-white/90 text-center mb-12 text-lg max-w-3xl mx-auto">
+            <p className="text-white/90 text-center mb-8 md:mb-12 text-sm md:text-lg max-w-3xl mx-auto px-4">
               Para dar cumplimiento a su Misión, la Fundación desarrolla y promueve los siguientes objetivos:
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
               
               <Card className="border-2 border-white/20 bg-white/10 backdrop-blur-sm hover:bg-white/20 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
                 <CardHeader>

@@ -97,25 +97,6 @@ export default function SpecialtiesPage() {
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-[#5bbaa5] font-semibold mb-2 uppercase tracking-wider text-sm">Contáctanos</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-[#00334e] mb-6">¿Necesitas alguno de estos servicios?</h2>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Nuestro equipo de profesionales especializados en medicina de alta complejidad está listo para atenderte. 
-            Contáctanos para más información sobre nuestros servicios especializados.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-[#c74a3a] text-white hover:bg-[#b43a2a] shadow-xl">
-              <Link href="/contacto">Solicitar información</Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="border-[#00334e] text-[#00334e] hover:bg-[#00334e]/5">
-              <Link href="/quienes-somos">Conoce más</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }

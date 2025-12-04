@@ -139,33 +139,6 @@ export default function TestimonialsPage() {
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="py-16 md:py-24 bg-[#00334e] text-white">
-        <div className="container mx-auto px-4 text-center">
-          <div className="inline-block px-4 py-2 bg-white/10 rounded-full mb-6">
-            <span className="text-sm font-semibold uppercase tracking-wider">¿Necesitas Asistencia?</span>
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">¿Necesitas ayuda con un trasplante?</h2>
-          <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Si tú o un familiar necesitan un trasplante o tratamiento de alta complejidad, contáctanos. 
-            Nuestro equipo está listo para ayudarte en cada paso del proceso.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/contacto"
-              className="inline-flex items-center justify-center px-8 py-4 bg-[#c74a3a] hover:bg-[#b73d2d] text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-xl"
-            >
-              Solicitar Asistencia
-            </a>
-            <a
-              href="/especialidades"
-              className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-[#0a4d5c] transition-all duration-300"
-            >
-              Ver Especialidades
-            </a>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }

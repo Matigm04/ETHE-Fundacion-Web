@@ -21,6 +21,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
+      <head>
+        {/* Tipografía Corporativa Fundación ETHE */}
+        {/* ITC Goudy Sans Std (1930) se carga localmente desde /fonts */}
+        {/* TASA Orbiter para textos generales */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=TASA+Orbiter:wght@400..800&display=swap" rel="stylesheet" />
+      </head>
       <body>
         <Navigation />
         <main className="min-h-screen">{children}</main>
