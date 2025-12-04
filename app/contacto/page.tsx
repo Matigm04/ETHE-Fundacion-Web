@@ -39,8 +39,8 @@ export default function ContactPage() {
 
     try {
       // PEGA AQUÍ TU URL DE GOOGLE SCRIPT
-      const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyRcd3RiODJS5egzIryq7mRtun12EXbFsnAGJV8j6h5yNHsEu3hjNbLNRUzKWprbRi2Kg/exec"
-
+      
+      const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzixY0tSEjmRzPQV-3YZNk0e3rRCgEpIQKBSBx-TX8GfoUu8FLU08rXrc_wx9v6PDb0rA/exec"
       await fetch(GOOGLE_SCRIPT_URL, {
         method: "POST",
         mode: "no-cors", // Vital para evitar problemas de seguridad cruzada con Google
