@@ -19,27 +19,46 @@ import DO from 'country-flag-icons/react/3x2/DO'
 import TT from 'country-flag-icons/react/3x2/TT'
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    nombreApellido: "",
-    pais: "",
-    ciudad: "",
-    correo: "",
-    mensaje: "",
-  })
+  const [loading, setLoading] = useState(false)
+  const [status, setStatus] = useState<"idle" | "success" | "error">("idle")
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle form submission
-    console.log("Form submitted:", formData)
-    alert("Gracias por contactarnos. Te responderemos a la brevedad.")
-    setFormData({ nombreApellido: "", pais: "", ciudad: "", correo: "", mensaje: "" })
-  }
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+    setLoading(true)
+    setStatus("idle")
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    })
+    // Capturamos los datos del formulario
+    const form = event.currentTarget
+    const formData = {
+      nombre: (form.elements.namedItem("nombreApellido") as HTMLInputElement).value,
+      pais: (form.elements.namedItem("pais") as HTMLInputElement).value,
+      ciudad: (form.elements.namedItem("ciudad") as HTMLInputElement).value,
+      email: (form.elements.namedItem("correo") as HTMLInputElement).value,
+      mensaje: (form.elements.namedItem("mensaje") as HTMLTextAreaElement).value,
+    }
+
+    try {
+      // PEGA AQUÍ TU URL DE GOOGLE SCRIPT
+      const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyRcd3RiODJS5egzIryq7mRtun12EXbFsnAGJV8j6h5yNHsEu3hjNbLNRUzKWprbRi2Kg/exec"
+
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors", // Vital para evitar problemas de seguridad cruzada con Google
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
+
+      // Como usamos 'no-cors', asumimos éxito si no salta al catch
+      setStatus("success")
+      form.reset() // Limpiamos el formulario
+    } catch (error) {
+      console.error("Error al enviar", error)
+      setStatus("error")
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -174,8 +193,6 @@ export default function ContactPage() {
                       <Input
                         id="nombreApellido"
                         name="nombreApellido"
-                        value={formData.nombreApellido}
-                        onChange={handleChange}
                         required
                         placeholder="Tu nombre y apellido"
                         className="border-gray-300 focus:border-[#5bbaa5] focus:ring-[#5bbaa5]"
@@ -190,8 +207,6 @@ export default function ContactPage() {
                         <Input
                           id="pais"
                           name="pais"
-                          value={formData.pais}
-                          onChange={handleChange}
                           required
                           placeholder="Tu país"
                           className="border-gray-300 focus:border-[#5bbaa5] focus:ring-[#5bbaa5]"
@@ -205,8 +220,6 @@ export default function ContactPage() {
                         <Input
                           id="ciudad"
                           name="ciudad"
-                          value={formData.ciudad}
-                          onChange={handleChange}
                           required
                           placeholder="Tu ciudad"
                           className="border-gray-300 focus:border-[#5bbaa5] focus:ring-[#5bbaa5]"
@@ -222,8 +235,6 @@ export default function ContactPage() {
                         id="correo"
                         name="correo"
                         type="email"
-                        value={formData.correo}
-                        onChange={handleChange}
                         required
                         placeholder="tu@correo.com"
                         className="border-gray-300 focus:border-[#5bbaa5] focus:ring-[#5bbaa5]"
@@ -237,8 +248,6 @@ export default function ContactPage() {
                       <Textarea
                         id="mensaje"
                         name="mensaje"
-                        value={formData.mensaje}
-                        onChange={handleChange}
                         required
                         placeholder="Explícanos el motivo de tu consulta. Cuéntanos cómo podemos ayudarte..."
                         rows={6}
@@ -246,10 +255,31 @@ export default function ContactPage() {
                       />
                     </div>
 
-                    <Button type="submit" size="lg" className="w-full bg-[#c74a3a] hover:bg-[#b43a2a] text-white">
-                      Enviar Mensaje
-                      <Send className="ml-2" size={20} />
+                    <Button 
+                      type="submit" 
+                      size="lg" 
+                      disabled={loading}
+                      className="w-full bg-[#c74a3a] hover:bg-[#b43a2a] text-white disabled:opacity-50"
+                    >
+                      {loading ? "Enviando..." : "Enviar Mensaje"}
+                      {!loading && <Send className="ml-2" size={20} />}
                     </Button>
+
+                    {/* Mensajes de Feedback */}
+                    {status === "success" && (
+                      <div className="p-4 bg-green-50 border border-green-200 rounded-lg">
+                        <p className="text-green-700 text-center font-medium">
+                          ¡Mensaje enviado con éxito! Nos contactaremos pronto.
+                        </p>
+                      </div>
+                    )}
+                    {status === "error" && (
+                      <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
+                        <p className="text-red-700 text-center font-medium">
+                          Hubo un error. Por favor intenta nuevamente.
+                        </p>
+                      </div>
+                    )}
                   </form>
                 </div>
               </div>
