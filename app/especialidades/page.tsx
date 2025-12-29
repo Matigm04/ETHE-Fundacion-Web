@@ -8,6 +8,7 @@ export default function SpecialtiesPage() {
     {
       icon: Activity,
       title: "Trasplante hepático",
+      slug: "trasplante-hepatico",
       description:
         "El trasplante hepático es un tratamiento médico indicado cuando otras alternativas para recuperar la salud del paciente se han agotado. Consiste en el reemplazo de un hígado enfermo, sin posibilidad de recuperación, por otro sano proveniente de un donante cadavérico o de un donante vivo relacionado. El procedimiento puede durar hasta 12 horas y está indicado principalmente en casos de insuficiencia hepática aguda o crónica, cirrosis hepática, tumores hepáticos y defectos genéticos del metabolismo. Fundación ETHE cuenta con una larga trayectoria en transplantes hepáticos pediátricos, posicionándose como experta en estas intervenciones y colaborando con aquellos pacientes que tengan dificultades económicas.",
       services: [
@@ -20,6 +21,7 @@ export default function SpecialtiesPage() {
     {
       icon: Brain,
       title: "Trasplante renal",
+      slug: "trasplante-renal",
       description:
         "El trasplante renal es el procedimiento mediante el cual a una persona con insuficiencia renal crónica se le implanta un riñón sano de otra persona. Un trasplante renal realizado a tiempo evita tener que recurrir a la diálisis, un tratamiento de por vida que afecta al paciente y a todo su entorno familiar. El riñón donado puede provenir de un donante cadavérico o de un donante vivo relacionado (padres, hijos, hermanos). El riñón trasplantado se coloca en la región anterior del abdomen y puede comenzar a funcionar inmediatamente o demorar algunos días. Fundación ETHE trabaja junto a esferas gubernamentales, especialistas y centros médicos con un equipo dedicado a las necesidades especiales de cada paciente, acompañando cada caso de manera integral durante todo el proceso para que el niño pueda llevar una vida plena.",
       services: [
@@ -32,6 +34,7 @@ export default function SpecialtiesPage() {
     {
       icon: Heart,
       title: "Cardiopatías congénitas",
+      slug: "cardiopatias",
       description:
         "Las cardiopatías congénitas son defectos cardíacos presentes desde el nacimiento que en su mayoría requieren intervención quirúrgica para su curación. La detección temprana durante la primera semana de vida es fundamental, ya que determina que el niño pueda tener una vida normal y sana. Pasada la primera semana, la intervención se hace más dificultosa, por lo cual es crucial detectar anomalías mediante ecografías durante el embarazo y tras el nacimiento del bebé. La prevención cardiovascular debe iniciarse precozmente en la infancia, tanto en niños con patologías específicas de alto riesgo como en aquellos expuestos a factores preexistentes. Fundación ETHE reúne a profesionales reconocidos mundialmente por su trabajo en cardiopatías congénitas y cirugías, junto a Centros Médicos altamente calificados y un equipo de asistencia personalizada que otorga asistencia médica de calidad, contención emocional a pacientes y familiares, facilitando el acceso al tratamiento.",
       services: [
@@ -71,7 +74,7 @@ export default function SpecialtiesPage() {
             {specialties.map((specialty, index) => {
               const Icon = specialty.icon
               return (
-                <Card key={index} className="border-[#5dbfb3] hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <Card key={index} className="flex flex-col border-[#5dbfb3] hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                   <CardHeader>
                     <div className="w-16 h-16 bg-gradient-to-br from-[#5dbfb3] to-[#0a4d5c] rounded-xl flex items-center justify-center mb-4">
                       <Icon className="text-white" size={32} />
@@ -79,7 +82,7 @@ export default function SpecialtiesPage() {
                     <CardTitle className="text-xl text-[#0a4d5c] mb-3">{specialty.title}</CardTitle>
                     <CardDescription className="text-base leading-relaxed">{specialty.description}</CardDescription>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="flex flex-col flex-grow">
                     <h4 className="font-semibold text-[#0a4d5c] mb-3 text-sm">Servicios incluidos:</h4>
                     <ul className="space-y-2">
                       {specialty.services.map((service, idx) => (
@@ -89,6 +92,13 @@ export default function SpecialtiesPage() {
                         </li>
                       ))}
                     </ul>
+                    <div className="mt-auto pt-6">
+                      <Link href={`/especialidades/${specialty.slug}`} passHref>
+                        <Button className="w-full bg-[#00334e] hover:bg-[#002233]">
+                          Conocer más
+                        </Button>
+                      </Link>
+                    </div>
                   </CardContent>
                 </Card>
               )
