@@ -178,4 +178,112 @@ export const testimonials: Testimonial[] = [
     },
     date: "2023",
   },
+  {
+    name: "Ayodele Roberts",
+    slug: "ayodele-roberts",
+    country: "Trinidad y Tobago",
+    countryFlag: "🇹🇹",
+    specialty: "Trasplante Hepático",
+    image: "/testimonios/ayodele-roberts.jpg",
+    excerpt: "A Ayodele le diagnosticaron un Amartoma Hepático Quístico a los 2 años.",
+    content: "Entrevista a Nicole Roberts, nacida en Trinidad y Tobago y mamá de Ayodele (3 años). Vinieron a Argentina para operar el Amartoma Hepático Quístico que Ayodele tenía en su hígado. Luego de una exitosa operación, aquí su testimonio.",
+    fullTestimony: {
+      interviewer: "Nicole Roberts, mamá de Ayodele",
+      sections: [
+        {
+          question: "¿Cuál fue el diagnóstico Ayodele?",
+          answer: "Nicole: Su diagnóstico fue que tenía un quiste hepático benigno y el pronóstico era muy bueno. Sin embargo, era necesario que consiguiéramos hacer una cirugía que no está disponible en Trinidad y Tobago.\n\nAl principio, antes de que tuviéramos el diagnóstico correcto, cuando nos dimos cuenta de que había una masa en su hígado fue aterrador. Pero mi comunidad, en la iglesia a la que voy, tenemos gente que rezó por su salud y nos apoyó. Luego los médicos en Trinidad continuaron con la investigación y se dieron cuenta de que era un quiste y la noticia de Dios es que era benigno, así que los médicos trataron de eliminarlo. Ayodele tuvo entonces una cirugía inicial en octubre de 2012. Cuando lo abrieron y vieron lo grande que era el quiste los médicos intentaron removerlo. Pero estaba muy involucrado en el hígado y ellos hicieron lo que pudieron en ese momento.\n\nLo que estaban esperando con la cirugía era que se dreanar el líquido que se estaba formando en su estómago por el quiste. Sin embargo, eso no funcionó porque en el próximo mes su estómago comenzó a llenarse otra vez. Y era complicado porque, el quiste tenía tres compartimentos. Los médicos lograron drenar la mayor parte del compartimiento principal pero había otro compartimiento que estaba lleno de líquido también. Así que lo que pasó, es que fue drenado inmediatamente al mes siguiente, en noviembre. Y entonces, su estómago quedó bien por un buen rato. Pero en abril se llenó de nuevo hasta el punto de que era incómodo y tuvo que tener otro drenaje. Creo que en total, fueron tres o cuatro drenajes antes de venir aquí."
+        },
+        {
+          question: "¿Cómo se decidió a venir a Argentina y realizarse la cirugía con la Fundación ETHE?",
+          answer: "Cuando nos dimos cuenta de que no podíamos lidiar con esto en casa, tengo que confesar que, en un principio, miramos a los EEUU. Porque mi mamá es ciudadana de allí y vive a diez minutos de uno de los mejores hospitales. Así que empezamos a ver las opciones en los EEUU. Tuvimos algunas buenas respuestas iniciales, creo que una de las primeras fue de una fundación en Canadá que asiste a niños enfermos de todo el mundo. Bueno, después de enviar todas las muestras y papeles dijeron: «No podemos hacerlo.» No creo que dieran muchas más razones, sólo que no podían hacerlo.\n\nAsí que estaba cerrada esa vía y continuamos buscando en los Estados Unidos. Mi agente del seguro médico envió notas y papeles a algunos lugares; creo que fueron algo así como nueve hospitales. Sólo tres de ellos de los Estados Unidos y uno de Canadá estaban dispuestos a mirarlo y a tomarlo como un caso. Luego se tomaron un tiempo para devolvernos el precio de la cirugía y en el mes de agosto llegaron finalmente algunas cifras.\n\nAsí es como encontré en Internet acerca de la Fundación ETHE. Algunos médicos en particular, que eran la Doctora Doodnat y el Doctor Lee, habían mencionado la opción argentina antes pero nosotros estábamos viendo a los Estados Unidos. Esto fue porque estábamos estudiando la barrera del idioma y la distancia en la que se encuentra Argentina de casa. Pero después de recibir las cotizaciones de los Estados Unidos, los llamé para buscar otras opciones ya que el premio era un poco prohibitivo. El seguro médico habría cubierto la mitad de la cirugía y yo hubiera tenido que recaudar los fondos para la otra mitad. Así fue que nos encontramos con Fundación ETHE y mi marido y yo nos pusimos a investigar su sitio – por eso es que el sitio es muy importante- Y también investigamos historias en Trinidad en los periódicos línea acerca de la Fundación ETHE. Y cuando vimos que había trasplantes y cirugías realizadas por el Doctor Luque empezamos a emocionarnos. Porque vimos un camino por el que habían pasado otros trinitenses. Había algunos que realmente estaban mejor en Trinidad después de venir aquí y tener la experiencia de la cirugía con el Dr. Luque. Así que empezamos a sonreír. Sí. Empezamos a sentir mejor.\n\nLuego la médica en Trinidad, Doctora Doodnat, comenzó a interactuar con el Doctor Luque enviándole algunos exámenes médicos que solicitaba. Y empezaron a recopilar la información que necesitaba y luego, él envió un presupuesto. Y debo decir que nos quedamos impresionados por la cifra que envió de vuelta porque esperábamos que fuera mucho más caro de lo que era."
+        },
+        {
+          question: "¿Cómo te sientes con los servicios ofrecidos por la Fundación ETHE?",
+          answer: "Creo que es excelente y bien cualificado. Sentí que las enfermeras son muy humildes y orientadas al servicio. Tengo que confesar que nos hicieron sentir muy cómodos así que no tengo nada de qué quejarme. Sólo tengo cosas positivas que decir acerca de la calidad de los servicios médicos que recibimos aquí. Dr. Luque, por ejemplo, había estimado que Ayodele tendría que permanecer en el hospital durante dos semanas. Pero luego él tuvo que quedarse una semana más porque generó una infección y yo me sentí muy cómoda en ese momento. Me hicieron sentir muy bien. Lo único que importaba era que él se sintiera mejor ¿sabes?"
+        },
+        {
+          question: "¿Qué le dirías a otra familia que está pasando por una situación similar en casa o en otro país?",
+          answer: "Lo primero que me gustaría decirles es que hagan tanta investigación como puedan. Creo que de alguna manera por nuestros vínculos históricos con América del Norte, eso fue lo primero que me vino a mí. Quiero decir, los medios son América del Norte y en ellos se ve que hay instalaciones en los Estados Unidos y que son de calidad. Pero eso se convirtió en un obstáculo para mí, fue lo único que podíamos ver hasta que llegó la realidad del costo de los servicios médicos allá. Así que mi primer consejo es orar. Espero que tengan una comunidad para apoyarlos y para ayudarles. Y hagan mucha investigación. Miren todas las opciones. Nosotros, después de la investigación, nos dimos cuenta de que hay una gran cantidad de países en el mundo que ofrecen servicios médicos muy razonables. El doctor Luque siempre estuvo disponible para nosotros. Creo que si hubiéramos hecho mejor investigación y hubiéramos leído las historias en la web, podríamos haber ahorrado algún tiempo y hubiéramos podido ver más opciones desde el principio."
+        },
+        {
+          question: "¿Cómo te sentiste en Argentina con la barrera del idioma?",
+          answer: "Sentí que – honestamente – tenía que mejorar mi español. ¡Muchos argentinos son bilingües y pueden hablar tres idiomas! He hablado con mucha gente aquí que habla un poco de inglés pero también pueden hablar un poco de francés. Así que creo que tengo que revisar mis habilidades y no estar tan orientada al inglés (risas). Hablando en serio, creo que el idioma no fue un problema aquí. La mayoría de los argentinos hablan más de un idioma. Pero yo tengo planes de volver aquí en unos pocos años. Es un país hermoso y le he dicho a algunos amigos que la gente aquí me recuerda a los trinitenses. Aunque se trata de una gran ciudad y la gente siempre se está moviendo; ¡si usted va a la terraza en la mañana puede ver a la gente moviéndose hacia arriba y hacia abajo! (risas). Pero la gente de aquí se reúne para relajarse juntos, se los oye cantar por la mañana. Y eso realmente fue como estar en casa porque allá en Trinidad también salimos mucho juntos. La gente está muy orientada a la familia, les gusta pasar los ratos juntos. También son cálidos y hospitalarios cuando se llega a su país también como los trinitenses. Eso fue muy agradable."
+        }
+      ]
+    },
+    date: "2013",
+  },
+  {
+    name: "Mikhail Ragoobar",
+    slug: "mikhail-ragoobar",
+    country: "Trinidad y Tobago",
+    countryFlag: "🇹🇹",
+    specialty: "Trasplante Hepático",
+    image: "/testimonios/mikhail-ragoobar.jpg",
+    excerpt: "Mikhail se recuperó de un Quiste de Colédoco.",
+    content: "Entrevista a Himraj y Nadia, nacidos en Trinidad y Tobago y padres de Mikhail (4 años). Vinieron a Argentina para hacer una cirugía en un quiste de Coledoco que Mikhail tenía en su hígado. Luego de un exitoso procedimiento y buenos resultados, aquí su testimonio.",
+    fullTestimony: {
+      interviewer: "Himraj y Nadia, padres de Mikhail",
+      sections: [
+        {
+          question: "¿Cuál fue el diagnóstico Mikhail y cómo se sintieron cuando llegó?",
+          answer: "Nadia: Lo que tuvo Mikhail fue un quiste de colédoco. Al principio, no sabíamos realmente qué hacer. Los médicos en Trinidad tampoco sabían qué hacer con la situación porque él es un caso pediátrico y ellos han hecho esto antes en adultos pero nunca en un niño. Cuando Mikhail tuvo la complicación de pancreatitis se empeoró la situación. Entonces, después de un par de semanas, los médicos dijeron que deberíamos considerar ir a Argentina y para nosotros el sólo pensamiento de ir nos asustó mucho. Nos daba miedo.\n\nHimraj: Ir tan lejos de casa, ¿sabes?\n\nNadia: También sucede que tenemos otros dos niños que teníamos que tener en cuenta en el momento de tomar una decisión. Pero los médicos de Trinidad se pusieron en el trabajo de hacer los papeles para nosotros y nos dieron la opción de ir a Argentina. Nos dijeron que los médicos de aquí eran mucho mejores, que eran más capaces de manejar este tipo de situaciones y que había pediatras especialistas hepáticos. Así fue que mientras hablamos sobre el tema más y más, la decisión se nos hizo más fácil.\n\nHimraj: Mantener el contacto con Mario hizo que fuera mucho más fácil la transición ya que la logística necesaria para llegar hasta aquí también es importante. Cuando estás realmente por tomar una decisión te das cuenta de la importancia de todo y todos."
+        },
+        {
+          question: "¿Cuándo fue el primer contacto con el Dr. Luque?",
+          answer: "Nadia: Eso vino a través de los médicos de Mikhail.\n\nHimraj: Aproximadamente un mes después de que él fuera admitido en nuestro hospital local.\n\nNadia: Una vez que tuvimos la carta de aceptación del hospital fue cuando realmente comenzamos a tomar medidas para llegar a Argentina. A través de la Fundación Children Life Found tuvimos la posibilidad de recaudar fondos para llegar hasta aquí. Eso sí fue un gran proceso y tomó un mucho tiempo y tuvimos que ser pacientes. Pero el objetivo final siempre fue llegar a Argentina y conseguir que Mikhail se realizara la cirugía porque no podía seguir vivir así, un mes en cada hospital. Así no había manera real de que mejorara."
+        },
+        {
+          question: "¿Cómo encontraron los servicios ofrecidos por la fundación ETHE?",
+          answer: "Himraj: Fueron excelentes. Son muy profesionales, muy amables, muy serviciales. Ellos tratan de hablar en inglés y siempre se disculpan por si es pobre su manejo del mismo y yo creo que deberíamos ser nosotros quienes deberíamos disculparnos por nuestro pobre Español! (Risas).\n\nNadia: Ayer dijimos que todos hablamos “Spanglish” aquí porque ellos tratan de hablar un poco de Inglés y nosotros tratamos de hablar un poco de español. Creo que si tuviera que hacerlo todo de nuevo, me hubiera preparado un poco más y practicar un curso de español o algo. Pero creo que cuando tienes un niño enfermo no puedes pensar en hablar un idioma diferente. Por ejemplo, nosotros estábamos tan nerviosos de venir aquí porque estuvimos al límite tanto tiempo…que no podíamos pensar en otra cosa. Pero venir fue realmente una buena experiencia. Amamos a los médicos y a las enfermeras. Tenemos muy buenas enfermeras aquí en el hospital en quienes se puede ver que realmente les importa lo que hacen. El doctor Luque se preocupó mucho por Mikhail y la doctora Bailez también. Se puede ver que es auténtica su dedicación y eso te hace sentir mejor. Y la ciudad está muy bien, son como unas vacaciones para nosotros. Nunca hemos estado juntos fuera del país así que es nuestra primera vez fuera y es muy bonito."
+        }
+      ]
+    },
+    date: "2014",
+  },
+  {
+    name: "Tonisha Rigaud",
+    slug: "tonisha-rigaud",
+    country: "Trinidad y Tobago",
+    countryFlag: "🇹🇹",
+    specialty: "Trasplante Hepático",
+    image: "/testimonios/tonisha-rigaud.jpg",
+    excerpt: "A Tonisha la diagnosticaron un Quiste de Colédoco a los 6 años.",
+    content: "Conocimos a Tonisha Rigaud cuando tenía 6 años de edad. Sus papás, Tony e Isha, provenientes de Trinidad y Tobago, se pusieron en contacto con Fundación ETHE después de que Maria Bartholomew, le comentara al médico a cargo del caso (Dr. Hilary Lee-Cazabon) que allá por un país lejano se encontraba la oportunidad para Tonisha.\n\nDespués de varios exámenes no encontraban más respuestas que un diagnóstico: “Quiste de Colédoco”, dijeron los médicos y un procedimiento quirúrgico como solución: Hepático Yeyunotomias-Laparoscopia. El quiste del colédoco es una malformación de la vía biliar poco frecuente que esta comúnmente asociado a alteraciones de la unión biliopancreática en la gran mayoría de los casos. Se puede presentar a cualquier edad, pero se diagnostica con mayor frecuencia en la infancia.\n\n“Teníamos mucho miedo, estábamos traumatizados, no sabíamos que teníamos que hacer”, dijo Tony. “No teníamos suficiente información sobre eso y por el dolor que ella tenía, teníamos miedo de que fuera algo malo”, anunció su mamá. El miedo, dicen estos papás después de revivir todo lo sucedido, es una de las principales causas que inmovilizan a muchas familias a tomar una decisión.\nPero la confianza ganó y la operación resultó un éxito.",
+    fullTestimony: {
+      interviewer: "Tony e Isha, padres de Tonisha",
+      sections: [
+        {
+          question: "¿Cómo fue el primer contacto con Dr. Luque (Director Médico de Fundación ETHE)?",
+          answer: "Fue por Skype, una entrevista donde se sentó y habló con nosotros. Con la doctora de allá comenzaron a hacer dibujos para intentar hacernos entender lo que estaba sucediendo. Y nos hizo sentir cómodos porque nosotros queríamos lo mejor para Tonisha. Nos hizo sentir seguros y entendió lo que estábamos buscando. Y después de eso solo queríamos venir y deseábamos conocerlo. Teníamos toda la confianza en lo que él nos decía porque era realista y eso era suficiente para nosotros. Y no nos lamentamos de nada. Sonreímos cada día y estamos contentos ahora. Sabes…el Dr. Luque es tan alegre. Mario… es tan divertido también. Entonces todo está muy bien. Son muy buenos con nosotros."
+        },
+        {
+          question: "¿Cuáles eran sus dudas y miedos cuando les dijeron que tenían su oportunidad para Tonisha en Argentina?",
+          answer: "Oh…sí. Habíamos llegado hasta acá y teníamos que ir a otro país nuevo y no sabíamos el idioma porque acá es español y el nuestro es inglés. Entonces, estábamos preocupados por cómo íbamos a comunicarnos. Pero otra vez, él (Dr. Luque) tenía eso también planeado. Y tuvimos un muy buen traductor…Ese es Santi….que es muy cool y tradujo todo para nosotros y nos explicó todo. Y estaba siempre ahí, por teléfono. Ellos realmente prepararon el lugar para que nos sintiéramos cómodos. De hecho estamos en casa aunque no estemos en casa. Así es como nos sentimos. Y eso es bueno."
+        },
+        {
+          question: "¿Y tu Isha? ¿Cómo te sentiste?",
+          answer: "Fue muy traumático para mí, porque era tan lejos de casa. Iba a ser la primera vez que iba a conocer al Dr. Luque en persona y no teníamos una relación con él como teníamos relación con los doctores allá en casa. Pero él nos hizo sentir muy cómodos desde el momento que pisamos Argentina. Nos acomodó muy bien, nos explicó todos los procedimientos que iban a hacer en Tonisha, los riesgos y eso nos hizo sentir muy cómodos y seguros de que cuidarían de Tonisha. Así que no tuvimos problemas hasta ahora. Realmente nos sentimos en casa. Y cada procedimiento que se hacía con Tonisha éramos informados, nos explicaban y todo era analizado con nosotros como papás. Entonces teníamos la última decisión sobre todo lo que se hacía. Todo fue 100% no como esperábamos…sino perfecto.\n\nSí…porque nuestra duda era que iba a pasar después.\n\nY fue 100% bueno."
+        },
+        {
+          question: "¿Qué dirían a una familia que está atravesando por una situación similar a la que ustedes pasaron con Tonisha?",
+          answer: "Yo les diría que tengan la mente abierta al respecto y que confíen, que tengan confianza. Porque tus dudas pueden generar más problemas…entonces esas veces que hay dudas, solo hazlo; porque esta gente realmente cuida de ti y quiere ayudarte. Eso es todo lo que quieren hacer: ayudar. Entonces, hay que sacarse ese miedo y dudas. Porque te diría que eso es lo más grande en un papá…el miedo. Miedo a ir a otro país, a donde no hablas el idioma, miedo porque no conoces esta gente. Pero cuando puedes despejar esas cosas, y abrir tu mente, te das cuenta que era tu propio miedo el que te mantenía atrás. Por eso yo le diría a cualquier familia que esto es bueno, los doctores son seguros, no va a pasar nada que no puedas enterarte. Ellos no van a hacer nada sin preguntarte antes de hacerlo y asegurarse de que tú vas a estar cómodo con eso. Recuerdo una vez que me preguntaban qué hacer y yo decía…”tú eres el doctor, haz lo que le parezca”. Pero él no…estaba esperando a decirme a mí para después hacerlo y eso fue muy bueno."
+        },
+        {
+          question: "¿Y tú Isha? ¿Qué dirías como mamá?",
+          answer: "Fue terrorífico para a mí. Pero una vez que haces mucha investigación y haces muchas preguntas, hasta las preguntas que suenan más tontas, el Dr. Luque está ahí para responderlas. Entonces deja el miedo porque ellos están aquí para ayudar y estuvieron ahí al 100% para hacer sentir a Tonisha mejor."
+        },
+        {
+          question: "¿Nos vendrían a visitar otra vez?",
+          answer: "¡Por supuesto, si! Estamos considerando hacernos residentes permanentes de Argentina (risas). Es muy lindo aquí. No es lo que estabas esperando, no es lo que escuchas sobre Argentina, es exactamente lo opuesto. Es muy lindo, confíen! Yo estaba en la misma situación. Pero están en buenas manos!"
+        },
+        {
+          question: "¿Qué es lo primero que les gustaría hacer cuando lleguen a casa?",
+          answer: "Tenemos un hijo y lo dejamos en casa por Tonisha. Y lo primero que quiero hacer es malcriarlo un poco. Darle besos y abrazos. ¡Y después comer un buen plato de nuestra comida típica!"
+        }
+      ]
+    },
+    date: "2015",
+  },
 ]

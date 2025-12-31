@@ -3,7 +3,8 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Card, CardContent } from "@/components/ui/card"
 import Link from "next/link"
-import { HelpCircle, Heart, Activity } from "lucide-react"
+import Image from "next/image"
+import { HelpCircle } from "lucide-react"
 import { generalFAQs, myths, specialtyFAQs } from "@/lib/faq-data"
 
 export default function FAQPage() {
@@ -123,9 +124,33 @@ export default function FAQPage() {
                   <CardContent className="p-8 text-center">
                     <div className="mb-6">
                       <div className="w-24 h-24 mx-auto bg-gradient-to-br from-[#5bbaa5]/20 to-[#00334e]/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                        {specialty.icon === "liver" && <Activity className="w-12 h-12 text-[#00334e]" />}
-                        {specialty.icon === "kidney" && <Activity className="w-12 h-12 text-[#00334e]" />}
-                        {specialty.icon === "heart" && <Heart className="w-12 h-12 text-[#00334e]" />}
+                        {specialty.icon === "liver" && (
+                          <Image 
+                            src="/Logos_Especialidades/Logo_Higado.png" 
+                            alt="Trasplante Hepático" 
+                            width={48} 
+                            height={48} 
+                            className="w-12 h-12 object-contain"
+                          />
+                        )}
+                        {specialty.icon === "kidney" && (
+                          <Image 
+                            src="/Logos_Especialidades/Logo_Renal.png" 
+                            alt="Trasplante Renal" 
+                            width={48} 
+                            height={48} 
+                            className="w-12 h-12 object-contain"
+                          />
+                        )}
+                        {specialty.icon === "heart" && (
+                          <Image 
+                            src="/Logos_Especialidades/Logo_Corazon.png" 
+                            alt="Cardiopatías Congénitas" 
+                            width={48} 
+                            height={48} 
+                            className="w-12 h-12 object-contain"
+                          />
+                        )}
                       </div>
                     </div>
                     <h3 className="text-xl font-bold text-[#00334e] mb-3">
@@ -135,7 +160,12 @@ export default function FAQPage() {
                       {specialty.description}
                     </p>
                     <Link
-                      href="/especialidades"
+                      href={
+                        specialty.slug === 'hepatico' ? '/faq/trasplante-hepatico' :
+                        specialty.slug === 'renal' ? '/faq/trasplante-renal' :
+                        specialty.slug === 'cardiaco' ? '/faq/cardiopatias-congenitas' :
+                        '/especialidades'
+                      }
                       className="inline-flex items-center justify-center px-6 py-3 bg-[#c74a3a] hover:bg-[#b73d2d] text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg w-full"
                     >
                       LEER +

@@ -106,7 +106,6 @@ export default function ContactPage() {
                         <AR className="w-6 h-4 md:w-8 md:h-6 rounded flex-shrink-0 mt-0.5" />
                         <div className="flex-1 min-w-0">
                           <p className="font-semibold text-xs md:text-sm">Argentina</p>
-                          <p className="text-[10px] md:text-xs text-white/60 truncate">info@fundacionethe.org</p>
                         </div>
                       </div>
 
@@ -115,7 +114,6 @@ export default function ContactPage() {
                         <SV className="w-6 h-4 md:w-8 md:h-6 rounded flex-shrink-0 mt-0.5" />
                         <div className="flex-1 min-w-0">
                           <p className="font-semibold text-xs md:text-sm">El Salvador</p>
-                          <p className="text-[10px] md:text-xs text-white/60 truncate">info@fundacionethe.org</p>
                         </div>
                       </div>
 
@@ -124,7 +122,6 @@ export default function ContactPage() {
                         <GT className="w-6 h-4 md:w-8 md:h-6 rounded flex-shrink-0 mt-0.5" />
                         <div className="flex-1 min-w-0">
                           <p className="font-semibold text-xs md:text-sm">Guatemala</p>
-                          <p className="text-[10px] md:text-xs text-white/60 truncate">info@fundacionethe.org</p>
                         </div>
                       </div>
 
@@ -133,7 +130,6 @@ export default function ContactPage() {
                         <HN className="w-6 h-4 md:w-8 md:h-6 rounded flex-shrink-0 mt-0.5" />
                         <div className="flex-1 min-w-0">
                           <p className="font-semibold text-xs md:text-sm">Honduras</p>
-                          <p className="text-[10px] md:text-xs text-white/60 truncate">info@fundacionethe.org</p>
                         </div>
                       </div>
 
@@ -142,7 +138,6 @@ export default function ContactPage() {
                         <JM className="w-6 h-4 md:w-8 md:h-6 rounded flex-shrink-0 mt-0.5" />
                         <div className="flex-1 min-w-0">
                           <p className="font-semibold text-xs md:text-sm">Jamaica</p>
-                          <p className="text-[10px] md:text-xs text-white/60 truncate">info@fundacionethe.org</p>
                         </div>
                       </div>
 
@@ -151,7 +146,6 @@ export default function ContactPage() {
                         <PA className="w-6 h-4 md:w-8 md:h-6 rounded flex-shrink-0 mt-0.5" />
                         <div className="flex-1 min-w-0">
                           <p className="font-semibold text-xs md:text-sm">Panamá</p>
-                          <p className="text-[10px] md:text-xs text-white/60 truncate">info@fundacionethe.org</p>
                         </div>
                       </div>
 
@@ -160,7 +154,6 @@ export default function ContactPage() {
                         <DO className="w-6 h-4 md:w-8 md:h-6 rounded flex-shrink-0 mt-0.5" />
                         <div className="flex-1 min-w-0">
                           <p className="font-semibold text-xs md:text-sm">República Dominicana</p>
-                          <p className="text-[10px] md:text-xs text-white/60 truncate">info@fundacionethe.org</p>
                         </div>
                       </div>
 
@@ -169,7 +162,6 @@ export default function ContactPage() {
                         <TT className="w-6 h-4 md:w-8 md:h-6 rounded flex-shrink-0 mt-0.5" />
                         <div className="flex-1 min-w-0">
                           <p className="font-semibold text-xs md:text-sm">Trinidad y Tobago</p>
-                          <p className="text-[10px] md:text-xs text-white/60 truncate">info@fundacionethe.org</p>
                         </div>
                       </div>
                     </div>

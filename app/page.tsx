@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, Heart, GraduationCap, HandCoins, Activity, Brain, ArrowRight } from "lucide-react";

@@ -75,14 +75,18 @@ export function Footer() {
             <h3 className="text-lg font-semibold mb-4 text-[#5dbfb3]">Síguenos</h3>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://www.facebook.com/ETHE.Foundation/?_rdc=1&_rdr#"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 hover:bg-[#5dbfb3] rounded-lg flex items-center justify-center transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook size={20} />
               </a>
               <a
-                href="#"
+                href="https://x.com/FundacionETHE"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 hover:bg-[#5dbfb3] rounded-lg flex items-center justify-center transition-colors"
                 aria-label="Twitter"
               >
