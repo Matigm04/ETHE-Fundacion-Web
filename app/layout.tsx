@@ -6,7 +6,7 @@ import { Footer } from "@/components/footer"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Fundación ETHE - Comprometidos con la Comunidad",
+  title: "Fundación ETHE",
   description:
     "Fundación dedicada al bienestar y desarrollo de nuestra comunidad a través de servicios profesionales y especializados.",
   generator: 'v0.app',
