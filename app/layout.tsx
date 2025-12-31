@@ -1,5 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
+import { GoogleAnalytics } from '@next/third-parties/google'
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import "./globals.css"
@@ -33,6 +34,7 @@ export default function RootLayout({
         <Navigation />
         <main className="min-h-screen">{children}</main>
         <Footer />
+        <GoogleAnalytics gaId="G-F0WPST9JJ3" />
       </body>
     </html>
   )
