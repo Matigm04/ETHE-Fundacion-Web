@@ -2,7 +2,8 @@
 
 import type React from "react"
 
-import { useState } from "react"
+import { useState, useRef } from "react"
+import ReCAPTCHA from "react-google-recaptcha"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -21,44 +22,60 @@ import TT from 'country-flag-icons/react/3x2/TT'
 export default function ContactPage() {
   const [loading, setLoading] = useState(false)
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle")
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null)
+  const recaptchaRef = useRef<ReCAPTCHA>(null)
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
+
+    // Validación: Si no hay captcha, no enviamos nada
+    if (!captchaToken) {
+      setStatus("error")
+      return
+    }
+
     setLoading(true)
     setStatus("idle")
 
     // Capturamos los datos del formulario
     const form = event.currentTarget
+    
     const formData = {
-      nombre: (form.elements.namedItem("nombreApellido") as HTMLInputElement).value,
+      nombre: (form.elements.namedItem("nombre") as HTMLInputElement).value,
+      apellido: (form.elements.namedItem("apellido") as HTMLInputElement).value,
       pais: (form.elements.namedItem("pais") as HTMLInputElement).value,
       ciudad: (form.elements.namedItem("ciudad") as HTMLInputElement).value,
       email: (form.elements.namedItem("correo") as HTMLInputElement).value,
       mensaje: (form.elements.namedItem("mensaje") as HTMLTextAreaElement).value,
+      recaptchaToken: captchaToken // Enviamos el token al script
     }
 
     try {
-      // PEGA AQUÍ TU URL DE GOOGLE SCRIPT
-
-      const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzzqLzRB-LFDWyYQ9t8LDWH4V1DqqrXPXXHPFO068jAc_JCuF08jrJ3yItR3xxVGjheLQ/exec"
+      const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzC2Uj8glPw2e6dLV8IoSfJIA0EY71R4U6-GfmBXL2h0MGllBjRLNwXjp16bM7jRy5lig/exec"
       await fetch(GOOGLE_SCRIPT_URL, {
         method: "POST",
-        mode: "no-cors", // Vital para evitar problemas de seguridad cruzada con Google
+        mode: "no-cors",
         headers: {
           "Content-Type": "text/plain;charset=utf-8",
         },
         body: JSON.stringify(formData),
       })
 
-      // Como usamos 'no-cors', asumimos éxito si no salta al catch
       setStatus("success")
-      form.reset() // Limpiamos el formulario
+      form.reset()
+      setCaptchaToken(null)
+      recaptchaRef.current?.reset()
     } catch (error) {
       console.error("Error al enviar", error)
       setStatus("error")
     } finally {
       setLoading(false)
     }
+  }
+
+  // Función que se ejecuta cuando el usuario completa el captcha
+  const onCaptchaChange = (token: string | null) => {
+    setCaptchaToken(token)
   }
 
   return (
@@ -178,17 +195,32 @@ export default function ContactPage() {
                   </div>
 
                   <form onSubmit={handleSubmit} className="space-y-5">
-                    <div className="space-y-2">
-                      <Label htmlFor="nombreApellido" className="text-sm font-medium text-gray-700">
-                        Nombre y Apellido *
-                      </Label>
-                      <Input
-                        id="nombreApellido"
-                        name="nombreApellido"
-                        required
-                        placeholder="Tu nombre y apellido"
-                        className="border-gray-300 focus:border-[#5bbaa5] focus:ring-[#5bbaa5]"
-                      />
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                      <div className="space-y-2">
+                        <Label htmlFor="nombre" className="text-sm font-medium text-gray-700">
+                          Nombre *
+                        </Label>
+                        <Input
+                          id="nombre"
+                          name="nombre"
+                          required
+                          placeholder="Tu nombre"
+                          className="border-gray-300 focus:border-[#5bbaa5] focus:ring-[#5bbaa5]"
+                        />
+                      </div>
+
+                      <div className="space-y-2">
+                        <Label htmlFor="apellido" className="text-sm font-medium text-gray-700">
+                          Apellido *
+                        </Label>
+                        <Input
+                          id="apellido"
+                          name="apellido"
+                          required
+                          placeholder="Tu apellido"
+                          className="border-gray-300 focus:border-[#5bbaa5] focus:ring-[#5bbaa5]"
+                        />
+                      </div>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -247,10 +279,19 @@ export default function ContactPage() {
                       />
                     </div>
 
+                    {/* reCAPTCHA */}
+                    <div className="flex justify-center my-4">
+                      <ReCAPTCHA
+                        ref={recaptchaRef}
+                        sitekey="6LfKijwsAAAAANxvH3iTm3Al5Tw_0p0m5SEivU-O"
+                        onChange={onCaptchaChange}
+                      />
+                    </div>
+
                     <Button 
                       type="submit" 
                       size="lg" 
-                      disabled={loading}
+                      disabled={loading || !captchaToken}
                       className="w-full bg-[#c74a3a] hover:bg-[#b43a2a] text-white disabled:opacity-50"
                     >
                       {loading ? "Enviando..." : "Enviar Mensaje"}
@@ -268,7 +309,7 @@ export default function ContactPage() {
                     {status === "error" && (
                       <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
                         <p className="text-red-700 text-center font-medium">
-                          Hubo un error. Por favor intenta nuevamente.
+                          {!captchaToken ? "Por favor confirma que no eres un robot." : "Hubo un error. Por favor intenta nuevamente."}
                         </p>
                       </div>
                     )}
