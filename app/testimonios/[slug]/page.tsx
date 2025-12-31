@@ -3,6 +3,7 @@ import { testimonials } from "@/lib/testimonials-data"
 import { Card, CardContent } from "@/components/ui/card"
 import { MapPin, Calendar, ArrowLeft, Quote } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 interface TestimonialPageProps {
   params: {
@@ -16,8 +17,9 @@ export async function generateStaticParams() {
   }))
 }
 
-export default function TestimonialPage({ params }: TestimonialPageProps) {
-  const testimonial = testimonials.find((t) => t.slug === params.slug)
+export default async function TestimonialPage({ params }: TestimonialPageProps) {
+  const { slug } = await params
+  const testimonial = testimonials.find((t) => t.slug === slug)
 
   if (!testimonial) {
     notFound()
@@ -40,9 +42,19 @@ export default function TestimonialPage({ params }: TestimonialPageProps) {
 
             {/* Patient Info */}
             <div className="flex items-start gap-6 mb-6">
-              <div className="w-24 h-24 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-5xl flex-shrink-0">
-                {testimonial.countryFlag}
-              </div>
+              {testimonial.image ? (
+                <Image
+                  src={testimonial.image}
+                  alt={testimonial.name}
+                  width={96}
+                  height={96}
+                  className="rounded-full object-cover flex-shrink-0"
+                />
+              ) : (
+                <div className="w-24 h-24 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-5xl flex-shrink-0">
+                  {testimonial.countryFlag}
+                </div>
+              )}
               <div className="flex-1">
                 <h1 className="text-3xl md:text-4xl font-bold mb-3">{testimonial.name}</h1>
                 <div className="flex flex-wrap gap-4 text-white/90">

@@ -28,7 +28,7 @@ export const testimonials: Testimonial[] = [
     country: "República Dominicana",
     countryFlag: "🇩🇴",
     specialty: "Trasplante Hepático",
-    image: null,
+    image: "/testimonios/YORGENIS-1-150x150.jpg",
     excerpt: "Entrevistamos a Lucía, abuela de Yorgenis...",
     content:
       "Todo comenzó cuando fuimos a un Hospital en República Dominicana por un hidrocele. Los médicos le hicieron una operación, pero al transcurrir los días le iba creciendo su barriga de forma alarmante. Después de 8 meses internado y múltiples estudios, nos dijeron que necesitaba un trasplante hepático urgente y que en nuestro país no teníamos nada que hacer.",
@@ -69,7 +69,7 @@ export const testimonials: Testimonial[] = [
     country: "Trinidad y Tobago",
     countryFlag: "🇹🇹",
     specialty: "Trasplante Hepático",
-    image: null,
+    image: "/testimonios/Kelly-Ann-2015_6-150x150.jpg",
     excerpt: "Una historia de amor y donación...",
     content:
       "Cuando Kelly Ann tenía 2 meses desarrolló un color amarillo en los ojos. El diagnóstico fue Atresia Biliar y necesitaba un trasplante de hígado. Como padre, decidí que no iba a permitir que Kelly Ann desapareciera de mí. El Doctor Luque nos explicó todo el procedimiento y me convertí en su donante. Hoy, 4 años después, Kelly Ann está perfectamente bien.",
@@ -98,7 +98,7 @@ export const testimonials: Testimonial[] = [
     country: "Trinidad y Tobago",
     countryFlag: "🇹🇹",
     specialty: "Trasplante Hepático",
-    image: null,
+    image: "/testimonios/FAMILIA-JACK-1-500x500.jpg",
     excerpt: "El diagnóstico de Amiah fue Atresia de vías Biliares...",
     content:
       "A los tres días de haber nacido, sus ojos estaban completamente amarillos. Cuando fuimos a Trinidad a confirmar el diagnóstico de atresia de vías biliares, el pediatra nos recomendó la Fundación ETHE. Con un trasplante de hígado, hoy Amiah se recupera favorablemente y se encuentra plena.",
@@ -139,7 +139,7 @@ export const testimonials: Testimonial[] = [
     country: "Trinidad y Tobago",
     countryFlag: "🇹🇹",
     specialty: "Trasplante Renal",
-    image: null,
+    image: "/testimonios/Ariella_Bazzard_3-500x500.jpg",
     excerpt: "Una historia de valentía maternal y transformación...",
     content:
       "Notamos los primeros síntomas a los dos meses: ictericia, orina oscura y heces pálidas. A los cinco meses fue diagnosticada con Atresia Biliar. La Dra. Bartholomew nos recomendó al Dr. Luque. Yo fui la donante de mi hija. Hoy Ariella es una niña completamente diferente: ríe todo el tiempo, tiene energía y hace cosas propias de su edad que antes no podía hacer.",
@@ -184,7 +184,7 @@ export const testimonials: Testimonial[] = [
     country: "Trinidad y Tobago",
     countryFlag: "🇹🇹",
     specialty: "Trasplante Hepático",
-    image: "/testimonios/ayodele-roberts.jpg",
+    image: "/testimonios/Ayodele_Roberts.jpg",
     excerpt: "A Ayodele le diagnosticaron un Amartoma Hepático Quístico a los 2 años.",
     content: "Entrevista a Nicole Roberts, nacida en Trinidad y Tobago y mamá de Ayodele (3 años). Vinieron a Argentina para operar el Amartoma Hepático Quístico que Ayodele tenía en su hígado. Luego de una exitosa operación, aquí su testimonio.",
     fullTestimony: {
@@ -220,7 +220,7 @@ export const testimonials: Testimonial[] = [
     country: "Trinidad y Tobago",
     countryFlag: "🇹🇹",
     specialty: "Trasplante Hepático",
-    image: "/testimonios/mikhail-ragoobar.jpg",
+    image: "/testimonios/Mikhail_Ragoobar.jpg",
     excerpt: "Mikhail se recuperó de un Quiste de Colédoco.",
     content: "Entrevista a Himraj y Nadia, nacidos en Trinidad y Tobago y padres de Mikhail (4 años). Vinieron a Argentina para hacer una cirugía en un quiste de Coledoco que Mikhail tenía en su hígado. Luego de un exitoso procedimiento y buenos resultados, aquí su testimonio.",
     fullTestimony: {
@@ -248,12 +248,17 @@ export const testimonials: Testimonial[] = [
     country: "Trinidad y Tobago",
     countryFlag: "🇹🇹",
     specialty: "Trasplante Hepático",
-    image: "/testimonios/tonisha-rigaud.jpg",
+    image: "/testimonios/Tonisha_Rigaud.jpg",
     excerpt: "A Tonisha la diagnosticaron un Quiste de Colédoco a los 6 años.",
-    content: "Conocimos a Tonisha Rigaud cuando tenía 6 años de edad. Sus papás, Tony e Isha, provenientes de Trinidad y Tobago, se pusieron en contacto con Fundación ETHE después de que Maria Bartholomew, le comentara al médico a cargo del caso (Dr. Hilary Lee-Cazabon) que allá por un país lejano se encontraba la oportunidad para Tonisha.\n\nDespués de varios exámenes no encontraban más respuestas que un diagnóstico: “Quiste de Colédoco”, dijeron los médicos y un procedimiento quirúrgico como solución: Hepático Yeyunotomias-Laparoscopia. El quiste del colédoco es una malformación de la vía biliar poco frecuente que esta comúnmente asociado a alteraciones de la unión biliopancreática en la gran mayoría de los casos. Se puede presentar a cualquier edad, pero se diagnostica con mayor frecuencia en la infancia.\n\n“Teníamos mucho miedo, estábamos traumatizados, no sabíamos que teníamos que hacer”, dijo Tony. “No teníamos suficiente información sobre eso y por el dolor que ella tenía, teníamos miedo de que fuera algo malo”, anunció su mamá. El miedo, dicen estos papás después de revivir todo lo sucedido, es una de las principales causas que inmovilizan a muchas familias a tomar una decisión.\nPero la confianza ganó y la operación resultó un éxito.",
+    content:
+      "A Tonisha la diagnosticaron un Quiste de Colédoco a los 6 años. Sus padres, Tony e Isha, tomaron la decisión de confiar en la Fundación ETHE para realizar el procedimiento quirúrgico necesario. La confianza ganó y la operación resultó un éxito.",
     fullTestimony: {
       interviewer: "Tony e Isha, padres de Tonisha",
       sections: [
+        {
+          question: "¿Cuál fue el diagnóstico de Tonisha?",
+          answer: "Conocimos a Tonisha Rigaud cuando tenía 6 años de edad. Sus papás, Tony e Isha, provenientes de Trinidad y Tobago, se pusieron en contacto con Fundación ETHE después de que Maria Bartholomew, le comentara al médico a cargo del caso (Dr. Hilary Lee-Cazabon) que allá por un país lejano se encontraba la oportunidad para Tonisha.\n\nDespués de varios exámenes no encontraban más respuestas que un diagnóstico: “Quiste de Colédoco”, dijeron los médicos y un procedimiento quirúrgico como solución: Hepático Yeyunotomias-Laparoscopia. El quiste del colédoco es una malformación de la vía biliar poco frecuente que esta comúnmente asociado a alteraciones de la unión biliopancreática en la gran mayoría de los casos. Se puede presentar a cualquier edad, pero se diagnostica con mayor frecuencia en la infancia.\n\n“Teníamos mucho miedo, estábamos traumatizados, no sabíamos que teníamos que hacer”, dijo Tony. “No teníamos suficiente información sobre eso y por el dolor que ella tenía, teníamos miedo de que fuera algo malo”, anunció su mamá. El miedo, dicen estos papás después de revivir todo lo sucedido, es una de las principales causas que inmovilizan a muchas familias a tomar una decisión.\nPero la confianza ganó y la operación resultó un éxito."
+        },
         {
           question: "¿Cómo fue el primer contacto con Dr. Luque (Director Médico de Fundación ETHE)?",
           answer: "Fue por Skype, una entrevista donde se sentó y habló con nosotros. Con la doctora de allá comenzaron a hacer dibujos para intentar hacernos entender lo que estaba sucediendo. Y nos hizo sentir cómodos porque nosotros queríamos lo mejor para Tonisha. Nos hizo sentir seguros y entendió lo que estábamos buscando. Y después de eso solo queríamos venir y deseábamos conocerlo. Teníamos toda la confianza en lo que él nos decía porque era realista y eso era suficiente para nosotros. Y no nos lamentamos de nada. Sonreímos cada día y estamos contentos ahora. Sabes…el Dr. Luque es tan alegre. Mario… es tan divertido también. Entonces todo está muy bien. Son muy buenos con nosotros."
@@ -285,5 +290,58 @@ export const testimonials: Testimonial[] = [
       ]
     },
     date: "2015",
+  },
+  {
+    name: "Nathaniel Cipriani",
+    slug: "nathaniel-cipriani",
+    country: "Trinidad y Tobago",
+    countryFlag: "🇹🇹",
+    specialty: "Trasplante Hepático",
+    image: "/testimonios/NATHANIEL-2-500x500.jpg",
+    excerpt: "Recuperar la infancia: Nathaniel Cipriani fue Atresia Biliar y fue trasplantado exitoso.",
+    content:
+      "Nathaniel Cipriani fue Atresia Biliar y fue trasplantado exitoso. Risa y Alester, su madre biológica y padre adoptivo, cuentan su historia.",
+    fullTestimony: {
+      interviewer: "Risa y Alester, madre biológica y padre adoptivo de Nathaniel",
+      sections: [
+        {
+          question: "¿Cómo descubrieron su enfermedad, sus primeros síntomas?",
+          answer: "Risa: A los cinco días de nacer, sus ojos estaban amarillos y los ingresaron al hospital por diez días. Luego de hacer los exámenes de sangre el doctor nos dijo que podíamos irnos a casa, pero no pudimos irnos. Al final, cuando tenía cuatro meses, su doctor le diagnosticó atresia de vías biliares."
+        },
+        {
+          question: "¿Cómo descubrieron la Fundación ETHE?",
+          answer: "Al principio no sabíamos nada. No enteramos luego por las otras familias de allá, que habían venido aquí. Ellos sabían sobre la Fundación."
+        },
+        {
+          question: "¿Cómo y por qué decidieron venir a Argentina y confiar en el programa de la Fundación ETHE?",
+          answer: "Risa: Tenemos un grupo allá con todos los chicos que recibieron trasplante de hígado y el doctor especialista que trata a Nathaniel en Trinidad me ofreció incluirme en el grupo con esos niños y sus padres, que sabían un poco más sobre la situación. Luego de reunirnos con el Dr. Luque, cuando estuvo en Trinidad, supimos que la solución estaba en Argentina. Recibimos otras ofertas de hospitales de otros países pero nos quedamos con esta porque habíamos visto los resultados. Y siempre hablaba con el Dr. Luque regularmente, y cada vez que llevaba a Nathaniel al hospital él me escribía para estar al tanto de todo. Yo estaba cómoda con la decisión de venir acá. No pensaba ir a ningún otro lado."
+        },
+        {
+          question: "¿Cómo se sintieron y que nos pueden decir de los profesionales médicos que atendieron a Nathaniel, de la calidad del servicio médico, de las enfermeras y las instalaciones del hospital?",
+          answer: "Risa: Muy bueno. Estuvo muy bien. Estoy satisfecha con los cirujanos, hicieron un buen trabajo. Los otros doctores, las enfermeras y todo el hospital fueron muy atentos y cuidaron muy bien de él. Estamos conformes con todo"
+        },
+        {
+          question: "¿Qué o cuáles sentimientos tenían días antes del trasplante?",
+          answer: "Risa: Miedo. Era todo un día, porque la cirugía llevaba entre 10 y 12 horas. Pero al final del día no queda otra cosa más que esperar. Había visto resultados en los otros niños así que sabía que iba a salir bien. Pero tuvimos mucho apoyo de amigos y de las traductoras también, así pude pasarlo."
+        },
+        {
+          question: "¿Cuál es su estado actual y sus pensamientos viendo a Nathaniel tan recuperado y con una Mirada hacia atrás de todo lo que usted y su familia han pasado para llegar hasta este momento?",
+          answer: "Risa: Por empezar subió de peso que era el objetivo porque siempre estuvo por debajo de su peso y siempre intenté que subiera. Y luego de la cirugía tenía mucha más energía, como pueden ver. Se lo ve bien, está intentando caminar, porque no lo podía hacer antes, no podía ni gatear porque tenía el estómago muy grande. Y ahora está intentando dar unos pasos por sí mismo y caminar y está comiendo mucho. ¡Así que está muy bien ahora, gracias a dios todo va bien por ahora!"
+        },
+        {
+          question: "¿Les gustaría volver a la Argentina? ¿Por qué?",
+          answer: "Risa: Si. Vamos a volver cuando él tenga quince años, así sabe dónde le hicimos el trasplante. Porque la gente de acá es muy buena, y los lugares muy lindos, si bien no pudimos pasear mucho, los lugares que visitamos son muy lindos."
+        },
+        {
+          question: "¿Qué le dirías a otra familia que está pasando por una situación similar?",
+          answer: "Risa: Les haría saber que es una batalla muy muy larga. Que al final del día tienen que estar ahí para sus hijos y rezar con él. Que tiene que hacer más, preguntar, en cuanto a las cosas médicas. Cómo cuando vayan al hospital, o si tienen preguntas para el Dr. Luque, que hagan más preguntas, porque yo no tenía ni idea y gracias a las otras familias fuimos conociendo un poco más sobre el tema y leímos un poco también. Y decidimos venir a Argentina porque vimos dos niños que habían estado muy mal y ahora son niños sanos y felices. No se rindan. Pueden pensar que no hay solución pero siempre hay una forma. Con la ayuda de los cirujanos y el Dr. Luque pueden superarlo."
+        },
+        {
+          question: "¿Qué puedes decirnos de la situación legal que tuvieron que atravesar al no ser el donante un familiar directo?",
+          answer: "Risa: Bueno, es la primera vez que tuvimos que hacer algo así. No sé qué quiere decir el, ya que fue el quien pasó por todo esto, no yo. Yo solo participé como madre, tutora y esposa, pero él fue el donante, no sé cómo se sintió el durante esta proceso legal.\n\nAlester: Honestamente me sentí muy cómodo, porque en definitiva nadie me obligó a hacerlo, fue una decisión mía. Risa tenía otros donantes en su familia. Algunos, pero no pudieron hacerle por diferentes motivos. Tenían esposa o hijos y no podían venir y dejar alá a su familia. Un hermano iba a donar y pasó lo mismo. El hermano iba a ser donante y le descubrieron glaucoma asique tampoco pudo. Para ese entonces ya estábamos casados. Y pensé, si ya estamos casados, Nathaniel es cómo mi hijo ¿no? Porque si estamos casados formas parte de mi vida y Nathaniel también. Entonces me pareció lo mejor donar el 25% de mi hígado a Nathaniel."
+        }
+      ]
+    },
+    date: "2016",
   },
 ]

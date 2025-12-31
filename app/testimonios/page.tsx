@@ -93,9 +93,19 @@ export default function TestimonialsPage() {
                   <CardContent className="p-6">
                     {/* Patient Info */}
                     <div className="flex items-start gap-4 mb-6">
-                      <div className="w-20 h-20 bg-gradient-to-br from-gray-200 to-gray-300 rounded-full flex items-center justify-center text-3xl flex-shrink-0">
-                        {testimonial.countryFlag}
-                      </div>
+                      {testimonial.image ? (
+                        <Image
+                          src={testimonial.image}
+                          alt={testimonial.name}
+                          width={80}
+                          height={80}
+                          className="rounded-full object-cover flex-shrink-0"
+                        />
+                      ) : (
+                        <div className="w-20 h-20 bg-gradient-to-br from-gray-200 to-gray-300 rounded-full flex items-center justify-center text-3xl flex-shrink-0">
+                          {testimonial.countryFlag}
+                        </div>
+                      )}
                       <div className="flex-1">
                         <h3 className="text-xl font-bold text-[#0a4d5c] mb-1">{testimonial.name}</h3>
                         <div className="flex items-center gap-2 text-gray-600 mb-2">
