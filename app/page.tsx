@@ -45,7 +45,7 @@ export default function HomePage() {
             {/* Trasplante Hepático - Rojo completo */}
             <div className="group bg-[#c74a3a] rounded-2xl p-5 md:p-8 text-white hover:shadow-2xl transition-all hover:scale-105">
               <div className="w-12 h-12 md:w-16 md:h-16 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center mb-4 md:mb-6">
-                <Activity className="text-white" size={28} />
+                <Image src="/Logos_Especialidades/Logo_Higado.png" alt="Trasplante Hepático" width={32} height={32} className="w-7 h-7 md:w-8 md:h-8" />
               </div>
               <h3 className="text-xl md:text-2xl font-bold mb-2 md:mb-3">Trasplante hepático</h3>
               <p className="text-white/90 text-sm md:text-base leading-relaxed mb-4 md:mb-6">
@@ -60,7 +60,7 @@ export default function HomePage() {
             {/* Trasplante Renal - Beige completo */}
             <div className="group bg-[#cfa46c] rounded-2xl p-5 md:p-8 text-white hover:shadow-2xl transition-all hover:scale-105">
               <div className="w-12 h-12 md:w-16 md:h-16 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center mb-4 md:mb-6">
-                <Brain className="text-white" size={28} />
+                <Image src="/Logos_Especialidades/Logo_Renal.png" alt="Trasplante Renal" width={32} height={32} className="w-7 h-7 md:w-8 md:h-8" />
               </div>
               <h3 className="text-xl md:text-2xl font-bold mb-2 md:mb-3">Trasplante renal</h3>
               <p className="text-white/90 text-sm md:text-base leading-relaxed mb-4 md:mb-6">
@@ -75,7 +75,7 @@ export default function HomePage() {
             {/* Cardiopatías - Amarillo completo */}
             <div className="group bg-[#ffcb05] rounded-2xl p-5 md:p-8 text-[#00334e] hover:shadow-2xl transition-all hover:scale-105">
               <div className="w-12 h-12 md:w-16 md:h-16 bg-[#00334e]/10 backdrop-blur-sm rounded-xl flex items-center justify-center mb-4 md:mb-6">
-                <Heart className="text-[#00334e]" size={28} />
+                <Image src="/Logos_Especialidades/Logo_Corazon.png" alt="Cardiopatías Congénitas" width={32} height={32} className="w-7 h-7 md:w-8 md:h-8" />
               </div>
               <h3 className="text-xl md:text-2xl font-bold mb-2 md:mb-3">Cardiopatías congénitas</h3>
               <p className="text-[#00334e]/80 text-sm md:text-base leading-relaxed mb-4 md:mb-6">

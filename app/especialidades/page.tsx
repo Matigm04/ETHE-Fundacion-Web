@@ -1,12 +1,12 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { Heart, Activity, Brain } from "lucide-react"
+import Image from "next/image"
 
 export default function SpecialtiesPage() {
   const specialties = [
     {
-      icon: Activity,
+      icon: "/Logos_Especialidades/Logo_Higado.png",
       title: "Trasplante hepático",
       slug: "trasplante-hepatico",
       description:
@@ -19,7 +19,7 @@ export default function SpecialtiesPage() {
       ],
     },
     {
-      icon: Brain,
+      icon: "/Logos_Especialidades/Logo_Renal.png",
       title: "Trasplante renal",
       slug: "trasplante-renal",
       description:
@@ -32,7 +32,7 @@ export default function SpecialtiesPage() {
       ],
     },
     {
-      icon: Heart,
+      icon: "/Logos_Especialidades/Logo_Corazon.png",
       title: "Cardiopatías congénitas",
       slug: "cardiopatias",
       description:
@@ -72,12 +72,11 @@ export default function SpecialtiesPage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {specialties.map((specialty, index) => {
-              const Icon = specialty.icon
               return (
                 <Card key={index} className="flex flex-col border-[#5dbfb3] hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                   <CardHeader>
                     <div className="w-16 h-16 bg-gradient-to-br from-[#5dbfb3] to-[#0a4d5c] rounded-xl flex items-center justify-center mb-4">
-                      <Icon className="text-white" size={32} />
+                      <Image src={specialty.icon} alt={specialty.title} width={40} height={40} className="w-10 h-10" />
                     </div>
                     <CardTitle className="text-xl text-[#0a4d5c] mb-3">{specialty.title}</CardTitle>
                     <CardDescription className="text-base leading-relaxed">{specialty.description}</CardDescription>
