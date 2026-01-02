@@ -18,7 +18,7 @@ export function Footer() {
                 className="object-contain brightness-0 invert"
               />
             </div>
-            <p className="text-sm text-white/80 leading-relaxed">
+            <p className="text-base text-white/80 leading-relaxed">
               Comprometidos con el bienestar y desarrollo de nuestra comunidad a través de servicios profesionales y
               especializados.
             </p>
@@ -26,25 +26,25 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-[#5dbfb3]">Enlaces rápidos</h3>
+            <h3 className="text-xl font-semibold mb-4 text-[#5dbfb3]">Enlaces rápidos</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/quienes-somos" className="text-sm text-white/80 hover:text-[#5dbfb3] transition-colors">
+                <Link href="/quienes-somos" className="text-base text-white/80 hover:text-[#5dbfb3] transition-colors">
                   Quiénes somos
                 </Link>
               </li>
               <li>
-                <Link href="/especialidades" className="text-sm text-white/80 hover:text-[#5dbfb3] transition-colors">
+                <Link href="/especialidades" className="text-base text-white/80 hover:text-[#5dbfb3] transition-colors">
                   Especialidades
                 </Link>
               </li>
               <li>
-                <Link href="/documentos" className="text-sm text-white/80 hover:text-[#5dbfb3] transition-colors">
+                <Link href="/documentos" className="text-base text-white/80 hover:text-[#5dbfb3] transition-colors">
                   Documentos
                 </Link>
               </li>
               <li>
-                <Link href="/testimonios" className="text-sm text-white/80 hover:text-[#5dbfb3] transition-colors">
+                <Link href="/testimonios" className="text-base text-white/80 hover:text-[#5dbfb3] transition-colors">
                   Testimonios
                 </Link>
               </li>
@@ -53,26 +53,22 @@ export function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-[#5dbfb3]">Contacto</h3>
+            <h3 className="text-xl font-semibold mb-4 text-[#5dbfb3]">Contacto</h3>
             <ul className="space-y-3">
-              <li className="flex items-start gap-2 text-sm text-white/80">
-                <Phone size={16} className="mt-1 flex-shrink-0" />
+              <li className="flex items-start gap-2 text-base text-white/80">
+                <Phone size={18} className="mt-1 flex-shrink-0" />
                 <span>+54 11 1234-5678</span>
               </li>
-              <li className="flex items-start gap-2 text-sm text-white/80">
-                <Mail size={16} className="mt-1 flex-shrink-0" />
+              <li className="flex items-start gap-2 text-base text-white/80">
+                <Mail size={18} className="mt-1 flex-shrink-0" />
                 <span>info@fundacionethe.org</span>
-              </li>
-              <li className="flex items-start gap-2 text-sm text-white/80">
-                <MapPin size={16} className="mt-1 flex-shrink-0" />
-                <span>Buenos Aires, Argentina</span>
               </li>
             </ul>
           </div>
 
           {/* Social Media */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-[#5dbfb3]">Síguenos</h3>
+            <h3 className="text-xl font-semibold mb-4 text-[#5dbfb3]">Síguenos</h3>
             <div className="flex gap-4">
               <a
                 href="https://www.facebook.com/ETHE.Foundation/?_rdc=1&_rdr#"
@@ -110,8 +106,23 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 mt-8 pt-8 text-center text-sm text-white/60">
-          <p>&copy; 2018 / Fundación ETHE / Todos los derechos reservados.</p>
+        <div className="border-t border-white/10 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            {/* Copyright - Left */}
+            <div className="text-base text-white/60">
+              <p>&copy; 2018 / Fundación ETHE / Todos los derechos reservados.</p>
+            </div>
+            
+            {/* Developer Seal - Right */}
+            <div className="flex items-center gap-3">
+              <span className="text-sm text-white/50">Diseño y desarrollo</span>
+              <div className="inline-block px-3 py-1.5 bg-white/5 rounded-md hover:bg-white/10 transition-colors">
+                <span className="font-bold text-white/70 tracking-tight" style={{ fontFamily: 'Montserrat, Poppins, sans-serif' }}>
+                  &lt;MG /&gt;
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
