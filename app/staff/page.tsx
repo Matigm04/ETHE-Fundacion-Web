@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Stethoscope, UserCheck, User, Heart, Activity } from "lucide-react"
+import { Stethoscope, UserCheck, User, Heart, Activity, Microscope } from "lucide-react"
 
 export default function StaffPage() {
   return (
@@ -114,7 +114,7 @@ export default function StaffPage() {
               <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 group">
                 <div className="relative h-32 md:h-56 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
                   <div className="w-16 h-16 md:w-24 md:h-24 bg-gradient-to-br from-[#5dbfb3] to-[#0a4d5c] rounded-full flex items-center justify-center">
-                    <Stethoscope className="text-white" size={24} className="md:w-9 md:h-9" />
+                    <Stethoscope className="text-white w-6 h-6 md:w-9 md:h-9" />
                   </div>
                 </div>
                 <CardHeader className="text-center p-3 md:pb-4">
@@ -262,7 +262,7 @@ export default function StaffPage() {
               <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 group">
                 <div className="relative h-32 md:h-56 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
                   <div className="w-16 h-16 md:w-24 md:h-24 bg-gradient-to-br from-[#5dbfb3] to-[#0a4d5c] rounded-full flex items-center justify-center">
-                    <Activity className="text-white w-6 h-6 md:w-9 md:h-9" />
+                    <Microscope className="text-white w-6 h-6 md:w-9 md:h-9" />
                   </div>
                 </div>
                 <CardHeader className="text-center p-3 md:pb-4">
@@ -273,7 +273,7 @@ export default function StaffPage() {
               <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 group">
                 <div className="relative h-32 md:h-56 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
                   <div className="w-16 h-16 md:w-24 md:h-24 bg-gradient-to-br from-[#5dbfb3] to-[#0a4d5c] rounded-full flex items-center justify-center">
-                    <Activity className="text-white w-6 h-6 md:w-9 md:h-9" />
+                    <Microscope className="text-white w-6 h-6 md:w-9 md:h-9" />
                   </div>
                 </div>
                 <CardHeader className="text-center p-3 md:pb-4">
@@ -284,7 +284,7 @@ export default function StaffPage() {
               <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 group">
                 <div className="relative h-32 md:h-56 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
                   <div className="w-16 h-16 md:w-24 md:h-24 bg-gradient-to-br from-[#5dbfb3] to-[#0a4d5c] rounded-full flex items-center justify-center">
-                    <Activity className="text-white w-6 h-6 md:w-9 md:h-9" />
+                    <Microscope className="text-white w-6 h-6 md:w-9 md:h-9" />
                   </div>
                 </div>
                 <CardHeader className="text-center p-3 md:pb-4">
@@ -295,7 +295,7 @@ export default function StaffPage() {
               <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 group">
                 <div className="relative h-32 md:h-56 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
                   <div className="w-16 h-16 md:w-24 md:h-24 bg-gradient-to-br from-[#5dbfb3] to-[#0a4d5c] rounded-full flex items-center justify-center">
-                    <Activity className="text-white w-6 h-6 md:w-9 md:h-9" />
+                    <Microscope className="text-white w-6 h-6 md:w-9 md:h-9" />
                   </div>
                 </div>
                 <CardHeader className="text-center p-3 md:pb-4">
