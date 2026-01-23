@@ -12,7 +12,7 @@ export default function EjesAccionPage() {
         {/* Imagen de fondo con overlay */}
         <div className="absolute inset-0">
           <Image 
-            src="/Secciones_iniciales/5228409.jpg" 
+            src="/Secciones_Iniciales/5228409.jpg" 
             alt="Ejes de Acción - Fundación ETHE" 
             fill
             className="object-cover object-top opacity-20"

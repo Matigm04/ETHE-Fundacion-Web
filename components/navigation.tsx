@@ -17,7 +17,7 @@ export function Navigation() {
       label: "Acerca de ETHE",
       submenu: [
         { href: "/quienes-somos", label: "Quiénes Somos" },
-        { href: "/mision-vision", label: "Misión y Visión" },
+        { href: "/mision-vision", label: "Misión, Visión y Valores" },
         { href: "/ejes-de-accion", label: "Ejes de Acción" },
       ]
     },

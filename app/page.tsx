@@ -52,7 +52,7 @@ export default function HomePage() {
                 <div className="absolute -inset-4 bg-white/10 rounded-3xl blur-2xl" />
                 <div className="relative">
                   <Image 
-                    src="/Secciones_iniciales/group-primary-schoolers-lying-ground-smiling.jpg" 
+                    src="/Secciones_Iniciales/group-primary-schoolers-lying-ground-smiling.jpg" 
                     alt="Fundación ETHE - Medicina de Alta Complejidad" 
                     width={600} 
                     height={600} 
