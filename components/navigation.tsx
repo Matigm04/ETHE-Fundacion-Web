@@ -8,16 +8,17 @@ import { usePathname } from "next/navigation"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
-  const [isQuienesSomosOpen, setIsQuienesSomosOpen] = useState(false)
+  const [isFundacionOpen, setIsFundacionOpen] = useState(false)
   const pathname = usePathname()
 
   const navLinks = [
     { href: "/", label: "Inicio" },
     { 
-      label: "Quiénes somos",
+      label: "Acerca de ETHE",
       submenu: [
-        { href: "/quienes-somos", label: "Acerca de ETHE" },
-        { href: "/staff", label: "Nuestro staff" },
+        { href: "/quienes-somos", label: "Quiénes Somos" },
+        { href: "/mision-vision", label: "Misión y Visión" },
+        { href: "/ejes-de-accion", label: "Ejes de Acción" },
       ]
     },
     { href: "/especialidades", label: "Especialidades" },
@@ -53,8 +54,8 @@ export function Navigation() {
                   <>
                     <button
                       className="flex items-center gap-1 text-sm font-medium hover:text-[#5dbfb3] transition-colors"
-                      onMouseEnter={() => setIsQuienesSomosOpen(true)}
-                      onMouseLeave={() => setIsQuienesSomosOpen(false)}
+                      onMouseEnter={() => setIsFundacionOpen(true)}
+                      onMouseLeave={() => setIsFundacionOpen(false)}
                     >
                       {link.label}
                       <ChevronDown size={16} className="transition-transform group-hover:rotate-180" />
@@ -62,8 +63,8 @@ export function Navigation() {
                     {/* Dropdown Menu */}
                     <div
                       className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2"
-                      onMouseEnter={() => setIsQuienesSomosOpen(true)}
-                      onMouseLeave={() => setIsQuienesSomosOpen(false)}
+                      onMouseEnter={() => setIsFundacionOpen(true)}
+                      onMouseLeave={() => setIsFundacionOpen(false)}
                     >
                       <div className="py-2">
                         {link.submenu.map((sublink) => (
@@ -108,16 +109,16 @@ export function Navigation() {
                 {link.submenu ? (
                   <>
                     <button
-                      onClick={() => setIsQuienesSomosOpen(!isQuienesSomosOpen)}
+                      onClick={() => setIsFundacionOpen(!isFundacionOpen)}
                       className="flex items-center justify-between w-full py-2 text-sm font-medium hover:text-[#5dbfb3] transition-colors"
                     >
                       {link.label}
                       <ChevronDown 
                         size={16} 
-                        className={`transition-transform ${isQuienesSomosOpen ? 'rotate-180' : ''}`} 
+                        className={`transition-transform ${isFundacionOpen ? 'rotate-180' : ''}`} 
                       />
                     </button>
-                    {isQuienesSomosOpen && (
+                    {isFundacionOpen && (
                       <div className="pl-4 mt-2 space-y-2">
                         {link.submenu.map((sublink) => (
                           <Link
@@ -125,7 +126,7 @@ export function Navigation() {
                             href={sublink.href}
                             onClick={() => {
                               setIsOpen(false)
-                              setIsQuienesSomosOpen(false)
+                              setIsFundacionOpen(false)
                             }}
                             className="block py-2 text-sm font-medium text-[#5dbfb3] hover:text-white transition-colors"
                           >

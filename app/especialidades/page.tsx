@@ -82,15 +82,6 @@ export default function SpecialtiesPage() {
                     <CardDescription className="text-base leading-relaxed">{specialty.description}</CardDescription>
                   </CardHeader>
                   <CardContent className="flex flex-col flex-grow">
-                    <h4 className="font-semibold text-[#0a4d5c] mb-3 text-sm">Servicios incluidos:</h4>
-                    <ul className="space-y-2">
-                      {specialty.services.map((service, idx) => (
-                        <li key={idx} className="flex items-start gap-2 text-sm text-gray-600">
-                          <span className="text-[#5dbfb3] mt-1 text-lg">•</span>
-                          <span>{service}</span>
-                        </li>
-                      ))}
-                    </ul>
                     <div className="mt-auto pt-6">
                       <Link href={`/especialidades/${specialty.slug}`} passHref>
                         <Button className="w-full bg-[#00334e] hover:bg-[#002233]">

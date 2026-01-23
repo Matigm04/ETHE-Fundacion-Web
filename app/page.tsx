@@ -7,26 +7,62 @@ import { CheckCircle, Heart, GraduationCap, HandCoins, Activity, Brain, ArrowRig
 export default function HomePage() {
   return (
     <div className="flex flex-col">
-      {/* Hero Section - Teal vibrante con decoración amarilla */}
-      <section className="relative bg-[#5bbaa5] text-white py-12 md:py-32 overflow-hidden">
-        {/* Decorative yellow overlay */}
-        <div className="absolute bottom-0 right-0 w-1/3 h-1/2 bg-[#ffcb05] opacity-20 rounded-tl-[100px]" />
-        <div className="absolute top-10 right-4 w-32 h-32 bg-[#ffcb05] opacity-10 rounded-full" />
-        <div className="absolute bottom-20 left-10 w-24 h-24 bg-white opacity-5 rounded-full" />
+      {/* Hero Section - Diseño moderno con ilustración */}
+      <section className="relative min-h-[90vh] bg-gradient-to-br from-[#5bbaa5] via-[#4aa596] to-[#00334e] text-white overflow-hidden flex items-center">
+        {/* Decorative elements */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#ffcb05] opacity-10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-white opacity-5 rounded-full blur-2xl" />
         
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 bg-white/20 backdrop-blur-sm rounded-full mb-4 md:mb-6">
-              <div className="w-2 h-2 bg-[#ffcb05] rounded-full animate-pulse" />
-              <span className="text-xs md:text-sm font-semibold uppercase tracking-wider">Alta Complejidad</span>
+        <div className="container mx-auto px-4 py-12 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center max-w-7xl mx-auto">
+            
+            {/* Contenido de texto */}
+            <div className="text-center lg:text-left order-2 lg:order-1">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 bg-white/20 backdrop-blur-sm rounded-full mb-4 md:mb-6">
+                <div className="w-2 h-2 bg-[#ffcb05] rounded-full animate-pulse" />
+                <span className="text-xs md:text-sm font-semibold uppercase tracking-wider">Alta Complejidad</span>
+              </div>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 md:mb-6 leading-tight">
+                Transformando vidas a través de la medicina
+                <span className="block text-[#ffcb05] mt-2 text-2xl md:text-3xl lg:text-4xl">
+                  Expertos en Medicina de Alta Complejidad
+                </span>
+              </h1>
+              <p className="text-white/90 text-base md:text-lg mb-6 md:mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
+                Brindamos atención especializada en trasplantes y cardiopatías congénitas con un equipo de profesionales de renombre internacional.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <Link href="/especialidades">
+                  <Button size="lg" className="bg-[#ffcb05] text-[#00334e] hover:bg-[#ffd52e] font-semibold w-full sm:w-auto">
+                    Nuestras Especialidades
+                  </Button>
+                </Link>
+                <Link href="/contacto">
+                  <Button size="lg" variant="outline" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-[#00334e] w-full sm:w-auto font-semibold shadow-lg transition-all">
+                    Contáctanos
+                  </Button>
+                </Link>
+              </div>
             </div>
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight text-balance">
-              Transformando vidas a través de la medicina
-              <span className="block text-[#ffcb05] mt-2">especializada</span>
-            </h1>
-            <p className="text-base md:text-xl mb-6 md:mb-8 text-white/95 leading-relaxed max-w-3xl mx-auto px-4">
-              Expertos en trasplantes hepáticos, renales y cardiopatías congénitas en el Caribe y Centro América.
-            </p>
+
+            {/* Ilustración */}
+            <div className="relative order-1 lg:order-2">
+              <div className="relative w-full max-w-lg mx-auto lg:max-w-none">
+                {/* Decoración de fondo para la imagen */}
+                <div className="absolute -inset-4 bg-white/10 rounded-3xl blur-2xl" />
+                <div className="relative">
+                  <Image 
+                    src="/Secciones_iniciales/group-primary-schoolers-lying-ground-smiling.jpg" 
+                    alt="Fundación ETHE - Medicina de Alta Complejidad" 
+                    width={600} 
+                    height={600} 
+                    priority
+                    className="w-full h-auto rounded-2xl shadow-2xl"
+                  />
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -37,9 +73,6 @@ export default function HomePage() {
           <div className="text-center mb-8 md:mb-12">
             <p className="text-[#5bbaa5] font-semibold mb-1 md:mb-2 uppercase tracking-wider text-xs md:text-sm">Nuestras Áreas</p>
             <h2 className="text-2xl md:text-4xl font-bold text-[#00334e] mb-2 md:mb-4">Especialidades médicas</h2>
-            <p className="text-sm md:text-lg text-[#333333] max-w-2xl mx-auto px-4">
-              Tres pilares de excelencia en medicina de alta complejidad
-            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 max-w-6xl mx-auto">

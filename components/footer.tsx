@@ -29,6 +29,11 @@ export function Footer() {
             <h3 className="text-xl font-semibold mb-4 text-[#5dbfb3]">Enlaces rápidos</h3>
             <ul className="space-y-2">
               <li>
+                <Link href="/acerca-de-ethe" className="text-base text-white/80 hover:text-[#5dbfb3] transition-colors">
+                  Acerca de ETHE
+                </Link>
+              </li>
+              <li>
                 <Link href="/quienes-somos" className="text-base text-white/80 hover:text-[#5dbfb3] transition-colors">
                   Quiénes somos
                 </Link>
@@ -57,7 +62,7 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start gap-2 text-base text-white/80">
                 <Phone size={18} className="mt-1 flex-shrink-0" />
-                <span>+54 11 1234-5678</span>
+                <span>+(507) 309-1800 Ext.1518</span>
               </li>
               <li className="flex items-start gap-2 text-base text-white/80">
                 <Mail size={18} className="mt-1 flex-shrink-0" />

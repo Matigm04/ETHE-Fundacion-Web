@@ -138,7 +138,7 @@ export const testimonials: Testimonial[] = [
     slug: "ariella-bazzard",
     country: "Trinidad y Tobago",
     countryFlag: "🇹🇹",
-    specialty: "Trasplante Renal",
+    specialty: "Trasplante Hepático",
     image: "/testimonios/Ariella_Bazzard_3-500x500.jpg",
     excerpt: "Una historia de valentía maternal y transformación...",
     content:
