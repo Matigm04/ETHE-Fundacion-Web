@@ -71,22 +71,27 @@ export default function DocumentsPage() {
 
   return (
     <div className="flex flex-col">
-      {/* Hero Section */}
-      <section className="bg-[#5bbaa5] text-white py-16 md:py-24 relative overflow-hidden">
-        {/* Decorative elements */}
-        <div className="absolute top-10 right-4 w-32 h-32 bg-[#ffcb05] opacity-15 rounded-full" />
-        <div className="absolute bottom-10 left-10 w-24 h-24 bg-white opacity-10 rounded-full" />
+      {/* Hero Section - The Academic Focus */}
+      <section className="relative h-[450px] flex items-center justify-center bg-[#00334e]">
+        <div className="absolute inset-0 z-0 opacity-40">
+          <img 
+            src="/Secciones_Iniciales/Documensots_y_recursos.jpg" 
+            alt="Investigación" 
+            className="w-full h-full object-cover"
+            style={{ objectPosition: "50% 30%" }}
+          />
+        </div>
         
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full mb-6">
-              <span className="text-sm font-semibold uppercase tracking-wider">Centro de Recursos</span>
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">Documentos y recursos</h1>
-            <p className="text-lg md:text-xl text-white/90 leading-relaxed">
-              El siguiente material fue seleccionado por Fundación ETHE por su contenido de calidad respecto de los tratamientos que la Fundación lleva adelante. Reservado para Uso Profesional, de los Pacientes y Familiares o Interesados en la temática en general. Fundación ETHE consigna en cada material la autoría de los mismos
-            </p>
-          </div>
+        <div className="relative z-10 container mx-auto px-4 text-center">
+          <span className="text-[#5bbaa5] font-bold tracking-[0.2em] uppercase text-sm block mb-3">
+            Investigación y Desarrollo
+          </span>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 font-goudy">
+            Documentos y Recursos
+          </h1>
+          <p className="text-gray-300 max-w-2xl mx-auto text-lg">
+            Acceso exclusivo a protocolos, investigaciones y material educativo para profesionales y pacientes.
+          </p>
         </div>
       </section>
 

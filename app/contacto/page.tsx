@@ -1,8 +1,6 @@
 "use client"
 
-import type React from "react"
-
-import { useState, useRef } from "react"
+import { useState, useRef, type FormEvent } from "react"
 import ReCAPTCHA from "react-google-recaptcha"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -25,7 +23,7 @@ export default function ContactPage() {
   const [captchaToken, setCaptchaToken] = useState<string | null>(null)
   const recaptchaRef = useRef<ReCAPTCHA>(null)
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
 
     // Validación: Si no hay captcha, no enviamos nada
@@ -80,22 +78,34 @@ export default function ContactPage() {
 
   return (
     <div className="flex flex-col">
-      {/* Hero Section */}
-      <section className="bg-[#5bbaa5] text-white py-12 md:py-24 relative overflow-hidden">
-        {/* Decorative elements */}
-        <div className="absolute top-10 right-4 w-32 h-32 bg-[#ffcb05] opacity-15 rounded-full" />
-        <div className="absolute bottom-10 left-10 w-24 h-24 bg-white opacity-10 rounded-full" />
+      {/* Hero Section - Open Doors */}
+      <section className="relative h-[450px] flex flex-col justify-center items-center text-center overflow-hidden">
+        {/* 1. CAPA DE IMAGEN DE FONDO */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="/Secciones_Iniciales/Contacto2.jpg" 
+            alt="Contáctanos" 
+            className="w-full h-full object-cover"
+            style={{ objectPosition: "center center" }}
+          />
+        </div>
         
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full mb-4">
-              <span className="text-xs md:text-sm font-semibold uppercase tracking-wider">Comunícate</span>
-            </div>
-            <h1 className="text-3xl md:text-5xl font-bold mb-3 md:mb-6 text-balance">Contáctanos</h1>
-            <p className="text-base md:text-xl text-white/90 leading-relaxed">
-              Estamos aquí para ayudarte. Comunícate con nosotros y te responderemos a la brevedad
-            </p>
-          </div>
+        {/* 2. CAPA DE FILTRO (Overlay Blanco Luminoso) */}
+        <div className="absolute inset-0 bg-white/70 z-10" />
+
+        {/* 3. CAPA DE CONTENIDO (Texto Oscuro Centrado) */}
+        <div className="relative z-20 max-w-3xl px-4">
+          <span className="bg-[#5bbaa5] text-white text-xs font-bold px-3 py-1 rounded-full mb-4 inline-block uppercase tracking-wider">
+            Estamos para ayudarte
+          </span>
+          
+          <h1 className="text-5xl font-extrabold text-[#00334e] mb-6 font-goudy leading-tight">
+            Hablemos
+          </h1>
+          
+          <p className="text-[#00334e] text-xl font-medium max-w-xl mx-auto leading-relaxed opacity-90">
+            Ponte en contacto con nuestro equipo. Estamos listos para escuchar tus dudas y orientarte en el proceso.
+          </p>
         </div>
       </section>
 

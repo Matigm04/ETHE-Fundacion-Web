@@ -48,22 +48,38 @@ export default function SpecialtiesPage() {
 
   return (
     <div className="flex flex-col">
-      {/* Hero Section */}
-      <section className="bg-[#5bbaa5] text-white py-16 md:py-24 relative overflow-hidden">
-        {/* Decorative elements */}
-        <div className="absolute top-10 right-20 w-32 h-32 bg-[#ffcb05] opacity-15 rounded-full" />
-        <div className="absolute bottom-10 left-10 w-24 h-24 bg-white opacity-10 rounded-full" />
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full mb-6">
-              <span className="text-sm font-semibold uppercase tracking-wider">Medicina Especializada</span>
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">Nuestras especialidades</h1>
-            <p className="text-lg md:text-xl text-white/95 leading-relaxed">
-              Medicina de alta complejidad especializada en trasplantes y cardiopatías congénitas
-            </p>
-          </div>
+      {/* Hero Section - Deep Tech Immersion */}
+      <section className="relative h-[500px] flex items-center justify-center overflow-hidden">
+        {/* 1. CAPA DE IMAGEN DE FONDO */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="/Secciones_Iniciales/Especialidades.jpg" 
+            alt="Alta Complejidad Médica" 
+            className="w-full h-full object-cover"
+            style={{ objectPosition: "center 40%" }}
+          />
+        </div>
+
+        {/* 2. CAPA DE FILTRO (Overlay Azul Oscuro) */}
+        <div className="absolute inset-0 bg-[#00334e]/80 mix-blend-multiply z-10" />
+
+        {/* 3. CAPA DE CONTENIDO (Texto Blanco Centrado) */}
+        <div className="relative z-20 text-center max-w-4xl px-4">
+          {/* Pequeña etiqueta opcional arriba */}
+          <span className="inline-block py-1 px-3 rounded-full bg-[#5bbaa5]/20 text-[#5bbaa5] text-sm font-bold tracking-wider uppercase mb-4 backdrop-blur-sm">
+            Vanguardia Médica
+          </span>
+
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 font-goudy drop-shadow-lg leading-tight">
+            Especialidades de <br/> Alta Complejidad
+          </h1>
+          
+          {/* Línea decorativa verde */}
+          <div className="w-20 h-1 bg-[#5bbaa5] mx-auto mb-6 rounded-full"></div>
+
+          <p className="text-white/90 text-xl md:text-2xl font-light max-w-2xl mx-auto leading-relaxed">
+            Líderes en trasplantes, cardiopatías y tratamientos que transforman vidas mediante tecnología y experiencia.
+          </p>
         </div>
       </section>
 

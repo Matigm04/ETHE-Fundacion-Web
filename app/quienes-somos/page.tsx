@@ -4,28 +4,34 @@ import { Stethoscope, Heart, Microscope, User } from "lucide-react"
 export default function QuienesSomosPage() {
   return (
     <div className="flex flex-col">
-      {/* Hero Section */}
-      <section className="bg-[#5bbaa5] text-white py-12 md:py-24 relative overflow-hidden">
-        {/* Decorative elements */}
-        <div className="absolute top-10 right-20 w-32 h-32 bg-[#ffcb05] opacity-15 rounded-full" />
-        <div className="absolute bottom-10 left-10 w-24 h-24 bg-white opacity-10 rounded-full" />
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl font-bold mb-6 font-goudy">Quiénes Somos</h1>
-            <div className="max-w-3xl mx-auto text-lg md:text-xl leading-relaxed space-y-4">
-              <p>
-                Somos un equipo de profesionales seleccionados por su reconocida trayectoria en cada una de sus 
-                especialidades de medicina de alta complejidad. Nos identificamos por nuestros valores éticos y por nuestro 
-                alto grado de compromiso para transmitir y compartir conocimientos, con el objetivo de capacitar en pos 
-                de brindar el mejor tratamiento al paciente.
-              </p>
-              <p>
-                Conoce al equipo de profesionales altamente calificados que hacen posible nuestra misión de excelencia 
-                en medicina de alta complejidad. Cada miembro de nuestro staff aporta experiencia y dedicación para 
-                brindar el mejor cuidado a nuestros pacientes.
-              </p>
-            </div>
+      {/* Hero Section - The Gradient Fade */}
+      <section className="relative h-[600px] flex items-center overflow-hidden">
+        {/* IMAGEN DE FONDO */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="/Secciones_Iniciales/Quienes_Somos.jpg" 
+            alt="Equipo Médico" 
+            className="w-full h-full object-cover"
+            style={{ objectPosition: "40% center" }}
+          />
+        </div>
+
+        {/* DEGRADADO DE MARCA (El Truco) */}
+        {/* Va del Verde ETHE sólido a la izquierda -> a Transparente a la derecha */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#5bbaa5] via-[#5bbaa5]/70 to-transparent z-10" />
+
+        {/* TEXTO (Alineado a la Izquierda sobre la parte verde) */}
+        <div className="container mx-auto px-4 relative z-20">
+          <div className="max-w-2xl text-white">
+            <span className="bg-[#00334e] text-white text-xs font-bold px-3 py-1 rounded-full mb-4 inline-block uppercase tracking-wider">
+              Nuestro Equipo
+            </span>
+            <h1 className="text-5xl font-bold mb-6 font-goudy leading-tight">
+              Expertos unidos por una <br/> misma pasión
+            </h1>
+            <p className="text-xl opacity-90 leading-relaxed">
+              Conoce a los profesionales que hacen posible la medicina de alta complejidad con calidad humana.
+            </p>
           </div>
         </div>
       </section>

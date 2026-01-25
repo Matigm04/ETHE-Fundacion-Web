@@ -10,19 +10,32 @@ import { generalFAQs, myths, specialtyFAQs } from "@/lib/faq-data"
 export default function FAQPage() {
   return (
     <div className="flex flex-col">
-      {/* Hero Section */}
-      <section className="bg-[#5bbaa5] text-white py-16 md:py-24 relative overflow-hidden">
-        {/* Decorative elements */}
-        <div className="absolute top-10 right-20 w-32 h-32 bg-[#ffcb05] opacity-15 rounded-full" />
-        <div className="absolute bottom-10 left-10 w-24 h-24 bg-white opacity-10 rounded-full" />
+      {/* Hero Section - The Warm Side */}
+      <section className="relative h-[550px] flex items-center">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="/Secciones_Iniciales/FAQ.jpg" 
+            alt="Consulta" 
+            className="w-full h-full object-cover"
+            style={{ objectPosition: "center 5%" }}
+          />
+        </div>
         
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <HelpCircle className="w-16 h-16 mx-auto mb-6" />
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Preguntas Frecuentes</h1>
-            <p className="text-lg md:text-xl text-white/90 leading-relaxed">
-              Encuentra respuestas a las preguntas más comunes sobre trasplantes, donación de órganos y nuestros servicios
+        {/* Overlay suave general para unificar tonos */}
+        <div className="absolute inset-0 bg-[#00334e]/20 z-10" />
+
+        <div className="container mx-auto px-4 relative z-20">
+          {/* TARJETA FLOTANTE A LA IZQUIERDA */}
+          <div className="bg-white/95 backdrop-blur-sm p-8 md:p-12 rounded-2xl max-w-xl shadow-2xl border-l-8 border-[#5bbaa5]">
+            <h1 className="text-4xl font-bold text-[#00334e] mb-4 font-goudy">
+              Preguntas Frecuentes
+            </h1>
+            <p className="text-gray-600 text-lg mb-6 leading-relaxed">
+              Sabemos que los procesos médicos generan dudas. Aquí respondemos las consultas más comunes con claridad y empatía.
             </p>
+            <a href="#preguntas" className="text-[#5bbaa5] font-bold hover:underline flex items-center">
+              Ir a las preguntas generales →
+            </a>
           </div>
         </div>
       </section>

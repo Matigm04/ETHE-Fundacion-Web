@@ -7,28 +7,38 @@ export default function EjesAccionPage() {
   return (
     <div className="flex flex-col min-h-screen bg-slate-50">
       
-      {/* 1. HERO SECTION (Estilo similar pero con identidad propia) */}
-      <section className="relative min-h-[400px] md:min-h-[500px] flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#5bbaa5] via-[#4aa596] to-[#00334e]">
-        {/* Imagen de fondo con overlay */}
-        <div className="absolute inset-0">
-          <Image 
-            src="/Secciones_Iniciales/5228409.jpg" 
-            alt="Ejes de Acción - Fundación ETHE" 
-            fill
-            className="object-cover object-top opacity-20"
-            priority
-            style={{ objectPosition: '50% 20%' }}
+      {/* HERO SECTION - Inmersión de Color Corporativo */}
+      <section className="relative h-[500px] flex items-center justify-center overflow-hidden">
+        {/* 1. CAPA DE IMAGEN DE FONDO (El equipo real) */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="/Secciones_Iniciales/Ejes_de_accion.jpg" 
+            alt="Equipo Médico de Fundación ETHE" 
+            className="w-full h-full object-cover"
+            style={{ objectPosition: "center 25%" }}
           />
         </div>
-        
-        {/* Overlay VERDE (Diferenciador clave de la página de Misión que es Azul) */}
-        <div className="absolute inset-0 bg-[#5bbaa5]/60 mix-blend-multiply" />
 
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 font-goudy drop-shadow-md">
+        {/* 2. CAPA DE FILTRO VERDE (Inmersión de Marca) */}
+        <div className="absolute inset-0 bg-[#5bbaa5]/90 mix-blend-multiply z-10" />
+
+        {/* 3. CAPA DE CONTENIDO (Texto Blanco Centrado) */}
+        <div className="relative z-20 text-center max-w-4xl px-4">
+          {/* Pequeña etiqueta superior */}
+          <span className="bg-white/20 text-white text-xs font-bold px-4 py-1.5 rounded-full mb-5 inline-block uppercase tracking-wider backdrop-blur-md shadow-sm">
+            Nuestra Labor
+          </span>
+          
+          {/* Título Principal */}
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 font-goudy drop-shadow-md leading-tight">
             Nuestros Ejes de Acción
           </h1>
-          <p className="text-white text-lg md:text-xl font-light leading-relaxed">
+          
+          {/* Decoración sutil */}
+          <div className="w-24 h-1 bg-white/50 mx-auto mb-6 rounded-full"></div>
+
+          {/* Subtítulo */}
+          <p className="text-white/95 text-xl md:text-2xl font-light max-w-3xl mx-auto leading-relaxed">
             Trabajamos en múltiples frentes para garantizar el acceso, la innovación y la excelencia médica en toda la región.
           </p>
         </div>

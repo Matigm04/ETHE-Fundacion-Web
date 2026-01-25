@@ -27,23 +27,40 @@ export default function TestimonialsPage() {
       })
 
   return (
-    <div className="flex flex-col">
-      {/* Hero Section */}
-      <section className="bg-[#5bbaa5] text-white py-16 md:py-24 relative overflow-hidden">
-        {/* Decorative elements */}
-        <div className="absolute top-10 right-20 w-32 h-32 bg-[#ffcb05] opacity-15 rounded-full" />
-        <div className="absolute bottom-10 left-10 w-24 h-24 bg-white opacity-10 rounded-full" />
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full mb-6">
-              <span className="text-sm font-semibold uppercase tracking-wider">Historias Reales</span>
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">Testimonios</h1>
-            <p className="text-lg md:text-xl text-white/90 leading-relaxed">
-              Historias reales de pacientes que recuperaron su salud gracias a nuestros programas de trasplantes y medicina de alta complejidad
-            </p>
-          </div>
+    <div className="flex flex-col min-h-screen bg-slate-50">
+      {/* --- SECCIÓN INICIAL TIPO HÉROE (El Sándwich) --- */}
+      {/* Le damos una altura de 550px porque el collage es alto y necesita espacio */}
+      <section className="relative h-[550px] flex items-center justify-center overflow-hidden">
+
+        {/* CAPA 1: TU COLLAGE DE FONDO */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('/testimonios/collage_niños_testimonios.jpg')"
+          }}
+        />
+
+        {/* CAPA 2: EL FILTRO PROTECTOR (Overlay Azul Oscuro) */}
+        {/* Usamos bg-[#00334e] (azul corporativo) con /90 (90% de opacidad).
+            Es casi sólido para garantizar que el texto blanco se lea perfecto. */}
+        <div className="absolute inset-0 bg-[#00334e]/90 mix-blend-multiply" />
+
+        {/* CAPA 3: EL TEXTO (Lo único que debe ser relative z-10) */}
+        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto pb-10">
+          
+          {/* Un detalle opcional: una pequeña etiqueta arriba */}
+          <span className="inline-block py-1 px-3 rounded-full bg-[#5bbaa5]/20 text-[#5bbaa5] text-sm font-bold tracking-wider uppercase mb-4 backdrop-blur-sm">
+            Historias de Esperanza
+          </span>
+
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 font-goudy drop-shadow-lg">
+            Testimonios Reales
+          </h1>
+
+          <p className="text-white/90 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto font-light">
+            Historias de pacientes que recuperaron su salud y transformaron sus vidas gracias a los programas de medicina de alta complejidad de Fundación ETHE.
+          </p>
+
         </div>
       </section>
 
