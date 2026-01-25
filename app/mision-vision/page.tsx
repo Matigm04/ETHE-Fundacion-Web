@@ -85,6 +85,76 @@ export default function MisionVisionPage() {
 
         </div>
       </section>
+
+      {/* =========================================
+          3. SECCIÓN RECUPERADA: ELEGIR ETHE
+          ========================================= */}
+      <section className="py-24 bg-[#fdfbf7]"> {/* Fondo crema suave para lectura cómoda */}
+        <div className="container mx-auto px-6 md:px-8 max-w-7xl">
+          
+          {/* Encabezados Centrados */}
+          <div className="text-center mb-16">
+            <span className="text-[#5bbaa5] font-bold tracking-[0.2em] uppercase text-sm mb-3 block">
+              Confía en nosotros
+            </span>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#00334e] mb-6 font-goudy">
+              Elegir ETHE
+            </h2>
+            <div className="w-20 h-1 bg-[#5bbaa5] mx-auto rounded-full mb-6"></div>
+            <p className="text-[#00334e]/80 text-xl font-medium">
+              Las razones por las cuales confiar en la Fundación
+            </p>
+          </div>
+
+          {/* Bloque de Texto (Justificado y limpio) */}
+          <div className="text-gray-600 space-y-6 text-lg leading-relaxed max-w-6xl mx-auto">
+            <p>
+              Desde Fundación ETHE, nos proponemos mejorar la calidad de vida de nuestros pacientes a través de cirugías de alta complejidad médica, siendo nuestra especialidad los trasplantes hepáticos, renales y las cardiopatías congénitas pediátricas.
+            </p>
+            <p>
+              El equipo de ETHE está formado por expertos médicos de renombre y un equipo de asistencia personalizada a los pacientes que ofrecen el mejor servicio, desde asistir a los pacientes con los planes de viaje hasta asegurarles una experiencia placentera durante su estadía en Argentina. Con el foco en la inclusión social, buscamos facilitar a personas de cualquier parte del mundo la posibilidad de realizar el trasplante que necesitan, colaborando con aquellos que presenten dificultades económicas y buscando alternativas de financiación.
+            </p>
+            <p>
+              Además, en los casos que se requiera, gestionamos la asistencia médica, estudios de laboratorio, estudios de análisis clínicos, obtención de medicamentos, estudios médicos complementarios, cobertura de viáticos y/u hospedaje para pacientes del país y del extranjero. Sabemos lo dificultoso que es ese momento y los acompañamos con una asistencia integral.
+            </p>
+            <p className="border-l-4 border-[#5bbaa5] pl-6 italic text-gray-700 bg-white p-4 rounded-r-lg shadow-sm">
+              Fundación ETHE trabaja junto a esferas gubernamentales (embajadas, ministerios de salud, etcétera), profesionales de la salud, centros médicos de alta calidad y un equipo dedicado a las necesidades especiales del paciente y sus familiares al llegar a Argentina. Es importante resaltar la excelente relación de confianza que se desarrolló a lo largo de los años entre las Instituciones Médicas, nuestro Equipo Profesional y los Ministerios Públicos de los distintos países. ETHE es una Fundación que busca promover el desarrollo de la medicina de alta complejidad a través de la educación y capacitación de los profesionales en todas las especialidades involucradas en el proceso.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================
+          4. SECCIÓN RECUPERADA: VIDEO INSTITUCIONAL
+          ========================================= */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 text-center">
+          
+          <span className="text-[#5bbaa5] font-bold tracking-[0.2em] uppercase text-sm mb-3 block">
+            Nuestro Trabajo
+          </span>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#00334e] mb-6 font-goudy">
+            Conoce más sobre nuestro impacto
+          </h2>
+          <p className="text-gray-500 max-w-2xl mx-auto mb-12 text-lg">
+            Descubre en este video cómo Fundación ETHE transforma vidas a través de la medicina de alta complejidad y el acompañamiento humano.
+          </p>
+
+          {/* Contenedor del Video (Responsive) */}
+          <div className="max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-2xl bg-black border-[8px] border-white ring-1 ring-gray-200">
+            <div className="relative pb-[56.25%] h-0">
+              <iframe 
+                className="absolute top-0 left-0 w-full h-full"
+                src="https://www.youtube.com/embed/uc7F2Zp7S-A" 
+                title="Fundación ETHE - Trasplante Hepático, Renal y Cardiopatías"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+
+        </div>
+      </section>
     </div>
   );
 }
