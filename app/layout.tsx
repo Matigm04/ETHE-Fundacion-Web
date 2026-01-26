@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { GoogleAnalytics } from '@next/third-parties/google'
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
+import ScrollToTop from "@/components/scroll-to-top"
 import "./globals.css"
 
 export const metadata: Metadata = {
@@ -31,6 +32,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=TASA+Orbiter:wght@400..800&display=swap" rel="stylesheet" />
       </head>
       <body>
+        <ScrollToTop />
         <Navigation />
         <main className="min-h-screen">{children}</main>
         <Footer />

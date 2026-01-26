@@ -2,6 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
+import InternalHero from "@/components/internal-hero"
 
 export default function SpecialtiesPage() {
   const specialties = [
@@ -48,43 +49,15 @@ export default function SpecialtiesPage() {
 
   return (
     <div className="flex flex-col">
-      {/* Hero Section - Deep Tech Immersion */}
-      <section className="relative h-[500px] flex items-center justify-center overflow-hidden">
-        {/* 1. CAPA DE IMAGEN DE FONDO */}
-        <div className="absolute inset-0 z-0">
-          <img 
-            src="/Secciones_Iniciales/Especialidades.jpg" 
-            alt="Alta Complejidad Médica" 
-            className="w-full h-full object-cover"
-            style={{ objectPosition: "center 40%" }}
-          />
-        </div>
-
-        {/* 2. CAPA DE FILTRO (Overlay Azul Oscuro) */}
-        <div className="absolute inset-0 bg-[#00334e]/80 mix-blend-multiply z-10" />
-
-        {/* 3. CAPA DE CONTENIDO (Texto Blanco Centrado) */}
-        <div className="relative z-20 text-center max-w-4xl px-4">
-          {/* Pequeña etiqueta opcional arriba */}
-          <span className="inline-block py-1 px-3 rounded-full bg-[#5bbaa5]/20 text-[#5bbaa5] text-sm font-bold tracking-wider uppercase mb-4 backdrop-blur-sm">
-            Vanguardia Médica
-          </span>
-
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 font-goudy drop-shadow-lg leading-tight">
-            Especialidades de <br/> Alta Complejidad
-          </h1>
-          
-          {/* Línea decorativa verde */}
-          <div className="w-20 h-1 bg-[#5bbaa5] mx-auto mb-6 rounded-full"></div>
-
-          <p className="text-white/90 text-xl md:text-2xl font-light max-w-2xl mx-auto leading-relaxed">
-            Líderes en trasplantes, cardiopatías y tratamientos que transforman vidas mediante tecnología y experiencia.
-          </p>
-        </div>
-      </section>
-
-      {/* Specialties Grid */}
-      <section className="py-16 md:py-24 bg-[#f5f7fa]">
+      {/* 1. COMPONENTE UNIFICADO "InternalHero" */}
+      <InternalHero 
+        title="Nuestras Especialidades"
+        subtitle="Brindamos atención de alta complejidad con un enfoque humano y tecnología de vanguardia."
+        imageSrc="/Secciones_Iniciales/Especialidades.jpg"
+        category="Excelencia Médica"
+      />
+      {/* 2. GRILLA DE ESPECIALIDADES */}
+      <section className="pt-16 pb-0 md:pt-24 bg-[#f5f7fa]">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {specialties.map((specialty, index) => {

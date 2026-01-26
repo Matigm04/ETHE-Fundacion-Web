@@ -6,39 +6,18 @@ import Link from "next/link"
 import Image from "next/image"
 import { HelpCircle } from "lucide-react"
 import { generalFAQs, myths, specialtyFAQs } from "@/lib/faq-data"
+import InternalHero from "@/components/internal-hero"
 
 export default function FAQPage() {
   return (
     <div className="flex flex-col">
-      {/* Hero Section - The Warm Side */}
-      <section className="relative h-[550px] flex items-center">
-        <div className="absolute inset-0 z-0">
-          <img 
-            src="/Secciones_Iniciales/FAQ.jpg" 
-            alt="Consulta" 
-            className="w-full h-full object-cover"
-            style={{ objectPosition: "center 5%" }}
-          />
-        </div>
-        
-        {/* Overlay suave general para unificar tonos */}
-        <div className="absolute inset-0 bg-[#00334e]/20 z-10" />
-
-        <div className="container mx-auto px-4 relative z-20">
-          {/* TARJETA FLOTANTE A LA IZQUIERDA */}
-          <div className="bg-white/95 backdrop-blur-sm p-8 md:p-12 rounded-2xl max-w-xl shadow-2xl border-l-8 border-[#5bbaa5]">
-            <h1 className="text-4xl font-bold text-[#00334e] mb-4 font-goudy">
-              Preguntas Frecuentes
-            </h1>
-            <p className="text-gray-600 text-lg mb-6 leading-relaxed">
-              Sabemos que los procesos médicos generan dudas. Aquí respondemos las consultas más comunes con claridad y empatía.
-            </p>
-            <a href="#preguntas" className="text-[#5bbaa5] font-bold hover:underline flex items-center">
-              Ir a las preguntas generales →
-            </a>
-          </div>
-        </div>
-      </section>
+      {/* 1. COMPONENTE UNIFICADO "InternalHero" */}
+      <InternalHero 
+        title="Preguntas Frecuentes"
+        subtitle="Sabemos que los procesos médicos generan dudas. Aquí respondemos las consultas más comunes con claridad y empatía."
+        imageSrc="/Secciones_Iniciales/FAQ.jpg"
+        category="Centro de Ayuda"
+      />
 
       {/* Preguntas Generales */}
       <section className="py-16 md:py-24 bg-[#f5f7fa]">

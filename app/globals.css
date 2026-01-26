@@ -155,29 +155,33 @@
   --font-headings: 'ITC Goudy Sans', sans-serif;
 
   /* Foundation Color Palette */
-  --color-petrol: #0a4d5c;
-  --color-turquoise: #5dbfb3;
-  --color-coral: #d9534f;
-  --color-gray-light: #f5f5f5;
+  --color-ethe-blue: #00334e;
+  --color-ethe-teal: #5bbaa5;
+  --color-ethe-yellow: #ffcb05;
+  --color-ethe-terracotta: #c74a3a;
+  --color-ethe-gray: #f5f5f5;
 
   /* Semantic Design Tokens */
   --color-background: 255 255 255;
-  --color-foreground: 10 77 92;
+  --color-foreground: 0 51 78;
 
-  --color-primary: 10 77 92;
+  --color-primary: 0 51 78;
   --color-primary-foreground: 255 255 255;
 
-  --color-secondary: 93 191 179;
-  --color-secondary-foreground: 10 77 92;
+  --color-secondary: 91 186 165;
+  --color-secondary-foreground: 255 255 255;
 
-  --color-accent: 217 83 79;
-  --color-accent-foreground: 255 255 255;
+  --color-accent: 255 203 5;
+  --color-accent-foreground: 0 51 78;
+
+  --color-destructive: 199 74 58;
+  --color-destructive-foreground: 255 255 255;
 
   --color-muted: 245 245 245;
-  --color-muted-foreground: 10 77 92;
+  --color-muted-foreground: 0 51 78;
 
   --color-card: 255 255 255;
-  --color-card-foreground: 10 77 92;
+  --color-card-foreground: 0 51 78;
 
   --color-border: 93 191 179;
 

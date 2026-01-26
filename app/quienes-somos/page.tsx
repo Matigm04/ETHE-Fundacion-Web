@@ -1,40 +1,17 @@
 ﻿import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Stethoscope, Heart, Microscope, User } from "lucide-react"
+import InternalHero from "@/components/internal-hero"
 
 export default function QuienesSomosPage() {
   return (
     <div className="flex flex-col">
-      {/* Hero Section - The Gradient Fade */}
-      <section className="relative h-[600px] flex items-center overflow-hidden">
-        {/* IMAGEN DE FONDO */}
-        <div className="absolute inset-0 z-0">
-          <img 
-            src="/Secciones_Iniciales/Quienes_Somos.jpg" 
-            alt="Equipo Médico" 
-            className="w-full h-full object-cover"
-            style={{ objectPosition: "40% center" }}
-          />
-        </div>
-
-        {/* DEGRADADO DE MARCA (El Truco) */}
-        {/* Va del Verde ETHE sólido a la izquierda -> a Transparente a la derecha */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#5bbaa5] via-[#5bbaa5]/70 to-transparent z-10" />
-
-        {/* TEXTO (Alineado a la Izquierda sobre la parte verde) */}
-        <div className="container mx-auto px-4 relative z-20">
-          <div className="max-w-2xl text-white">
-            <span className="bg-[#00334e] text-white text-xs font-bold px-3 py-1 rounded-full mb-4 inline-block uppercase tracking-wider">
-              Nuestro Equipo
-            </span>
-            <h1 className="text-5xl font-bold mb-6 font-goudy leading-tight">
-              Expertos unidos por una <br/> misma pasión
-            </h1>
-            <p className="text-xl opacity-90 leading-relaxed">
-              Conoce a los profesionales que hacen posible la medicina de alta complejidad con calidad humana.
-            </p>
-          </div>
-        </div>
-      </section>
+      {/* 1. Componente Unificado "Master Hero" */}
+      <InternalHero 
+        title="Expertos unidos por una misma pasión"
+        subtitle="Conoce a los profesionales que hacen posible la medicina de alta complejidad con calidad humana."
+        imageSrc="/Secciones_Iniciales/Quienes_Somos.jpg"
+        category="Nuestro Equipo"
+      />
 
       {/* Liderazgo / Consejo de Administración */}
       <section className="py-12 bg-[#f5f7fa]">
@@ -48,55 +25,55 @@ export default function QuienesSomosPage() {
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
               <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 group">
                 <div className="relative h-40 md:h-64 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-                  <div className="w-20 h-20 md:w-32 md:h-32 bg-gradient-to-br from-[#0a4d5c] to-[#5dbfb3] rounded-full flex items-center justify-center">
+                  <div className="w-20 h-20 md:w-32 md:h-32 bg-gradient-to-br from-[#00334e] to-[#5bbaa5] rounded-full flex items-center justify-center">
                     <User className="text-white" size={32} />
                   </div>
                 </div>
                 <CardHeader className="text-center p-3 md:p-6">
-                  <CardTitle className="text-[#0a4d5c] text-xs md:text-lg font-bold leading-tight">ING. JOSÉ MARIO FRONTALINI</CardTitle>
-                  <CardDescription className="text-[#5dbfb3] font-semibold text-[10px] md:text-base">Presidente</CardDescription>
+                  <CardTitle className="text-[#00334e] text-xs md:text-lg font-bold leading-tight">ING. JOSÉ MARIO FRONTALINI</CardTitle>
+                  <CardDescription className="text-[#5bbaa5] font-semibold text-[10px] md:text-base">Presidente</CardDescription>
                 </CardHeader>
               </Card>
 
               <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 group">
                 <div className="relative h-40 md:h-64 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-                  <div className="w-20 h-20 md:w-32 md:h-32 bg-gradient-to-br from-[#0a4d5c] to-[#5dbfb3] rounded-full flex items-center justify-center">
+                  <div className="w-20 h-20 md:w-32 md:h-32 bg-gradient-to-br from-[#00334e] to-[#5bbaa5] rounded-full flex items-center justify-center">
                     <User className="text-white" size={32} />
                   </div>
                 </div>
                 <CardHeader className="text-center p-3 md:p-6">
-                  <CardTitle className="text-[#0a4d5c] text-xs md:text-lg font-bold leading-tight">DR. CARLOS DANIEL LUQUE</CardTitle>
-                  <CardDescription className="text-[#5dbfb3] font-semibold text-[10px] md:text-base">Director Médico</CardDescription>
+                  <CardTitle className="text-[#00334e] text-xs md:text-lg font-bold leading-tight">DR. CARLOS DANIEL LUQUE</CardTitle>
+                  <CardDescription className="text-[#5bbaa5] font-semibold text-[10px] md:text-base">Director Médico</CardDescription>
                 </CardHeader>
               </Card>
 
               <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 group">
                 <div className="relative h-40 md:h-64 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-                  <div className="w-20 h-20 md:w-32 md:h-32 bg-gradient-to-br from-[#0a4d5c] to-[#5dbfb3] rounded-full flex items-center justify-center">
+                  <div className="w-20 h-20 md:w-32 md:h-32 bg-gradient-to-br from-[#00334e] to-[#5bbaa5] rounded-full flex items-center justify-center">
                     <User className="text-white" size={32} />
                   </div>
                 </div>
                 <CardHeader className="text-center p-3 md:p-6">
-                  <CardTitle className="text-[#0a4d5c] text-xs md:text-lg font-bold leading-tight">DR. GUSTAVO RAÚL BIANCO</CardTitle>
-                  <CardDescription className="text-[#5dbfb3] font-semibold text-[10px] md:text-base">Director Ejecutivo</CardDescription>
+                  <CardTitle className="text-[#00334e] text-xs md:text-lg font-bold leading-tight">DR. GUSTAVO RAÚL BIANCO</CardTitle>
+                  <CardDescription className="text-[#5bbaa5] font-semibold text-[10px] md:text-base">Director Ejecutivo</CardDescription>
                 </CardHeader>
               </Card>
 
               <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 group">
                 <div className="relative h-40 md:h-64 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-                  <div className="w-20 h-20 md:w-32 md:h-32 bg-gradient-to-br from-[#0a4d5c] to-[#5dbfb3] rounded-full flex items-center justify-center">
+                  <div className="w-20 h-20 md:w-32 md:h-32 bg-gradient-to-br from-[#00334e] to-[#5bbaa5] rounded-full flex items-center justify-center">
                     <User className="text-white" size={32} />
                   </div>
                 </div>
                 <CardHeader className="text-center p-3 md:p-6">
-                  <CardTitle className="text-[#0a4d5c] text-xs md:text-lg font-bold leading-tight">LIC. MAYQUEL MENDOZA</CardTitle>
-                  <CardDescription className="text-[#5dbfb3] font-semibold text-[10px] md:text-base">Estudio Contable</CardDescription>
+                  <CardTitle className="text-[#00334e] text-xs md:text-lg font-bold leading-tight">LIC. MAYQUEL MENDOZA</CardTitle>
+                  <CardDescription className="text-[#5bbaa5] font-semibold text-[10px] md:text-base">Estudio Contable</CardDescription>
                 </CardHeader>
               </Card>
 
               <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 group">
                 <div className="relative h-40 md:h-64 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-                  <div className="w-20 h-20 md:w-32 md:h-32 bg-gradient-to-br from-[#0a4d5c] to-[#5dbfb3] rounded-full flex items-center justify-center">
+                  <div className="w-20 h-20 md:w-32 md:h-32 bg-gradient-to-br from-[#00334e] to-[#5bbaa5] rounded-full flex items-center justify-center">
                     <User className="text-white" size={32} />
                   </div>
                 </div>
@@ -111,7 +88,7 @@ export default function QuienesSomosPage() {
       </section>
 
       {/* Profesionales Médicos */}
-      <section className="py-12 md:py-24 bg-white">
+      <section className="pt-12 md:pt-24 pb-0 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <p className="text-[#5bbaa5] font-semibold mb-1 md:mb-2 uppercase tracking-wider text-xs md:text-sm text-center">Especialistas</p>

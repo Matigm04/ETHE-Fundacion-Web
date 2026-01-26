@@ -2,6 +2,7 @@
 
 import { useState, useRef, type FormEvent } from "react"
 import ReCAPTCHA from "react-google-recaptcha"
+import InternalHero from "@/components/internal-hero"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -78,36 +79,13 @@ export default function ContactPage() {
 
   return (
     <div className="flex flex-col">
-      {/* Hero Section - Open Doors */}
-      <section className="relative h-[450px] flex flex-col justify-center items-center text-center overflow-hidden">
-        {/* 1. CAPA DE IMAGEN DE FONDO */}
-        <div className="absolute inset-0 z-0">
-          <img 
-            src="/Secciones_Iniciales/Contacto2.jpg" 
-            alt="Contáctanos" 
-            className="w-full h-full object-cover"
-            style={{ objectPosition: "center center" }}
-          />
-        </div>
-        
-        {/* 2. CAPA DE FILTRO (Overlay Blanco Luminoso) */}
-        <div className="absolute inset-0 bg-white/70 z-10" />
-
-        {/* 3. CAPA DE CONTENIDO (Texto Oscuro Centrado) */}
-        <div className="relative z-20 max-w-3xl px-4">
-          <span className="bg-[#5bbaa5] text-white text-xs font-bold px-3 py-1 rounded-full mb-4 inline-block uppercase tracking-wider">
-            Estamos para ayudarte
-          </span>
-          
-          <h1 className="text-5xl font-extrabold text-[#00334e] mb-6 font-goudy leading-tight">
-            Hablemos
-          </h1>
-          
-          <p className="text-[#00334e] text-xl font-medium max-w-xl mx-auto leading-relaxed opacity-90">
-            Ponte en contacto con nuestro equipo. Estamos listos para escuchar tus dudas y orientarte en el proceso.
-          </p>
-        </div>
-      </section>
+      {/* 1. Componente Unificado "InternalHero" */}
+      <InternalHero 
+        title="Hablemos"
+        subtitle="Ponte en contacto con nuestro equipo. Estamos listos para escuchar tus dudas y orientarte en el proceso."
+        imageSrc="/Secciones_Iniciales/Contacto2.jpg"
+        category="Estamos para ayudarte"
+      />
 
       {/* Integrated Contact Card */}
       <section className="py-8 md:py-24 bg-[#f5f7fa]">

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { FileText, FileCheck, Info, Activity, Heart } from "lucide-react"
+import InternalHero from "@/components/internal-hero"
 
 export default function DocumentsPage() {
   const documentCategories = [
@@ -7,7 +8,13 @@ export default function DocumentsPage() {
       title: "Trasplante Hepático",
       description: "Información sobre el hígado, indicaciones y procedimientos quirúrgicos",
       icon: "liver",
-      color: "from-[#5bbaa5] to-[#00334e]",
+      // Color: Verde Marca (#5bbaa5)
+      cardBg: "bg-[#5bbaa5]",
+      cardHover: "hover:bg-[#4aa08e]",
+      iconBg: "bg-[#5bbaa5]",
+      titleColor: "text-[#5bbaa5]",
+      btnBg: "bg-[#00334e]",
+      btnHover: "hover:bg-[#002233]",
       documents: [
         { 
           name: "Sobre el hígado y su funcionamiento", 
@@ -30,7 +37,13 @@ export default function DocumentsPage() {
       title: "Trasplante Renal",
       description: "Información sobre el proceso quirúrgico, donantes y opciones de tratamiento",
       icon: "kidney",
-      color: "from-[#5bbaa5] to-[#00334e]",
+      // Color: Azul Profundo (#00334e)
+      cardBg: "bg-[#00334e]",
+      cardHover: "hover:bg-[#002233]",
+      iconBg: "bg-[#00334e]",
+      titleColor: "text-[#00334e]",
+      btnBg: "bg-[#002233]", // Solicitado explícitamente, pero aseguraremos borde para contraste si es necesario
+      btnHover: "hover:bg-[#00111a]",
       documents: [
         { 
           name: "Sobre el proceso quirúrgico", 
@@ -53,7 +66,13 @@ export default function DocumentsPage() {
       title: "Cardiopatías Congénitas",
       description: "Información sobre cardiopatías congénitas y enfermedades cardiovasculares infantiles",
       icon: "heart",
-      color: "from-[#5bbaa5] to-[#00334e]",
+      // Color: Terracota (#c74a3a)
+      cardBg: "bg-[#c74a3a]",
+      cardHover: "hover:bg-[#a63d30]",
+      iconBg: "bg-[#c74a3a]",
+      titleColor: "text-[#c74a3a]",
+      btnBg: "bg-[#a63d30]",
+      btnHover: "hover:bg-[#853026]",
       documents: [
         { 
           name: "¿Qué son las cardiopatías congénitas?", 
@@ -71,29 +90,13 @@ export default function DocumentsPage() {
 
   return (
     <div className="flex flex-col">
-      {/* Hero Section - The Academic Focus */}
-      <section className="relative h-[450px] flex items-center justify-center bg-[#00334e]">
-        <div className="absolute inset-0 z-0 opacity-40">
-          <img 
-            src="/Secciones_Iniciales/Documensots_y_recursos.jpg" 
-            alt="Investigación" 
-            className="w-full h-full object-cover"
-            style={{ objectPosition: "50% 30%" }}
-          />
-        </div>
-        
-        <div className="relative z-10 container mx-auto px-4 text-center">
-          <span className="text-[#5bbaa5] font-bold tracking-[0.2em] uppercase text-sm block mb-3">
-            Investigación y Desarrollo
-          </span>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 font-goudy">
-            Documentos y Recursos
-          </h1>
-          <p className="text-gray-300 max-w-2xl mx-auto text-lg">
-            Acceso exclusivo a protocolos, investigaciones y material educativo para profesionales y pacientes.
-          </p>
-        </div>
-      </section>
+      {/* 1. COMPONENTE UNIFICADO "InternalHero" */}
+      <InternalHero 
+        title="Documentos y Recursos"
+        subtitle="Acceso exclusivo a protocolos, investigaciones y material educativo para profesionales y pacientes."
+        imageSrc="/Secciones_Iniciales/Documensots_y_recursos.jpg"
+        category="Investigación y Desarrollo"
+      />
 
       {/* Info Banner */}
       <section className="py-8 bg-[#f5f7fa]">
@@ -121,13 +124,13 @@ export default function DocumentsPage() {
               <div key={index}>
                 {/* Category Header with Icon */}
                 <div className="text-center mb-6 md:mb-10">
-                  <div className="w-20 h-20 md:w-32 md:h-32 mx-auto mb-4 md:mb-6 bg-[#5bbaa5] rounded-full flex items-center justify-center">
-                    {category.icon === "liver" && <Activity className="text-white" size={40} className="md:w-14 md:h-14" />}
-                    {category.icon === "kidney" && <Activity className="text-white" size={40} className="md:w-14 md:h-14" />}
-                    {category.icon === "heart" && <Heart className="text-white" size={40} className="md:w-14 md:h-14" />}
+                  <div className={`w-20 h-20 md:w-32 md:h-32 mx-auto mb-4 md:mb-6 ${category.iconBg} rounded-full flex items-center justify-center`}>
+                    {category.icon === "liver" && <Activity className="text-white md:w-14 md:h-14" size={40} />}
+                    {category.icon === "kidney" && <Activity className="text-white md:w-14 md:h-14" size={40} />}
+                    {category.icon === "heart" && <Heart className="text-white md:w-14 md:h-14" size={40} />}
                   </div>
-                  <h2 className="text-2xl md:text-4xl font-bold text-[#5bbaa5] mb-2 md:mb-3 uppercase tracking-wide">{category.title}</h2>
-                  <p className="text-gray-600 text-sm md:text-lg px-4">{category.description}</p>
+                  <h2 className={`text-2xl md:text-4xl font-bold ${category.titleColor} mb-2 md:mb-3 uppercase tracking-wide`}>{category.title}</h2>
+                  <p className="text-gray-600 text-sm md:text-lg px-4 max-w-2xl mx-auto">{category.description}</p>
                 </div>
 
                 {/* Documents List */}
@@ -135,7 +138,7 @@ export default function DocumentsPage() {
                   {category.documents.map((doc, idx) => (
                     <div 
                       key={idx} 
-                      className="bg-[#5bbaa5] hover:bg-[#4aa594] transition-all duration-300 rounded-lg p-4 md:p-6 shadow-md hover:shadow-xl group"
+                      className={`${category.cardBg} ${category.cardHover} transition-all duration-300 rounded-lg p-4 md:p-6 shadow-md hover:shadow-xl group`}
                     >
                       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 md:gap-4">
                         <div className="flex items-center gap-3 md:gap-4 flex-1 min-w-0">
@@ -150,7 +153,7 @@ export default function DocumentsPage() {
                           href={doc.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center justify-center gap-2 bg-[#00334e] hover:bg-[#00334e]/90 text-white px-4 md:px-6 py-2 rounded-md text-xs md:text-sm font-medium transition-colors w-full md:w-auto"
+                          className={`inline-flex items-center justify-center gap-2 ${category.btnBg} ${category.btnHover} text-white px-4 md:px-6 py-2 rounded-md text-xs md:text-sm font-medium transition-colors w-full md:w-auto shadow-sm border border-white/10`}
                         >
                           <FileText size={16} />
                           <span>Leer Documento</span>

@@ -7,62 +7,59 @@ import { CheckCircle, Heart, GraduationCap, HandCoins, Activity, Brain, ArrowRig
 export default function HomePage() {
   return (
     <div className="flex flex-col">
-      {/* Hero Section - Diseño moderno con ilustración */}
-      <section className="relative min-h-[90vh] bg-gradient-to-br from-[#5bbaa5] via-[#4aa596] to-[#00334e] text-white overflow-hidden flex items-center">
-        {/* Decorative elements */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#ffcb05] opacity-10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-white opacity-5 rounded-full blur-2xl" />
+      {/* 1. HERO HOME PAGE (Diseño Impactante) */}
+      <section className="relative h-screen flex items-center">
         
-        <div className="container mx-auto px-4 py-12 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center max-w-7xl mx-auto">
+        {/* 1. FOTO EMOTIVA DE FONDO (Niños/Esperanza) */}
+        <div className="absolute inset-0 z-0">
+          <Image 
+             src="/Secciones_Iniciales/group-primary-schoolers-lying-ground-smiling.jpg" 
+             fill
+             className="object-cover"
+             alt="Esperanza de vida - Fundación ETHE"
+             style={{ objectPosition: "center" }}
+             priority
+          />
+        </div>
+
+        {/* 2. DEGRADADO MÁS FUERTE (Para impacto visual) */}
+        {/* De Azul #00334e solido a transparente */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#00334e] via-[#00334e]/80 to-transparent z-10" />
+
+        {/* 3. TEXTO */}
+        <div className="container mx-auto px-4 relative z-20 grid grid-cols-1 lg:grid-cols-2">
+          <div className="max-w-2xl">
+            {/* Logo o Isotipo pequeño decorativo */}
+            <div className="mb-6 animate-fade-in-up">
+               {/* Un pequeño toque amarillo de la marca */}
+               <div className="h-1 w-20 bg-[#ffcb05] rounded-full"></div> 
+            </div>
+
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight font-goudy">
+              Expertos en <br/>
+              <span className="text-[#5bbaa5]">Transformar Vidas</span>
+            </h1>
             
-            {/* Contenido de texto */}
-            <div className="text-center lg:text-left order-2 lg:order-1">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 bg-white/20 backdrop-blur-sm rounded-full mb-4 md:mb-6">
-                <div className="w-2 h-2 bg-[#ffcb05] rounded-full animate-pulse" />
-                <span className="text-xs md:text-sm font-semibold uppercase tracking-wider">Alta Complejidad</span>
-              </div>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 md:mb-6 leading-tight">
-                Transformando vidas a través de la medicina
-                <span className="block text-[#ffcb05] mt-2 text-2xl md:text-3xl lg:text-4xl">
-                  Expertos en Medicina de Alta Complejidad
-                </span>
-              </h1>
-              <p className="text-white/90 text-base md:text-lg mb-6 md:mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
-                Brindamos atención especializada en trasplantes y cardiopatías congénitas con un equipo de profesionales de renombre internacional.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Link href="/especialidades">
-                  <Button size="lg" className="bg-[#ffcb05] text-[#00334e] hover:bg-[#ffd52e] font-semibold w-full sm:w-auto">
-                    Nuestras Especialidades
-                  </Button>
-                </Link>
-                <Link href="/contacto">
-                  <Button size="lg" variant="outline" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-[#00334e] w-full sm:w-auto font-semibold shadow-lg transition-all">
-                    Contáctanos
-                  </Button>
-                </Link>
-              </div>
-            </div>
+            <p className="text-gray-200 text-xl mb-8 font-light max-w-lg">
+              Fundación ETHE: Liderando la medicina de alta complejidad en trasplantes y cardiopatías para Latinoamérica.
+            </p>
 
-            {/* Ilustración */}
-            <div className="relative order-1 lg:order-2">
-              <div className="relative w-full max-w-lg mx-auto lg:max-w-none">
-                {/* Decoración de fondo para la imagen */}
-                <div className="absolute -inset-4 bg-white/10 rounded-3xl blur-2xl" />
-                <div className="relative">
-                  <Image 
-                    src="/Secciones_Iniciales/group-primary-schoolers-lying-ground-smiling.jpg" 
-                    alt="Fundación ETHE - Medicina de Alta Complejidad" 
-                    width={600} 
-                    height={600} 
-                    priority
-                    className="w-full h-auto rounded-2xl shadow-2xl"
-                  />
-                </div>
-              </div>
+            {/* 4. BOTONES OFICIALES */}
+            <div className="flex flex-wrap gap-4">
+              {/* Botón Principal: Amarillo */}
+              <Link href="/especialidades">
+                <button className="bg-[#ffcb05] text-[#00334e] px-8 py-4 rounded-full font-bold hover:bg-[#e5b604] transition-colors shadow-lg">
+                  Nuestras Especialidades
+                </button>
+              </Link>
+              
+              {/* Botón Secundario: Borde Blanco */}
+              <Link href="/contacto">
+                <button className="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-[#00334e] transition-colors">
+                  Cómo Ayudar / Contacto
+                </button>
+              </Link>
             </div>
-
           </div>
         </div>
       </section>
@@ -76,8 +73,8 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 max-w-6xl mx-auto">
-            {/* Trasplante Hepático - Rojo completo */}
-            <div className="group bg-[#c74a3a] rounded-2xl p-5 md:p-8 text-white hover:shadow-2xl transition-all hover:scale-105">
+            {/* Trasplante Hepático */}
+            <div className="group bg-gradient-to-br from-[#c74a3a] to-[#00334e] rounded-2xl p-5 md:p-8 text-white hover:shadow-2xl transition-all hover:scale-105">
               <div className="w-12 h-12 md:w-16 md:h-16 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center mb-4 md:mb-6">
                 <Image src="/Logos_Especialidades/Logo_Higado.png" alt="Trasplante Hepático" width={32} height={32} className="w-7 h-7 md:w-8 md:h-8" />
               </div>
@@ -91,32 +88,32 @@ export default function HomePage() {
               </Link>
             </div>
 
-            {/* Trasplante Renal - Beige completo */}
-            <div className="group bg-[#cfa46c] rounded-2xl p-5 md:p-8 text-white hover:shadow-2xl transition-all hover:scale-105">
+            {/* Trasplante Renal */}
+            <div className="group bg-gradient-to-br from-[#cfa46c] to-[#00334e] rounded-2xl p-5 md:p-8 text-white hover:shadow-2xl transition-all hover:scale-105">
               <div className="w-12 h-12 md:w-16 md:h-16 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center mb-4 md:mb-6">
                 <Image src="/Logos_Especialidades/Logo_Renal.png" alt="Trasplante Renal" width={32} height={32} className="w-7 h-7 md:w-8 md:h-8" />
               </div>
               <h3 className="text-xl md:text-2xl font-bold mb-2 md:mb-3">Trasplante renal</h3>
               <p className="text-white/90 text-sm md:text-base leading-relaxed mb-4 md:mb-6">
-                Transplantes renales pediátricos realizados a tiempo para evitar diálisis 
-                con acompañamiento completo.
+                Procedimientos especializados para insuficiencia renal crónica 
+                con opción de donante vivo o cadavérico.
               </p>
               <Link href="/especialidades" className="inline-flex items-center text-white text-sm md:text-base font-semibold border-b-2 border-white/30 hover:border-white transition-all">
                 Conocer más <ArrowRight className="ml-2" size={16} />
               </Link>
             </div>
 
-            {/* Cardiopatías - Amarillo completo */}
-            <div className="group bg-[#ffcb05] rounded-2xl p-5 md:p-8 text-[#00334e] hover:shadow-2xl transition-all hover:scale-105">
+            {/* Cardiopatías */}
+            <div className="group bg-gradient-to-br from-[#ffcb05] to-[#dfb204] rounded-2xl p-5 md:p-8 text-[#00334e] hover:shadow-2xl transition-all hover:scale-105">
               <div className="w-12 h-12 md:w-16 md:h-16 bg-[#00334e]/10 backdrop-blur-sm rounded-xl flex items-center justify-center mb-4 md:mb-6">
                 <Image src="/Logos_Especialidades/Logo_Corazon.png" alt="Cardiopatías Congénitas" width={32} height={32} className="w-7 h-7 md:w-8 md:h-8" />
               </div>
               <h3 className="text-xl md:text-2xl font-bold mb-2 md:mb-3">Cardiopatías congénitas</h3>
-              <p className="text-[#00334e]/80 text-sm md:text-base leading-relaxed mb-4 md:mb-6">
+              <p className="text-white/90 text-sm md:text-base leading-relaxed mb-4 md:mb-6">
                 Diagnóstico temprano y tratamiento de defectos cardíacos con 
                 profesionales de renombre mundial.
               </p>
-              <Link href="/especialidades" className="inline-flex items-center text-[#00334e] text-sm md:text-base font-semibold border-b-2 border-[#00334e]/30 hover:border-[#00334e] transition-all">
+              <Link href="/especialidades" className="inline-flex items-center text-white text-sm md:text-base font-semibold border-b-2 border-white/30 hover:border-white transition-all">
                 Conocer más <ArrowRight className="ml-2" size={16} />
               </Link>
             </div>
@@ -153,28 +150,32 @@ export default function HomePage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-7xl mx-auto">
-            <div className="bg-gradient-to-br from-[#c74a3a] to-[#00334e] rounded-2xl p-5 md:p-8 text-white">
-              <CheckCircle size={32} className="mb-3 md:mb-4" />
+            {/* Equipo Especializado */}
+            <div className="group bg-gradient-to-br from-[#c74a3a] to-[#00334e] rounded-2xl p-5 md:p-8 text-white hover:shadow-2xl transition-all hover:scale-105">
+              <CheckCircle size={32} className="mb-3 md:mb-4 opacity-90 group-hover:scale-110 transition-transform" />
               <h3 className="font-bold text-lg md:text-xl mb-1 md:mb-2">Equipo especializado</h3>
-              <p className="text-white/90 text-xs md:text-sm">Profesionales reconocidos internacionalmente</p>
+              <p className="text-white/90 text-xs md:text-sm">Profesionales reconocidos internacionalmente con amplia trayectoria.</p>
             </div>
 
-            <div className="bg-gradient-to-br from-[#5bbaa5] to-[#00334e] rounded-2xl p-5 md:p-8 text-white">
-              <CheckCircle size={32} className="mb-3 md:mb-4" />
+            {/* Atención Integral */}
+            <div className="group bg-gradient-to-br from-[#5bbaa5] to-[#00334e] rounded-2xl p-5 md:p-8 text-white hover:shadow-2xl transition-all hover:scale-105">
+              <CheckCircle size={32} className="mb-3 md:mb-4 opacity-90 group-hover:scale-110 transition-transform" />
               <h3 className="font-bold text-lg md:text-xl mb-1 md:mb-2">Atención integral</h3>
-              <p className="text-white/90 text-xs md:text-sm">Acompañamiento integral en cada etapa</p>
+              <p className="text-white/90 text-xs md:text-sm">Acompañamiento integral en cada etapa del tratamiento y recuperación.</p>
             </div>
 
-            <div className="bg-gradient-to-br from-[#cfa46c] to-[#00334e] rounded-2xl p-5 md:p-8 text-white">
-              <CheckCircle size={32} className="mb-3 md:mb-4" />
+            {/* Formación Continua */}
+            <div className="group bg-gradient-to-br from-[#cfa46c] to-[#00334e] rounded-2xl p-5 md:p-8 text-white hover:shadow-2xl transition-all hover:scale-105">
+              <CheckCircle size={32} className="mb-3 md:mb-4 opacity-90 group-hover:scale-110 transition-transform" />
               <h3 className="font-bold text-lg md:text-xl mb-1 md:mb-2">Formación continua</h3>
-              <p className="text-white/90 text-xs md:text-sm">Capacitación profesional permanente</p>
+              <p className="text-white/90 text-xs md:text-sm">Capacitación profesional permanente e intercambio de conocimientos.</p>
             </div>
 
-            <div className="bg-gradient-to-br from-[#ffcb05] to-[#cfa46c] rounded-2xl p-5 md:p-8 text-[#00334e]">
-              <CheckCircle size={32} className="mb-3 md:mb-4" />
-              <h3 className="font-bold text-lg md:text-xl mb-1 md:mb-2">Apoyo social</h3>
-              <p className="text-[#00334e]/80 text-xs md:text-sm">Asistencia económica disponible</p>
+            {/* Apoyo Social */}
+            <div className="group bg-gradient-to-br from-[#ffcb05] to-[#dfb204] rounded-2xl p-5 md:p-8 text-[#00334e] hover:shadow-2xl transition-all hover:scale-105">
+              <CheckCircle size={32} className="mb-3 md:mb-4 opacity-90 group-hover:scale-110 transition-transform" />
+              <h3 className="font-bold text-lg md:text-xl mb-1 md:mb-2 text-[#00334e]">Apoyo social</h3>
+              <p className="text-[#00334e]/90 text-xs md:text-sm">Asistencia y contención para pacientes y familias sin recursos.</p>
             </div>
           </div>
         </div>
