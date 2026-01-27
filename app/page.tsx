@@ -28,20 +28,23 @@ export default function HomePage() {
 
         {/* 3. TEXTO */}
         <div className="container mx-auto px-4 relative z-20 grid grid-cols-1 lg:grid-cols-2">
-          <div className="max-w-2xl">
-            {/* Logo o Isotipo pequeño decorativo */}
+          <div className="max-w-3xl">
+            {/* 1. ETIQUETA SUPERIOR (Capsule) */}
             <div className="mb-6 animate-fade-in-up">
-               {/* Un pequeño toque amarillo de la marca */}
-               <div className="h-1 w-20 bg-[#ffcb05] rounded-full"></div> 
+               <span className="bg-[#5bbaa5] text-white px-4 py-2 rounded-full font-bold uppercase tracking-widest text-xs md:text-sm shadow-sm">
+                 Transformando vidas a través de la medicina
+               </span>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight font-goudy">
-              Expertos en <br/>
-              <span className="text-[#5bbaa5]">Transformar Vidas</span>
+            {/* 2. TÍTULO PRINCIPAL (H1) */}
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight font-goudy">
+              Expertos en Medicina de <br/>
+              <span className="text-[#ffcb05]">Alta Complejidad</span>
             </h1>
             
-            <p className="text-gray-200 text-xl mb-8 font-light max-w-lg">
-              Fundación ETHE: Liderando la medicina de alta complejidad en trasplantes y cardiopatías para Latinoamérica.
+            {/* 3. BAJADA / DESCRIPCIÓN */}
+            <p className="text-gray-100 text-xl mb-8 font-light max-w-2xl leading-relaxed">
+              Brindamos atención especializada en trasplantes y cardiopatías congénitas con un equipo de profesionales de renombre internacional.
             </p>
 
             {/* 4. BOTONES OFICIALES */}
@@ -74,7 +77,7 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 max-w-6xl mx-auto">
             {/* Trasplante Hepático */}
-            <div className="group bg-gradient-to-br from-[#c74a3a] to-[#00334e] rounded-2xl p-5 md:p-8 text-white hover:shadow-2xl transition-all hover:scale-105">
+            <div className="group bg-[#c74a3a] rounded-2xl p-5 md:p-8 text-white hover:shadow-2xl transition-all hover:scale-105">
               <div className="w-12 h-12 md:w-16 md:h-16 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center mb-4 md:mb-6">
                 <Image src="/Logos_Especialidades/Logo_Higado.png" alt="Trasplante Hepático" width={32} height={32} className="w-7 h-7 md:w-8 md:h-8" />
               </div>
@@ -89,7 +92,7 @@ export default function HomePage() {
             </div>
 
             {/* Trasplante Renal */}
-            <div className="group bg-gradient-to-br from-[#cfa46c] to-[#00334e] rounded-2xl p-5 md:p-8 text-white hover:shadow-2xl transition-all hover:scale-105">
+            <div className="group bg-[#94a3b8] rounded-2xl p-5 md:p-8 text-white hover:shadow-2xl transition-all hover:scale-105">
               <div className="w-12 h-12 md:w-16 md:h-16 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center mb-4 md:mb-6">
                 <Image src="/Logos_Especialidades/Logo_Renal.png" alt="Trasplante Renal" width={32} height={32} className="w-7 h-7 md:w-8 md:h-8" />
               </div>
@@ -104,16 +107,16 @@ export default function HomePage() {
             </div>
 
             {/* Cardiopatías */}
-            <div className="group bg-gradient-to-br from-[#ffcb05] to-[#dfb204] rounded-2xl p-5 md:p-8 text-[#00334e] hover:shadow-2xl transition-all hover:scale-105">
+            <div className="group bg-[#ffcb05] rounded-2xl p-5 md:p-8 text-[#00334e] hover:shadow-2xl transition-all hover:scale-105">
               <div className="w-12 h-12 md:w-16 md:h-16 bg-[#00334e]/10 backdrop-blur-sm rounded-xl flex items-center justify-center mb-4 md:mb-6">
                 <Image src="/Logos_Especialidades/Logo_Corazon.png" alt="Cardiopatías Congénitas" width={32} height={32} className="w-7 h-7 md:w-8 md:h-8" />
               </div>
               <h3 className="text-xl md:text-2xl font-bold mb-2 md:mb-3">Cardiopatías congénitas</h3>
-              <p className="text-white/90 text-sm md:text-base leading-relaxed mb-4 md:mb-6">
+              <p className="text-[#00334e]/90 text-sm md:text-base leading-relaxed mb-4 md:mb-6">
                 Diagnóstico temprano y tratamiento de defectos cardíacos con 
                 profesionales de renombre mundial.
               </p>
-              <Link href="/especialidades" className="inline-flex items-center text-white text-sm md:text-base font-semibold border-b-2 border-white/30 hover:border-white transition-all">
+              <Link href="/especialidades" className="inline-flex items-center text-[#00334e] text-sm md:text-base font-semibold border-b-2 border-[#00334e]/30 hover:border-[#00334e] transition-all">
                 Conocer más <ArrowRight className="ml-2" size={16} />
               </Link>
             </div>
@@ -151,28 +154,28 @@ export default function HomePage() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-7xl mx-auto">
             {/* Equipo Especializado */}
-            <div className="group bg-gradient-to-br from-[#c74a3a] to-[#00334e] rounded-2xl p-5 md:p-8 text-white hover:shadow-2xl transition-all hover:scale-105">
+            <div className="group bg-[#c74a3a] rounded-2xl p-5 md:p-8 text-white hover:shadow-2xl transition-all hover:scale-105">
               <CheckCircle size={32} className="mb-3 md:mb-4 opacity-90 group-hover:scale-110 transition-transform" />
               <h3 className="font-bold text-lg md:text-xl mb-1 md:mb-2">Equipo especializado</h3>
               <p className="text-white/90 text-xs md:text-sm">Profesionales reconocidos internacionalmente con amplia trayectoria.</p>
             </div>
 
             {/* Atención Integral */}
-            <div className="group bg-gradient-to-br from-[#5bbaa5] to-[#00334e] rounded-2xl p-5 md:p-8 text-white hover:shadow-2xl transition-all hover:scale-105">
+            <div className="group bg-[#5bbaa5] rounded-2xl p-5 md:p-8 text-white hover:shadow-2xl transition-all hover:scale-105">
               <CheckCircle size={32} className="mb-3 md:mb-4 opacity-90 group-hover:scale-110 transition-transform" />
               <h3 className="font-bold text-lg md:text-xl mb-1 md:mb-2">Atención integral</h3>
               <p className="text-white/90 text-xs md:text-sm">Acompañamiento integral en cada etapa del tratamiento y recuperación.</p>
             </div>
 
             {/* Formación Continua */}
-            <div className="group bg-gradient-to-br from-[#cfa46c] to-[#00334e] rounded-2xl p-5 md:p-8 text-white hover:shadow-2xl transition-all hover:scale-105">
+            <div className="group bg-[#00334e] rounded-2xl p-5 md:p-8 text-white hover:shadow-2xl transition-all hover:scale-105">
               <CheckCircle size={32} className="mb-3 md:mb-4 opacity-90 group-hover:scale-110 transition-transform" />
               <h3 className="font-bold text-lg md:text-xl mb-1 md:mb-2">Formación continua</h3>
               <p className="text-white/90 text-xs md:text-sm">Capacitación profesional permanente e intercambio de conocimientos.</p>
             </div>
 
             {/* Apoyo Social */}
-            <div className="group bg-gradient-to-br from-[#ffcb05] to-[#dfb204] rounded-2xl p-5 md:p-8 text-[#00334e] hover:shadow-2xl transition-all hover:scale-105">
+            <div className="group bg-[#ffcb05] rounded-2xl p-5 md:p-8 text-[#00334e] hover:shadow-2xl transition-all hover:scale-105">
               <CheckCircle size={32} className="mb-3 md:mb-4 opacity-90 group-hover:scale-110 transition-transform" />
               <h3 className="font-bold text-lg md:text-xl mb-1 md:mb-2 text-[#00334e]">Apoyo social</h3>
               <p className="text-[#00334e]/90 text-xs md:text-sm">Asistencia y contención para pacientes y familias sin recursos.</p>

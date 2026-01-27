@@ -12,11 +12,26 @@ export default function TestimonialsPage() {
     <div className="flex flex-col min-h-screen bg-slate-50">
       {/* 1. COMPONENTE UNIFICADO "InternalHero" */}
       <InternalHero 
-        title="Testimonios Reales"
+        title="Testimonios"
         subtitle="Historias de pacientes que recuperaron su salud y transformaron sus vidas gracias a los programas de medicina de alta complejidad de Fundación ETHE."
         imageSrc="/testimonios/collage_niños_testimonios.jpg"
         category="Historias de Esperanza"
       />
+
+      {/* 2. NUEVA SECCIÓN DE TRANSICIÓN (Suaviza el corte) */}
+      <section className="py-16 bg-white text-center px-4">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#00334e] mb-6 font-goudy">
+            Cada historia es un milagro
+          </h2>
+          <div className="w-20 h-1 bg-[#ffcb05] mx-auto mb-8 rounded-full"></div>
+          <p className="text-gray-600 text-lg leading-relaxed">
+            Detrás de cada diagnóstico hay una familia, sueños y una vida por delante. 
+            Te invitamos a conocer de cerca a los protagonistas de nuestra misión y cómo, 
+            juntos, hemos logrado cambiar su destino.
+          </p>
+        </div>
+      </section>
 
       {/* Testimonials Grid */}
       <section className="py-16 md:py-24 bg-white">
