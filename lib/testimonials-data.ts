@@ -19,6 +19,7 @@ export interface Testimonial {
   content: string
   fullTestimony?: FullTestimony
   date: string
+  videoUrl?: string
 }
 
 export const testimonials: Testimonial[] = [
@@ -343,5 +344,53 @@ export const testimonials: Testimonial[] = [
       ]
     },
     date: "2016",
+  },
+  {
+    name: "Caso Yeiner",
+    slug: "yeiner",
+    country: "Desconocido",
+    countryFlag: "🌍",
+    specialty: "Testimonio en Video",
+    image: null,
+    excerpt: "Testimonio en video de Yeiner.",
+    content: "",
+    date: "2024",
+    videoUrl: "https://player.vimeo.com/video/1049385792?h=208548e562"
+  },
+  {
+    name: "Caso Manuel",
+    slug: "manuel",
+    country: "Desconocido",
+    countryFlag: "🌍",
+    specialty: "Testimonio en Video",
+    image: null,
+    excerpt: "Testimonio en video de Manuel.",
+    content: "",
+    date: "2024",
+    videoUrl: "https://player.vimeo.com/video/1049402203?h=c23668cbd3"
+  },
+  {
+    name: "Caso Scarlett",
+    slug: "scarlett",
+    country: "Desconocido",
+    countryFlag: "🌍",
+    specialty: "Testimonio en Video",
+    image: null,
+    excerpt: "Testimonio en video de Scarlett.",
+    content: "",
+    date: "2020",
+    videoUrl: "https://player.vimeo.com/video/484584864?h=4175b5b53c"
+  },
+  {
+    name: "Caso Yarielis",
+    slug: "yarielis",
+    country: "Desconocido",
+    countryFlag: "🌍",
+    specialty: "Testimonio en Video",
+    image: null,
+    excerpt: "Testimonio en video de Yarielis.",
+    content: "",
+    date: "2020",
+    videoUrl: "https://player.vimeo.com/video/484587983?h=bb9a53acd4"
   },
 ]

@@ -50,7 +50,7 @@ export default function ContactPage() {
     }
 
     try {
-      const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzC2Uj8glPw2e6dLV8IoSfJIA0EY71R4U6-GfmBXL2h0MGllBjRLNwXjp16bM7jRy5lig/exec"
+      const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyIpGZtTbBON21j3F9Eb3_QPfEr7skchBul0s0T00gndaWCdtj2JyBySBPW49kHIyy4EA/exec"
       await fetch(GOOGLE_SCRIPT_URL, {
         method: "POST",
         mode: "no-cors",

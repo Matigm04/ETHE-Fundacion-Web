@@ -49,16 +49,33 @@ const TrasplanteRenalPage = () => {
   return (
     <div className="bg-white text-gray-800">
       {/* Hero Section */}
-      <section className="relative bg-[#00334e] text-white py-20 sm:py-32 overflow-hidden">
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
+      <section className="relative h-[350px] flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#00334e] to-[#001a29]">
+        
+        {/* PATRÓN DE FONDO SUTIL */}
+        <div className="absolute -top-20 -left-20 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+
+        {/* CONTENIDO */}
+        <div className="relative z-20 container mx-auto px-4 text-center">
+          
+          {/* Icono Grande Flotante */}
+          <div className="mx-auto w-32 h-32 flex items-center justify-center mb-6 rounded-full bg-white/20 p-6 shadow-2xl backdrop-blur-sm">
+            <img 
+              src="/Logos_Especialidades/Logo_Renal.png" 
+              alt="Icono Riñón" 
+              className="w-full h-full object-contain drop-shadow-lg filter brightness-0 invert"
+            />
+          </div>
+
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-4 font-goudy drop-shadow-sm">
             Trasplante Renal
           </h1>
-          <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto">
+          
+          <p className="text-white/80 text-xl font-light max-w-2xl mx-auto">
             Recuperando la libertad y la calidad de vida lejos de la diálisis.
           </p>
+
         </div>
-        <Activity className="absolute -bottom-1/4 -right-16 text-white/5 h-[500px] w-[500px] rotate-12" />
       </section>
 
       {/* Call to Action Section */}

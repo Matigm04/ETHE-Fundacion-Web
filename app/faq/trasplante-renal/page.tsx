@@ -1,5 +1,6 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
+import { Search } from "lucide-react";
 import Link from "next/link";
 
 export default function FaqTrasplanteRenalPage() {
@@ -97,15 +98,23 @@ export default function FaqTrasplanteRenalPage() {
 
   return (
     <div className="min-h-screen bg-[#f5f7fa]">
-      {/* Hero Simple */}
-      <section className="bg-[#5bbaa5] py-16 text-center text-white">
-        <div className="container mx-auto px-4">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">
-            Preguntas Frecuentes: Trasplante Renal
+      {/* Nuevo Header Hero */}
+      <section className="relative h-[250px] flex items-center justify-center overflow-hidden bg-gradient-to-r from-[#00334e] to-[#002233]">
+        
+        {/* Decoración de fondo abstracta */}
+        <div className="absolute -top-20 -left-20 w-80 h-80 bg-white/5 rounded-full blur-3xl"></div>
+
+        <div className="relative z-10 container mx-auto px-4 text-center">
+          
+          {/* ETIQUETA SUPERIOR */}
+          <span className="bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-4 inline-block uppercase tracking-wider backdrop-blur-md border border-white/20">
+            Preguntas Frecuentes
+          </span>
+          
+          {/* TÍTULO */}
+          <h1 className="text-4xl md:text-5xl font-bold text-white font-goudy drop-shadow-sm">
+            Trasplante Renal
           </h1>
-          <p className="text-lg md:text-xl opacity-90 mb-2">
-            Resolvemos tus dudas sobre el trasplante de riñón, el procedimiento y la recuperación
-          </p>
         </div>
       </section>
 

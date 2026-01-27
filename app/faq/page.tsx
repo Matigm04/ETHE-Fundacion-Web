@@ -4,7 +4,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Card, CardContent } from "@/components/ui/card"
 import Link from "next/link"
 import Image from "next/image"
-import { HelpCircle } from "lucide-react"
+import { Activity, Heart, HelpCircle } from "lucide-react"
 import { generalFAQs, myths, specialtyFAQs } from "@/lib/faq-data"
 import InternalHero from "@/components/internal-hero"
 
@@ -109,62 +109,47 @@ export default function FAQPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {specialtyFAQs.map((specialty, index) => (
-                <Card key={index} className="border-2 border-[#5bbaa5]/30 hover:border-[#00334e] transition-all duration-300 hover:shadow-xl overflow-hidden group bg-white">
-                  <div className={`h-3 bg-gradient-to-r ${specialty.color}`} />
-                  <CardContent className="p-8 text-center">
-                    <div className="mb-6">
-                      <div className="w-24 h-24 mx-auto bg-gradient-to-br from-[#5bbaa5]/20 to-[#00334e]/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                        {specialty.icon === "liver" && (
-                          <Image 
-                            src="/Logos_Especialidades/Logo_Higado.png" 
-                            alt="Trasplante Hepático" 
-                            width={48} 
-                            height={48} 
-                            className="w-12 h-12 object-contain"
-                          />
-                        )}
-                        {specialty.icon === "kidney" && (
-                          <Image 
-                            src="/Logos_Especialidades/Logo_Renal.png" 
-                            alt="Trasplante Renal" 
-                            width={48} 
-                            height={48} 
-                            className="w-12 h-12 object-contain"
-                          />
-                        )}
-                        {specialty.icon === "heart" && (
-                          <Image 
-                            src="/Logos_Especialidades/Logo_Corazon.png" 
-                            alt="Cardiopatías Congénitas" 
-                            width={48} 
-                            height={48} 
-                            className="w-12 h-12 object-contain"
-                          />
-                        )}
-                      </div>
-                    </div>
-                    <h3 className="text-xl font-bold text-[#00334e] mb-3">
-                      {specialty.specialty}
-                    </h3>
-                    <p className="text-gray-600 mb-6 text-sm">
-                      {specialty.description}
-                    </p>
-                    <Link
-                      href={
-                        specialty.slug === 'hepatico' ? '/faq/trasplante-hepatico' :
-                        specialty.slug === 'renal' ? '/faq/trasplante-renal' :
-                        specialty.slug === 'cardiaco' ? '/faq/cardiopatias-congenitas' :
-                        '/especialidades'
-                      }
-                      className="inline-flex items-center justify-center px-6 py-3 bg-[#c74a3a] hover:bg-[#b73d2d] text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg w-full"
-                    >
-                      LEER +
-                    </Link>
-                  </CardContent>
-                </Card>
-              ))}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 container mx-auto px-4">
+              
+              {/* TARJETA HEPÁTICA */}
+              <Link href="/faq/trasplante-hepatico" className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1 border border-gray-100 overflow-hidden">
+                <div className="h-2 bg-[#5bbaa5] w-full" /> 
+                <div className="p-8 text-center">
+                  <div className="w-24 h-24 mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <img src="/Logos_Especialidades/Logo_Higado.png" alt="Hígado" className="w-full h-full object-contain" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-[#00334e] mb-2 font-goudy">Trasplante Hepático</h3>
+                  <p className="text-gray-500 mb-6 text-sm">Respuestas sobre el hígado, donantes y recuperación.</p>
+                  <span className="text-[#5bbaa5] font-bold text-sm tracking-wider uppercase border-b-2 border-transparent group-hover:border-[#5bbaa5] transition-all">Leer Preguntas</span>
+                </div>
+              </Link>
+
+              {/* TARJETA RENAL */}
+              <Link href="/faq/trasplante-renal" className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1 border border-gray-100 overflow-hidden">
+                <div className="h-2 bg-[#00334e] w-full" />
+                <div className="p-8 text-center">
+                  <div className="w-24 h-24 mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <img src="/Logos_Especialidades/Logo_Renal.png" alt="Riñón" className="w-full h-full object-contain" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-[#00334e] mb-2 font-goudy">Trasplante Renal</h3>
+                  <p className="text-gray-500 mb-6 text-sm">Dudas sobre diálisis, cirugía y calidad de vida.</p>
+                  <span className="text-[#00334e] font-bold text-sm tracking-wider uppercase border-b-2 border-transparent group-hover:border-[#00334e] transition-all">Leer Preguntas</span>
+                </div>
+              </Link>
+
+              {/* TARJETA CARDIOPATÍAS */}
+              <Link href="/faq/cardiopatias-congenitas" className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1 border border-gray-100 overflow-hidden">
+                <div className="h-2 bg-[#c74a3a] w-full" />
+                <div className="p-8 text-center">
+                  <div className="w-24 h-24 mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <img src="/Logos_Especialidades/Logo_Corazon.png" alt="Corazón" className="w-full h-full object-contain" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-[#00334e] mb-2 font-goudy">Cardiopatías</h3>
+                  <p className="text-gray-500 mb-6 text-sm">Información para familias sobre el corazón.</p>
+                  <span className="text-[#c74a3a] font-bold text-sm tracking-wider uppercase border-b-2 border-transparent group-hover:border-[#c74a3a] transition-all">Leer Preguntas</span>
+                </div>
+              </Link>
+
             </div>
           </div>
         </div>
